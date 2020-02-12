@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "224996343588",
+    "firebase_url": "https://mdm-cell-haroa.firebaseio.com",
+    "project_id": "mdm-cell-haroa",
+    "storage_bucket": "mdm-cell-haroa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:224996343588:android:a0550a0c42e9cae618fdb1",
+        "android_client_info": {
+          "package_name": "block.mdmcellharoa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "224996343588-9a5brqqjdbut7q1s2hf5fd3k7n75jail.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "block.mdmcellharoa",
+            "certificate_hash": "023cf23d1c5b8125f2c955b2800ee9bd1eab7dd9"
+          }
+        },
+        {
+          "client_id": "224996343588-avi971iv0c22ghrcr3uqk5mn4egiegem.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApEPinM2XHaJDHGvFqA-L6_EC-nneuG80"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "224996343588-avi971iv0c22ghrcr3uqk5mn4egiegem.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
