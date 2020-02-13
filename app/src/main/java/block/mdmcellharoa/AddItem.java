@@ -74,9 +74,10 @@ public class AddItem extends AppCompatActivity implements View.OnClickListener {
     private void   addItemToSheet() {
 
         final ProgressDialog loading = ProgressDialog.show(this,"Adding Item","Please wait");
+        final String school1 = school.getText().toString().trim();
         final String name = editTextItemName.getText().toString().trim();
         final String brand = editTextBrand.getText().toString().trim();
-        final String school1 = school.getText().toString().trim();
+
 
 
 
@@ -106,7 +107,7 @@ public class AddItem extends AppCompatActivity implements View.OnClickListener {
 
                 //here we pass params
                 parmas.put("action","addItem");
-                parmas.put("brand",school1);
+                parmas.put("school1",school1);
                 parmas.put("itemName",name);
                 parmas.put("brand",brand);
 

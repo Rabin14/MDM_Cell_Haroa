@@ -82,4 +82,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(),AddItem.class);
         startActivity(intent);
     }
+
+    public void items(View view) {
+        Intent intent = new Intent(getApplicationContext(),ListItem.class);
+        startActivity(intent);
+    }
 }
