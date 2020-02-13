@@ -112,6 +112,7 @@
         android:layout_height="84dp"
         android:layout_marginBottom="24dp"
         android:background="#E44614"
+        android:onClick="addcoverage"
         android:text="Coverage"
         android:textAlignment="center"
         android:textColor="#F8F8F2"
