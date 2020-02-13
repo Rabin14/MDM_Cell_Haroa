@@ -90,8 +90,8 @@ public class ListItem extends AppCompatActivity {
                 JSONObject jo = jarray.getJSONObject(i);
 
                 String school1 = jo.getString("school1");
-                String brand = jo.getString("brand");
-                String price = jo.getString("price");
+                String brand = jo.getString("itemName");
+                String price = jo.getString("brand");
 
 
                 HashMap<String, String> item = new HashMap<>();
