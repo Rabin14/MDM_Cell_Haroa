@@ -5,80 +5,119 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/school100"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/et_item_name"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="82dp"
-        android:layout_marginBottom="82dp"
-        android:text="Pre Pry/Class V"
-        app:layout_constraintBottom_toBottomOf="@+id/et_item_name"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="6dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/school" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_add_item"
+        android:layout_width="229dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="24dp"
+        android:background="#CE1BEC"
+        android:text="Add Coverage"
+        android:textColor="#FAFAF6"
+        app:layout_constraintEnd_toEndOf="@+id/et_brand2"
+        app:layout_constraintStart_toStartOf="@+id/et_brand2"
+        app:layout_constraintTop_toBottomOf="@+id/et_brand2" />
+
+    <EditText
+        android:id="@+id/et_brand2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="6dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="9dp"
-        android:layout_marginBottom="29dp"
-        android:text="Class I-IV/V-VIII"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="13dp"
+        android:text="Class V"
         app:layout_constraintBottom_toTopOf="@+id/et_brand"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <EditText
-        android:id="@+id/et_item_name"
-        android:layout_width="0dp"
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="9dp"
-        android:layout_marginEnd="9dp"
-        android:layout_marginBottom="78dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/et_brand"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/school" />
-
-    <EditText
-        android:id="@+id/et_brand"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="9dp"
-        android:layout_marginEnd="9dp"
-        android:layout_marginBottom="43dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/btn_add_item"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_item_name" />
-
-    <Button
-        android:id="@+id/btn_add_item"
-        android:layout_width="229dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="154dp"
-        android:background="#5AE9A3"
-        android:text="Add Coverage"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="19dp"
+        android:text="Class I-IV/VI-VIII"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_brand" />
+
+    <TextView
+        android:id="@+id/school100"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="16dp"
+        android:text="Class Pre Pry"
+        app:layout_constraintBottom_toTopOf="@+id/et_item_name"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/school"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="114dp"
+        android:layout_marginTop="29dp"
         android:text="School Name"
-        android:textStyle="bold"
         android:textColor="#050ECE"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/et_item_name"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_brand"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="6dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_item_name" />
+
+    <EditText
+        android:id="@+id/dateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="19dp"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/school" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:text="Date:"
+        app:layout_constraintBottom_toBottomOf="@+id/dateText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dateText" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

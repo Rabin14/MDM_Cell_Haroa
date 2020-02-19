@@ -92,6 +92,8 @@ public class ListItem extends AppCompatActivity {
                 String school1 = jo.getString("school1");
                 String brand = jo.getString("itemName");
                 String price = jo.getString("brand");
+                String brand2 = jo.getString("brand2");
+
 
 
                 HashMap<String, String> item = new HashMap<>();
@@ -99,6 +101,7 @@ public class ListItem extends AppCompatActivity {
                 item.put("school1", school1);
                 item.put("itemName", brand);
                 item.put("brand",price);
+                item.put("brand2",brand2);
 
                 list.add(item);
 
@@ -110,7 +113,7 @@ public class ListItem extends AppCompatActivity {
 
 
         adapter = new SimpleAdapter(this,list,R.layout.list_item_row,
-                new String[]{"date","school1","itemName","brand"},new int[]{R.id.date_id,R.id.tv_item_name,R.id.tv_brand,R.id.tv_price});
+                new String[]{"date","school1","itemName","brand","brand2"},new int[]{R.id.date_id,R.id.tv_item_name,R.id.tv_brand,R.id.tv_price,R.id.brand2});
 
 
         listView.setAdapter(adapter);

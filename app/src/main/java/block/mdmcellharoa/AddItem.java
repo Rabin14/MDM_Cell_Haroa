@@ -28,7 +28,10 @@ import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 public class AddItem extends AppCompatActivity implements View.OnClickListener {
@@ -36,7 +39,7 @@ public class AddItem extends AppCompatActivity implements View.OnClickListener {
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
-    EditText editTextItemName,editTextBrand;
+    EditText editTextItemName,editTextBrand,editTextBrand2,dateText;
     Button buttonAddItem;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -46,11 +49,16 @@ public class AddItem extends AppCompatActivity implements View.OnClickListener {
         school    = findViewById(R.id.school);
         editTextItemName = (EditText)findViewById(R.id.et_item_name);
         editTextBrand = (EditText)findViewById(R.id.et_brand);
-
+        editTextBrand2 = (EditText)findViewById(R.id.et_brand2);
+        dateText  = (EditText) findViewById(R.id.dateText);
         buttonAddItem = (Button)findViewById(R.id.btn_add_item);
         buttonAddItem.setOnClickListener(this);
 
+        String date_n = new SimpleDateFormat("MMM dd, yyyy", Locale.getDefault()).format(new Date());
 
+
+        //set it as current date.
+        dateText.setText(date_n);
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
@@ -77,6 +85,7 @@ public class AddItem extends AppCompatActivity implements View.OnClickListener {
         final String school1 = school.getText().toString().trim();
         final String name = editTextItemName.getText().toString().trim();
         final String brand = editTextBrand.getText().toString().trim();
+        final String brand2 = editTextBrand2.getText().toString().trim();
 
 
 
@@ -110,6 +119,7 @@ public class AddItem extends AppCompatActivity implements View.OnClickListener {
                 parmas.put("school1",school1);
                 parmas.put("itemName",name);
                 parmas.put("brand",brand);
+                parmas.put("brand2",brand2);
 
 
                 return parmas;
