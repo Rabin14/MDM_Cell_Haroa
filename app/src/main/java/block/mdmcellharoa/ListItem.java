@@ -88,13 +88,14 @@ public class ListItem extends AppCompatActivity {
             for (int i = 0; i < jarray.length(); i++) {
 
                 JSONObject jo = jarray.getJSONObject(i);
-
+                String date1 = jo.getString("date");
                 String school1 = jo.getString("school1");
                 String brand = jo.getString("itemName");
                 String price = jo.getString("brand");
 
 
                 HashMap<String, String> item = new HashMap<>();
+                item.put("date", date1);
                 item.put("school1", school1);
                 item.put("itemName", brand);
                 item.put("brand",price);
@@ -109,7 +110,7 @@ public class ListItem extends AppCompatActivity {
 
 
         adapter = new SimpleAdapter(this,list,R.layout.list_item_row,
-                new String[]{"school1","itemName","brand"},new int[]{R.id.tv_item_name,R.id.tv_brand,R.id.tv_price});
+                new String[]{"date","school1","itemName","brand"},new int[]{R.id.date_id,R.id.tv_item_name,R.id.tv_brand,R.id.tv_price});
 
 
         listView.setAdapter(adapter);
