@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/headerBackground"
+    android:background="#4C0559"
     tools:context=".MainActivity">
 
 
@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Well Come"
+        android:text="WelCome"
         android:textColor="@color/headerTextColor"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -31,7 +31,8 @@
         app:layout_constraintBottom_toTopOf="@+id/profilePhone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        />
 
     <TextView
         android:id="@+id/profileName"

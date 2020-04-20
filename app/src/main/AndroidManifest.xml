@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="block.mdmcellharoa">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,8 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".Register">
+        <activity android:name=".Details"></activity>
+        <activity
+            android:name=".PhoneRegister"
+            android:theme="@style/AppTheme2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
@@ -18,10 +22,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"/>
-        <activity android:name=".AddItem"/>
-        <activity android:name=".Login"/>
-        <activity android:name=".ListItem"/>
+        <activity android:name=".Register"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".AddItem" />
+        <activity android:name=".Login" />
+        <activity android:name=".ListItem" />
     </application>
 
 </manifest>
