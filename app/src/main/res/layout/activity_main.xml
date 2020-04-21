@@ -5,11 +5,30 @@
     android:id="@+id/ll"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#AC0808"
+    android:background="#540561"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="10dp"
     tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/profileName"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:textColor="#fff"
+            android:textSize="25sp"
+            android:text="Rabindranath Sardar"
+            android:textStyle="bold" />
+    </LinearLayout>
 
 
     <LinearLayout
@@ -22,13 +41,31 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="128dp"
-            android:background="@drawable/ef"
             android:padding="10dp"
             android:layout_marginBottom="10dp"
             android:src="@drawable/mdm" />
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/schoolname"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:textColor="#fff"
+            android:textSize="25sp"
+            android:text="Rabindranath Sardar"
+            android:textStyle="bold" />
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -45,21 +82,22 @@
             android:clickable="true"
             app:cardElevation="3dp"
             android:foreground="?android:attr/selectableItemBackground"
-            android:onClick="gk">
+
+            >
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#E9E48C"
+                android:background="#E040FB"
                 android:gravity="center"
                 android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:background="@drawable/ef"
+
                     android:padding="10dp"
-                    android:src="@drawable/ic_gk" />
+                    android:src="@drawable/mdm" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -72,7 +110,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_margin="5dp"
-                    android:background="@color/lightgray" />
+                    android:background="@color/hintTextColor" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -95,13 +133,14 @@
             android:clickable="true"
             app:cardElevation="3dp"
             android:foreground="?android:attr/selectableItemBackground"
-            android:onClick="admit">
+
+            >
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#E9E48C"
+                android:background="#E040FB"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -109,9 +148,9 @@
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:background="@drawable/cd"
+
                     android:padding="10dp"
-                    android:src="@drawable/ic_admit" />
+                    android:src="@drawable/mdm" />
 
 
                 <TextView
@@ -126,7 +165,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_margin="5dp"
-                    android:background="@color/lightgray" />
+                    android:background="@color/hintTextColor" />
 
 
                 <TextView
@@ -161,21 +200,22 @@
             app:cardElevation="3dp"
             android:clickable="true"
             android:foreground="?android:attr/selectableItemBackground"
-            android:onClick="rslt">
+
+            >
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#E9E48C"
+                android:background="#E040FB"
                 android:gravity="center"
                 android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:background="@drawable/pp1"
+
                     android:padding="10dp"
-                    android:src="@drawable/ic_pp1" />
+                    android:src="@drawable/mdm" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -188,7 +228,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_margin="5dp"
-                    android:background="@color/lightgray" />
+                    android:background="@color/hintTextColor" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -212,13 +252,14 @@
             app:cardElevation="3dp"
             android:clickable="true"
             android:foreground="?android:attr/selectableItemBackground"
-            android:onClick="wb">
+
+            >
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#E9E48C"
+                android:background="#E040FB"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -226,9 +267,9 @@
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:background="@drawable/pp2"
+
                     android:padding="10dp"
-                    android:src="@drawable/ic_pp2" />
+                    android:src="@drawable/mdm"/>
 
 
                 <TextView
@@ -243,7 +284,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_margin="1dp"
-                    android:background="@color/lightgray" />
+                    android:background="@color/hintTextColor" />
 
 
                 <TextView
