@@ -10,15 +10,11 @@
         <item> ANDULIA F P SCHOOL(19111302402)</item>
 
 
-
     </string-array>
     <string-array name="catagoryname">
         <item>....Select Catagory....</item>
         <item>Primary</item>
         <item>Upper Primary </item>
-
-
-
 
 
     </string-array>
@@ -35,11 +31,7 @@
         <item>Kulti</item>
 
 
-
     </string-array>
-
-
-
 
 
 </resources>
