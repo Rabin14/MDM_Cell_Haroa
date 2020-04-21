@@ -62,7 +62,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:background="#009688"
+        android:background="#900BE4"
         android:text="NEXT"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
