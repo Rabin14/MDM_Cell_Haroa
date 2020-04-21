@@ -19,7 +19,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 
 public class MainActivity extends AppCompatActivity {
-    TextView fullName,email,phone;
+    TextView fullName,school;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
@@ -29,12 +29,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        this.setTitle("Haroa MDM Cell");
+        this.setTitle("MDM, Haroa Block");
 
 
-        phone = findViewById(R.id.profilePhone);
+        school = findViewById(R.id.schoolname);
         fullName = findViewById(R.id.profileName);
-        email    = findViewById(R.id.profileEmail);
+
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
@@ -45,9 +45,9 @@ public class MainActivity extends AppCompatActivity {
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
-                phone.setText(documentSnapshot.getString("phone"));
-                fullName.setText(documentSnapshot.getString("fName"));
-                email.setText(documentSnapshot.getString("email"));
+                school.setText(documentSnapshot.getString("School"));
+                fullName.setText(documentSnapshot.getString("Name"));
+
             }
         });
 

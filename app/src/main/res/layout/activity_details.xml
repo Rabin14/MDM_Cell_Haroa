@@ -14,7 +14,7 @@
 
         android:layout_marginTop="73dp"
         android:layout_marginBottom="19dp"
-        android:text="OTP AUTH"
+        android:text="MDM,Haroa Block"
         android:textColor="#FFFFFE"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -25,17 +25,16 @@
 
     <EditText
         android:id="@+id/firstName"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/background"
 
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginBottom="30dp"
         android:ems="10"
-        android:hint="Full Name"
+        android:hint=" ....Full Name...."
         android:inputType="textPersonName"
-        android:textColor="#F7F7F8"
-        android:textColorHint="#E9EAEE"
+        android:textColor="#030304"
+        android:textColorHint="#070707"
         app:layout_constraintBottom_toTopOf="@+id/spinner"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,11 +42,11 @@
 
     <Button
         android:id="@+id/saveBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
         android:layout_marginBottom="28dp"
-        android:background="#2196F3"
-        android:text="Save"
+        android:background="#900BE4"
+        android:text="Register"
         android:textColor="#F9FAF8"
         android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -63,12 +62,17 @@
         app:layout_constraintBottom_toTopOf="@+id/firstName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        android:visibility="invisible"/>
 
     <Spinner
+
+
+        android:spinnerMode="dropdown"
+        android:background="@drawable/background"
         android:id="@+id/spinner"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="19dp"
@@ -79,9 +83,11 @@
 
     <Spinner
         android:id="@+id/spinner2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
         android:layout_marginStart="1dp"
+        android:spinnerMode="dropdown"
+        android:background="@drawable/background"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="28dp"
         app:layout_constraintBottom_toTopOf="@+id/spinner3"
@@ -91,8 +97,10 @@
 
     <Spinner
         android:id="@+id/spinner3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:spinnerMode="dropdown"
+        android:background="@drawable/background"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="51dp"

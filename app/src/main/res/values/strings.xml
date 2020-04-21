@@ -1,3 +1,45 @@
 <resources>
     <string name="app_name">MDM Cell Haroa</string>
+
+    <string-array name="schoolname">
+        <item>....Select School Name....</item>
+        <item>ADAMPUR F P SCHOOL(19111308103)</item>
+        <item>AKANDABERIA F P SCHOOL (19111300502) </item>
+        <item>AKANDABERIA HIGH SCHOOL(19111300602) </item>
+        <item>AMTA JR. BASIC F P SCHOOL(19111311201) </item>
+        <item> ANDULIA F P SCHOOL(19111302402)</item>
+
+
+
+    </string-array>
+    <string-array name="catagoryname">
+        <item>....Select Catagory....</item>
+        <item>Primary</item>
+        <item>Upper Primary </item>
+
+
+
+
+
+    </string-array>
+
+    <string-array name="gpname">
+        <item>....Select GP Name....</item>
+        <item>Haroa</item>
+        <item>Khasbalanda </item>
+        <item>Gopalpur-I</item>
+        <item>Gopalpur-II </item>
+        <item>Salipur</item>
+        <item>Sonapukur Sankarpur</item>
+        <item>Bokjuri</item>
+        <item>Kulti</item>
+
+
+
+    </string-array>
+
+
+
+
+
 </resources>
