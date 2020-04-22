@@ -37,7 +37,7 @@ import android.os.Bundle;
 
 public class PhoneRegister extends AppCompatActivity {
     FirebaseAuth fAuth;
-    String phoneNumber = "+917451221244";
+    String phoneNumber = "+917003454645";
     String otpCode = "123456";
     String verificationId;
     EditText phone,optEnter;

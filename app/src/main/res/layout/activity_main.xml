@@ -300,7 +300,7 @@
                     android:padding="1dp"
                     android:text="Share This App "
                     android:textColor="#fff"
-                    android:textSize="12sp" />
+                   />
 
 
             </LinearLayout>

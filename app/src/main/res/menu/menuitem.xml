@@ -7,6 +7,12 @@
         android:id="@+id/signout"
 
         />
+    <item
+
+        android:title=" Privacy Policy"
+        android:id="@+id/privacy"
+
+        />
 
 
 </menu>

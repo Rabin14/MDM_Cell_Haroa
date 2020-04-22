@@ -75,9 +75,14 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
+        if (item.getItemId()==R.id.privacy);{
+            Intent intent = new Intent (MainActivity.this, web.class);
+            intent.putExtra("url", "https://mdm-cell-haroa.web.app/");
+            startActivity(intent);
+
+        }
         return super.onOptionsItemSelected(item);
     }
-
 
 
 

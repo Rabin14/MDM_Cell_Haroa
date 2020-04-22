@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Distribution"></activity>
+        <activity android:name=".web"></activity>
+        <activity android:name=".Distribution" />
         <activity
             android:name=".SplashActivity"
             android:theme="@style/AppTheme2">
@@ -24,10 +25,10 @@
         </activity>
         <activity
             android:name=".Details"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".PhoneRegister"
-            android:theme="@style/AppTheme2"></activity>
+            android:theme="@style/AppTheme2" />
         <activity android:name=".Register" />
         <activity android:name=".MainActivity" />
         <activity android:name=".AddItem" />

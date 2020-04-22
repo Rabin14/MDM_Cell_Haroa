@@ -83,7 +83,7 @@ public class Details extends AppCompatActivity {
                 Map<String,Object> user = new HashMap<>();
                 user.put("Name",firstName.getText().toString());
                 user.put("School",school.getSelectedItem().toString());
-                user.put("Catagory",catagory.getSelectedItem().toString());
+                user.put("Category",catagory.getSelectedItem().toString());
                 user.put("GPName",gpname.getSelectedItem().toString());
                 progressBar.setVisibility(View.VISIBLE);
                 //add user to database

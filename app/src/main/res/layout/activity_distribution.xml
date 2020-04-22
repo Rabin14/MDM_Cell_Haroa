@@ -26,6 +26,21 @@
             android:textColor="#fff"
             android:textSize="30sp"
             android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/mdm" />
+
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
@@ -45,9 +60,10 @@
 
     </LinearLayout>
 
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="20dp"
         android:layout_marginTop="3dp"
         android:layout_marginBottom="5dp"
         android:background="@color/colorPrimaryDark"
@@ -112,7 +128,7 @@
             android:inputType="number"
             android:textAlignment="center"
             android:textColor="#030304"
-            android:textColorHint="#070707"
+            android:textColorHint="#7A7474"
             android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/spinner"
@@ -143,7 +159,7 @@
             android:inputType="number"
             android:textAlignment="center"
             android:textColor="#030304"
-            android:textColorHint="#070707"
+            android:textColorHint="#7A7474"
             android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/spinner"
@@ -161,27 +177,20 @@
         android:layout_marginBottom="5dp"
         android:clipToPadding="false"
         android:gravity="center"
-        android:orientation="vertical">
+      >
 
         <Button
-            android:id="@+id/nextBtn"
-            android:layout_width="250dp"
+            android:id="@+id/btn_add_item"
+            android:layout_width="match_parent"
             android:layout_height="69dp"
-            android:layout_marginStart="16dp"
 
+            android:textStyle="bold"
             android:background="#900BE4"
             android:text="Submit"
             android:textColor="#FFFFFF"
-            android:textSize="20sp" />
+            android:textSize="25sp" />
 
-        <ProgressBar
-            android:id="@+id/progressBar3"
-            style="?android:attr/progressBarStyle"
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="invisible"
-           />
+
 
     </LinearLayout>
 
