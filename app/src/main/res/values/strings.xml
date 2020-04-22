@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MDM Cell Haroa</string>
+    <string name="app_name">MDM Haroa Block</string>
 
     <string-array name="schoolname">
         <item>....Select School Name....</item>
@@ -12,7 +12,7 @@
 
     </string-array>
     <string-array name="catagoryname">
-        <item>....Select Catagory....</item>
+        <item>....Select Category....</item>
         <item>Primary</item>
         <item>Upper Primary </item>
 

@@ -78,13 +78,13 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void addcoverage(View view) {
-        Intent intent = new Intent(getApplicationContext(),AddItem.class);
-        startActivity(intent);
-    }
 
-    public void items(View view) {
-        Intent intent = new Intent(getApplicationContext(),ListItem.class);
+
+
+
+    public void covid19(View view) {
+        Intent intent = new Intent(getApplicationContext(),Distribution.class);
         startActivity(intent);
+
     }
 }
