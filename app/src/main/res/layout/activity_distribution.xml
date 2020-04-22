@@ -38,7 +38,7 @@
                 android:layout_height="100dp"
                 android:padding="10dp"
                 android:layout_marginBottom="10dp"
-                android:src="@drawable/mdm" />
+                android:src="@mipmap/logo" />
 
         </LinearLayout>
 

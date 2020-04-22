@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -91,5 +92,19 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(),Distribution.class);
         startActivity(intent);
 
+    }
+
+    public void share(View view) {
+        try {
+            Intent i = new Intent(Intent.ACTION_SEND);
+            i.setType("text/plain");
+            i.putExtra(Intent.EXTRA_SUBJECT, "Your Subject");
+            String sAux = "\nLet me recommend you this application\n\n";
+            sAux = sAux + "https://play.google.com/store/apps/details?id=block.mdmcellharoa \n\n"; // here define package name of you app
+            i.putExtra(Intent.EXTRA_TEXT, sAux);
+            startActivity(Intent.createChooser(i, "choose one"));
+        } catch (Exception e) {
+            Log.e(">>>", "Error: " + e);
+        }
     }
 }
