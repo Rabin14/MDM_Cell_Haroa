@@ -3,131 +3,495 @@
 
     <string-array name="schoolname">
         <item>....Select School Name....</item>
+
+
         <item>ADAMPUR F P SCHOOL(19111308103)</item>
-        <item>AKANDABERIA F P SCHOOL (19111300502) </item>
-        <item>AKANDABERIA HIGH SCHOOL(19111300602) </item>
-        <item>AMTA JR. BASIC F P SCHOOL(19111311201) </item>
-        <item> ANDULIA F P SCHOOL(19111302402)</item>
-        <item>SADARPUR F.P SCHOOL(19111309002)        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
-        <item>        </item>
+
+
+        <item>AKANDABERIA F P SCHOOL (19111300502)</item>
+
+
+        <item>AKANDABERIA HIGH SCHOOL(19111300602)</item>
+
+
+        <item> AMTA JR. BASIC F P SCHOOL(19111311201)</item>
+
+
+        <item>ANDULIA F P SCHOOL(19111302402)</item>
+
+
+        <item> BAGANATI B SMRITI F P SCHOOL(19111302901)</item>
+
+        <item> BAGANTI F P SCHOOL(19111310303)</item>
+
+
+        <item> BALTIA S DUTTA SMRITI F P SCHOOL(19111303302)</item>
+
+
+        <item> BANTOSHA SARBAPALLY R S F P SCHOOL(19111306302)</item>
+
+
+        <item> BARO BOKJURI F P SCHOOL(19111300603)</item>
+
+        <item> BARO BOKJURI JR HIGH SCHOOL(19111300604)</item>
+
+
+        <item>BAROJ INDALI BALTIA F P SCHOOL(19111303701)</item>
+
+
+        <item> BASABATI SARAT HALDER S F P SCHOOL(19111306602)</item>
+
+
+        <item>  BHABANIPUR F P SCHOOL(19111310801)</item>
+
+
+        <item> BHABANIPUR JR HIGH SCHOOL(19111310904)</item>
+
+        <item>  BHUBANPUR F P SCHOOL(19111310802)</item>
+
+
+        <item> BRAHMANCHAK F.P. SCHOOL(19111304201)</item>
+
+
+        <item> CENTRAL GOPALPUR F P SCHOOL(19111309706)</item>
+
+
+        <item> CHARABARI SARDARPARA F P SCHOOL(19111306101)</item>
+
+
+        <item> CHATRA F P SCHOOL(19111304302)</item>
+
+
+        <item> CHOUHATA ADARSHA VIDYAPITH(19111301302)</item>
+
+
+        <item>  CHOWDHUCHAK SANTIMAY SIKSHA NIKETAN (H.S)(19111304802)</item>
+
+
+        <item> CHOWDHURICHAK F P SCHOOL(19111304604)</item>
+
+
+        <item> CHOWHATA F P SCHOOL(19111301301)</item>
+
+
+        <item>  DAKSHIN RANIGACHI JR. HIGH SCHOOL(19111307206)</item>
+
+
+        <item> DAKSHIN RANIGACHI K. S. S. F.P. SCHOOL(19111307204)</item>
+
+
+        <item>  DIHIGACHHI HEMANTA GS FP SCHOOL(19111306801)</item>
+
+
+        <item> EAST BHAIDA F P SCHOOL(19111300201)</item>
+
+
+        <item>GAGRAMARI F P SCHOOL(19111310902)</item>
+
+
+        <item> GHOSHPUR F P SCHOOL(19111304804)</item>
+
+
+        <item>GOALPOTA F P SCHOOL(19111301502)</item>
+
+
+        <item>GOBERIA ABAD F P SCHOOL(19111308604)</item>
+
+
+        <item>  GOPALPUR BIRESWAR F P SCHOOL(19111309501)</item>
+
+
+        <item>  GOPAL PUR BIRESWAR JR. HIGH SCHOOL(19111309503)</item>
+
+
+        <item>  GOPALPUR F P SCHOOL(19111309705)</item>
+
+
+        <item>  GOPALPUR GIRLS HIGH SCHOOL(H.S)(19111309803)</item>
+
+
+        <item> GOPALPUR POPULAR ACADEMY(H.S)(19111310302)</item>
+
+
+        <item> GORAINAGAR F P SCHOOL(19111303201)</item>
+
+
+        <item>  GORAINAGAR JR HIGH SCHOOL(19111303202)</item>
+
+        <item>  HALDAHA F P SCHOOL(19111306201)</item>
+
+
+        <item>  HALDAHA JR. HIGH SCHOOL(19111306202)</item>
+
+
+        <item>  HAROA F P SCHOOL(19111307902)</item>
+
+
+        <item>   HAROA P.G. HIGH SCHOOL(19111308002)</item>
+
+
+        <item>  JAGANNATHPUR ARABINDAPALLI B V(19111306503)</item>
+
+
+        <item> JAMPUR F P SCHOOL(19111311302)</item>
+
+
+        <item>  JAMPUR JR. HIGH SCHOOL(19111311303)</item>
+
+
+        <item>  JHINKIA F P SCHOOL(19111300803)</item>
+
+
+        <item>  JHU-JHURGACHA JR. HIGH SCHOOL(19111303702)</item>
+
+
+        <item>  JHUJURGACHA F P SCHOOL(19111303801)</item>
+
+
+        <item> KABI DIPANKAR CHAKRABORTY S FP(19111310106)</item>
+
+
+        <item> KABI SAHADAT HOSSAIN SMRITI FP(19111300202)</item>
+
+
+        <item> KALIKAPUR FP SCHOOL(19111308803)</item>
+
+
+        <item> KALINAGAR F P SCHOOL(19111303301)</item>
+
+
+        <item> KAMARGANTI F P SCHOOL(19111304701)</item>
+
+
+        <item> KAMARGANTI HIGH SCHOOL(19111304902)</item>
+
+
+        <item> KAMARGHANTI GHASKHALI F P SCHOOL(19111304702)</item>
+
+
+        <item> KANKRATI ADIBASI FP SCHOOL(19111310503)</item>
+
+
+        <item>  KAWRAPUKUR F P SCHOOL(19111306504)</item>
+
+
+        <item> KHALISADI PAIRAGACHA F P SCHOOL(19111301802)</item>
+
+
+        <item> KHANTRA FP SCHOOL(19111311501)</item>
+
+
+        <item>  KHARUBALA F P SCHOOL(19111300306)</item>
+
+
+        <item>  KHASBALANDA 1 NO F P SCHOOL(19111306901)</item>
+
+
+        <item> KHASBALANDA 2 NO F P SCHOOL(19111307002)</item>
+
+
+        <item> KHEJER ALI S.A F.P. SCHOOL(19111308104)</item>
+
+
+        <item> KHORDACHANDPUR F P SCHOOL(19111308206)</item>
+
+        <item>  KISMAT-JANARDANPUR JR BASIC SCHOOL(19111301601)</item>
+
+
+        <item>  KUCHIAMORA-JHUJHARGACHA F.P. SCHOOL(19111303802)</item>
+
+
+        <item> KULGACHI F P SCHOOL(19111303501)</item>
+
+
+        <item>  KULTI F P SCHOOL(19111305402)</item>
+
+
+        <item>  KUMARPUKUR F P SCHOOL(19111300902)</item>
+
+
+        <item> KUMARPUKUR JR. HIGH SCHOOL(19111300904)</item>
+
+
+        <item> LAUGACHHI JR HIGH SCHOOL(19111305003)</item>
+
+
+        <item> LAWGACHI F P SCHOOL(19111305101)</item>
+
+
+        <item>  MADARTALA F P SCHOOL(19111309102)</item>
+
+
+        <item>  MAHISTIKARY JR. HIGH SCHOOL(19111306004)</item>
+
+
+        <item>  MAJAMPUR F P SCHOOL(19111300701)</item>
+
+
+        <item> MAKHLA F P SCHOOL(19111305302)</item>
+
+
+        <item> MAKHLA JR. HIGH SCHOOL(19111305304)</item>
+
+        <item>  METOATI F P SCHOOL(19111300903)</item>
+
+
+        <item> MOHISTIKARY J.B. SCHOOL(19111306005)</item>
+
+
+        <item> MSK. BRAHMANCHAK(19111304002)</item>
+
+
+        <item>  M.S.K. DHANPOTA F.D.U. MADHYAMIC(19111302104)</item>
+
+
+        <item>  M.S.K. DR SHAHIDULLAH VIDYA MADRASA(19111308006)</item>
+
+
+        <item> MSK KHANTRA(19111310903)</item>
+
+        <item> MSK. KHARUPALA(19111300307)</item>
+
+
+        <item> MSK. KULTI JOHARA MEMORIAL(19111305403)</item>
+
+        <item> M.S.K. MAKHLA TEGHARIA(19111305303)</item>
+
+        <item>M. S. K. MOZADEDIA(19111309302)</item>
+
+
+        <item> MSK. NEBUTALA ABAD MUNSHIGHERI(19111310504)</item>
+
+
+        <item> MSK. NURUL ISLAM SMRITI(19111301503)</item>
+
+
+        <item> M.S.K. PUKHURIA MADRASAH S K(19111311004)</item>
+
+        <item> MSK. SAHID RABIN SMRITI(19111306505)</item>
+
+        <item>  MSK. SANNYASI SMRITI(19111308606)</item>
+
+
+        <item> MUNSHIGHERI F P SCHOOL(19111310401)</item>
+
+
+        <item> NAJARNAGAR F P SCHOOL(19111303601)</item>
+
+
+        <item> NARAYANPUR F P SCHOOL(19111304001)</item>
+
+
+        <item> NAZDEPUR F P SCHOOL(19111308701)</item>
+
+
+        <item> NAZRUL NAGAR JR. HIGH SCHOOL(19111306506)</item>
+
+
+        <item> NOAPARA KALINAGAR HIGH SCHOOL(19111303303)</item>
+
+
+        <item> PAIKPARA F P SCHOOL(19111308502)</item>
+
+
+        <item>  PEARA F P SCHOOL(19111308004)</item>
+
+        <item>  PILKHANA F P SCHOOL(19111308503)</item>
+
+
+        <item>  PUKURIA JR. BASIC SCHOOL(19111311002)</item>
+
+
+        <item>PURATAN KAMARGANTI F P SCHOOL(19111304503)</item>
+
+
+        <item> PURBA KHARUBALA F P SCHOOL(19111300402)</item>
+
+
+        <item>RADHANAGAR F P SCHOOL(19111304501)</item>
+
+
+        <item> RAIKHAN F P SCHOOL(19111306402)</item>
+
+
+        <item> RAMCHAKI F P SCHOOL(19111309603)</item>
+
+
+        <item>  SADARPUR FP SCHOOL(19111309002)</item>
+
+
+        <item> SADARPUR JR. HIGH SCHOOL(19111309003)</item>
+
+
+        <item>  SAFIQUE AHMED GIRLS HIGH SCHOOL(H.S.)(19111308501)</item>
+
+
+        <item> SALIPUR F P SCHOOL(19111302202)</item>
+
+
+        <item> SALIPUR HARIPUR F P SCHOOL(19111302302)</item>
+
+
+        <item> SALIPUR HIGH SCHOOL(19111302702)</item>
+
+
+        <item> SALIPUR JR. HIGH SCHOOL(19111302204)</item>
+
+
+        <item> SANKARPUR F P SCHOOL(19111303101)</item>
+
+
+        <item> SONAPUKUR F P SCHOOL(19111304401)</item>
+
+
+        <item> SONAPUKUR VIDYAPITH H.S(19111304301)</item>
+
+
+        <item> SOUTH GOPALPUR F P SCHOOL(19111310001)</item>
+
+
+        <item>SOUTH KANKURIA F P SCHOOL(19111301902)</item>
+
+
+        <item>  SSK. AKANDABERIA(19111300504)</item>
+
+        <item> SSK. AMRADENGI(19111310304)</item>
+
+        <item> SSK. ATGHARA(19111307604)</item>
+
+
+        <item>  SSK. BAGAN ATI(19111303503)</item>
+
+
+        <item> SSK. BARO MESIA(19111300503)</item>
+
+
+        <item> SSK. BATAGACHI(19111311402)</item>
+
+
+        <item> SSK. BHANUR GHERI(19111311404)</item>
+
+        <item> SSK. BOYERGOTE(19111308607)</item>
+
+
+        <item> SSK. CHANDNI BAZAR(19111308402)</item>
+
+
+        <item> SSK. DAKSHIN HARIPUR(19111302103)</item>
+
+
+        <item> SSK. DAKSHIN PUKURIA(19111311003)</item>
+
+
+        <item> SSK. DASPARA(19111309805)</item>
+
+
+        <item>  SSK. DHANTALA(19111309604)</item>
+
+
+        <item> SSK. DHUTURAPOTA MANIK GANJA(19111304003)</item>
+
+        <item> SSK. GOALPOTA ASUR PALLY(19111301402)</item>
+
+
+        <item> SSK. GORAINAGAR MAZI PARA(19111303102)</item>
+
+
+        <item> SSK. HARANEGHARI(19111309605)</item>
+
+
+        <item> SSK. JANGALATI(19111308303)</item>
+
+
+        <item> SSK. KALIANAI(19111303502)</item>
+
+        <item> SSK. KHARUPALA(19111300309)</item>
+
+
+        <item> SSK. LATER BAGAN(19111307102)</item>
+
+
+        <item> SSK. MADHA PURBA KAHAR PARA(19111310002)</item>
+
+
+        <item>  SSK. MAKALGACHI(19111307205)</item>
+
+        <item>  SSK. MAZAMPUR KHALPARA(19111300702)</item>
+
+
+        <item> SSK. MUKUNDAPUR(19111301903)</item>
+
+
+        <item> SSK. NARAYAN PUR(19111303901)</item>
+
+
+        <item> SSK. NASIRHATI(19111305904)</item>
+
+        <item> SSK. NATUNPARA(19111310505)</item>
+
+
+        <item>   SSK. NAYA PATTAN(19111304805)</item>
+
+
+        <item> SSK. NONA KURA(19111310203)</item>
+
+
+        <item> SSK. PANCHIL BERIA(19111306102)</item>
+
+        <item> SSK. PASCHIM KHALISADI(19111301701)</item>
+
+
+        <item>SSK. PERCHANDPUR(19111300308)</item>
+
+
+        <item> SSK. PURATAN KAMARGANTI(19111304605)</item>
+
+
+        <item>  SSK. PURBA RADHANAGAR(19111304504)</item>
+
+
+        <item>SSK. SALIPUR(19111302203)</item>
+
+
+        <item>SSK. SAMASPUR CHARAK DANGA(19111304806)</item>
+
+        <item>  SSK. SARDERATI(19111309902)</item>
+
+
+        <item> SSK. SHANKIA(19111303401)</item>
+
+
+        <item> SSK. SHERPUR(19111304303)</item>
+
+        <item> SSK. SONAPOA MOKTAR MONDALSMRITI(19111311403)</item>
+
+
+        <item> SSK. SUBHAS PALLY(19111306003)</item>
+
+
+        <item> SSK. WEST GOPALPUR(19111309901)</item>
+
+
+        <item> TALBERIA F P SCHOOL(19111302002)</item>
+
+
+        <item>  TALBERIA JR HIGH SCHOOL(19111302003)</item>
+
+
+        <item> TEGHARIA F P SCHOOL(19111305202)</item>
+
+
+        <item>  TELENIPARA F P SCHOOL(19111304903)</item>
+
+
+        <item>  VIKARATI F.P. SCHOOL(19111308605)</item>
+
+
+        <item>  WEST BHAIDA F P SCHOOL(19111300101)</item>
+
+
+        <item>  WEST MADARTALA F P SCHOOL(19111309203)</item>
+
 
 
     </string-array>
