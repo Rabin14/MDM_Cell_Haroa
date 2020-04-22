@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
-        if(item.getItemId()==R.id.signout);{
+        if (item.getItemId()==R.id.signout){
 
             FirebaseAuth.getInstance().signOut();//logout
             startActivity(new Intent(getApplicationContext(),PhoneRegister.class));
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-        if (item.getItemId()==R.id.privacy);{
+        else if (item.getItemId()==R.id.privacy ){
             Intent intent = new Intent (MainActivity.this, web.class);
             intent.putExtra("url", "https://mdm-cell-haroa.web.app/");
             startActivity(intent);

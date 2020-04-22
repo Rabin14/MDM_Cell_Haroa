@@ -100,7 +100,7 @@
                     android:layout_height="64dp"
 
                     android:padding="10dp"
-                    android:src="@drawable/mdm" />
+                    android:src="@mipmap/logo" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -155,7 +155,7 @@
                     android:layout_height="64dp"
 
                     android:padding="10dp"
-                    android:src="@drawable/mdm" />
+                    android:src="@mipmap/logo" />
 
 
                 <TextView
@@ -221,7 +221,7 @@
                     android:layout_height="64dp"
 
                     android:padding="10dp"
-                    android:src="@drawable/mdm" />
+                    android:src="@mipmap/logo" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -277,7 +277,7 @@
                     android:layout_height="64dp"
 
                     android:padding="10dp"
-                    android:src="@drawable/mdm"/>
+                    android:src="@mipmap/logo"/>
 
 
                 <TextView
