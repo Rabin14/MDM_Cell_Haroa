@@ -107,7 +107,7 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
 
     private void   addItemToSheet() {
 
-        final ProgressDialog loading = ProgressDialog.show(this,"Adding Item","Please wait");
+        final ProgressDialog loading = ProgressDialog.show(this,"Adding Coverage","Please wait");
         final String school1 = school.getText().toString().trim();
         final String category1 = category.getText().toString().trim();
         final String gp1 = gp.getText().toString().trim();

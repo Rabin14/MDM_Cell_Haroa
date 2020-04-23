@@ -51,7 +51,7 @@ public class Feedback extends AppCompatActivity implements View.OnClickListener 
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
-    EditText subject,feedback,;
+    EditText subject,feedback;
     Button buttonAddItem;
 
     @Override
@@ -97,7 +97,7 @@ public class Feedback extends AppCompatActivity implements View.OnClickListener 
 
     private void   addItemToSheet() {
 
-        final ProgressDialog loading = ProgressDialog.show(this,"Adding Item","Please wait");
+        final ProgressDialog loading = ProgressDialog.show(this,"Sending Feedback","Please wait");
         final String school1 = school.getText().toString().trim();
 
         final String gp1 = gp.getText().toString().trim();
@@ -113,7 +113,7 @@ public class Feedback extends AppCompatActivity implements View.OnClickListener 
 
 
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbzyjhMoaRNtTI45HS3eJxShXv9VfYOmyJQQrFyGKouoGFSy01vM/exec",
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbz-lXfEHMSUw3a6T-KoHApLJBT-fzBMmpzh8qLAKXl9vNwvHAow/exec",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
