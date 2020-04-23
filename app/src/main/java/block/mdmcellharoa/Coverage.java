@@ -95,6 +95,7 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
                 school.setText(documentSnapshot.getString("School"));
                 category.setText(documentSnapshot.getString("Category"));
                 gp.setText(documentSnapshot.getString("GPName"));
+                name.setText(documentSnapshot.getString("Name"));
 
             }
         });
@@ -110,15 +111,26 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
         final String school1 = school.getText().toString().trim();
         final String category1 = category.getText().toString().trim();
         final String gp1 = gp.getText().toString().trim();
-        final String total1 = total.getText().toString().trim();
-        final String distribution1 = distribution.getText().toString().trim();
+
+        final String name1 = name.getText().toString().trim();
+        final String teachers1 = teachers.getText().toString().trim();
+        final String class_pp1 = class_pp.getText().toString().trim();
+        final String class_one1 = class_one.getText().toString().trim();
+        final String class_two2 = class_two.getText().toString().trim();
+        final String class_three2 = class_three.getText().toString().trim();
+        final String class_four2 = class_four.getText().toString().trim();
+        final String class_five2 = class_five.getText().toString().trim();
+        final String class_six2 = class_six.getText().toString().trim();
+        final String class_seven2 = class_seven.getText().toString().trim();
+        final String class_eight2 = class_eight.getText().toString().trim();
 
 
 
 
 
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbwl8yFG4DASk6YRy0_ShHcxNxKDOOhcqF4mJHJINaXTfyg4EJKC/exec",
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbzyjhMoaRNtTI45HS3eJxShXv9VfYOmyJQQrFyGKouoGFSy01vM/exec",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -146,8 +158,19 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
                 parmas.put("school",school1);
                 parmas.put("category",category1);
                 parmas.put("gp",gp1);
-                parmas.put("total",total1);
-                parmas.put("distribution",distribution1);
+                parmas.put("name",name1);
+                parmas.put("teachers",teachers1);
+                parmas.put("class_pp",class_pp1);
+                parmas.put("class_one",class_one1);
+                parmas.put("class_two",class_two2);
+                parmas.put("class_three",class_three2);
+                parmas.put("class_four",class_four2);
+                parmas.put("class_five",class_five2);
+                parmas.put("class_six",class_six2);
+                parmas.put("class_seven",class_seven2);
+                parmas.put("class_eight",class_eight2);
+
+
 
 
                 return parmas;
@@ -183,6 +206,11 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
 
     @Override
     public void onClick(View v) {
+        if(v==buttonAddItem){
+            addItemToSheet();
+
+            //Define what to do when button is clicked
+        }
 
     }
 }
