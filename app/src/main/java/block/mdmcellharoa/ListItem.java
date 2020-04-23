@@ -49,7 +49,7 @@ public class ListItem extends AppCompatActivity {
 
         loading =  ProgressDialog.show(this,"Loading","please wait",false,true);
 
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, "https://script.google.com/macros/s/AKfycbyd7QAr1vhNV0k2ASKs11hxKKnuojeJ-Bfc07rI62sMyNcEOIE/exec?action=getItems",
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, "https://script.google.com/macros/s/AKfycbyX2HJ0IA9s664SGm2fcMzIwHuT3l4cTCgpmYiAlQzellhtsCyY/exec?action=getItems",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -88,20 +88,20 @@ public class ListItem extends AppCompatActivity {
             for (int i = 0; i < jarray.length(); i++) {
 
                 JSONObject jo = jarray.getJSONObject(i);
-                String date1 = jo.getString("date");
-                String school1 = jo.getString("school1");
-                String brand = jo.getString("itemName");
-                String price = jo.getString("brand");
-                String brand2 = jo.getString("brand2");
+                String date_n1 = jo.getString("date_n");
+                String subject1 = jo.getString("subject");
+                String description1 = jo.getString("description");
+                String download1 = jo.getString("download");
+
 
 
 
                 HashMap<String, String> item = new HashMap<>();
-                item.put("date", date1);
-                item.put("school1", school1);
-                item.put("itemName", brand);
-                item.put("brand",price);
-                item.put("brand2",brand2);
+                item.put("date_n", date_n1);
+                item.put("subject", subject1);
+                item.put("description", description1);
+                item.put("download",download1);
+
 
                 list.add(item);
 
@@ -113,7 +113,7 @@ public class ListItem extends AppCompatActivity {
 
 
         adapter = new SimpleAdapter(this,list,R.layout.list_item_row,
-                new String[]{"date","school1","itemName","brand","brand2"},new int[]{R.id.date_id,R.id.tv_item_name,R.id.tv_brand,R.id.tv_price,R.id.brand2});
+                new String[]{"date_n","subject","description","download"},new int[]{R.id.date_n,R.id.subject,R.id.description,R.id.download});
 
 
         listView.setAdapter(adapter);

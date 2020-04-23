@@ -7,10 +7,17 @@
         android:id="@+id/signout"
 
         />
+
     <item
 
         android:title=" Privacy Policy"
         android:id="@+id/privacy"
+
+        />
+    <item
+
+        android:title="Share"
+        android:id="@+id/share"
 
         />
 

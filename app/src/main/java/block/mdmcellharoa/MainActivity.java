@@ -82,6 +82,21 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
 
         }
+
+        else if (item.getItemId()==R.id.share ){
+            try {
+                Intent i = new Intent(Intent.ACTION_SEND);
+                i.setType("text/plain");
+                i.putExtra(Intent.EXTRA_SUBJECT, "Your Subject");
+                String sAux = "\nLet me recommend you this application\n\n";
+                sAux = sAux + "https://play.google.com/store/apps/details?id=block.mdmcellharoa \n\n"; // here define package name of you app
+                i.putExtra(Intent.EXTRA_TEXT, sAux);
+                startActivity(Intent.createChooser(i, "choose one"));
+            } catch (Exception e) {
+                Log.e(">>>", "Error: " + e);
+            }
+
+        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -95,17 +110,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void share(View view) {
-        try {
-            Intent i = new Intent(Intent.ACTION_SEND);
-            i.setType("text/plain");
-            i.putExtra(Intent.EXTRA_SUBJECT, "Your Subject");
-            String sAux = "\nLet me recommend you this application\n\n";
-            sAux = sAux + "https://play.google.com/store/apps/details?id=block.mdmcellharoa \n\n"; // here define package name of you app
-            i.putExtra(Intent.EXTRA_TEXT, sAux);
-            startActivity(Intent.createChooser(i, "choose one"));
-        } catch (Exception e) {
-            Log.e(">>>", "Error: " + e);
-        }
+        Intent intent = new Intent (MainActivity.this, web.class);
+
+        startActivity(intent);
+
+
     }
 
     public void coverage(View view) {
