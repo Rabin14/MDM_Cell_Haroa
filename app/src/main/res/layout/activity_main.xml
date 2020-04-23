@@ -206,6 +206,7 @@
             app:cardCornerRadius="5dp"
             app:cardElevation="3dp"
             android:clickable="true"
+            android:onClick="notification"
             android:foreground="?android:attr/selectableItemBackground"
 
             >
