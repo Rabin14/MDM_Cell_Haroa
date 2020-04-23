@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void share(View view) {
-        Intent intent = new Intent (MainActivity.this, web.class);
+        Intent intent = new Intent (MainActivity.this, Feedback.class);
 
         startActivity(intent);
 
