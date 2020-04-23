@@ -107,4 +107,11 @@ public class MainActivity extends AppCompatActivity {
             Log.e(">>>", "Error: " + e);
         }
     }
+
+    public void coverage(View view) {
+        Intent intent = new Intent(getApplicationContext(),Coverage.class);
+        startActivity(intent);
+
+
+    }
 }
