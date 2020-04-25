@@ -173,9 +173,16 @@ public class PhoneRegister extends AppCompatActivity {
             progressBar.setVisibility(View.VISIBLE);
             state.setText("Checking..");
             state.setVisibility(View.VISIBLE);
+
             checkUserProfile();
         }
     }
+
+
+
+
+
+
 
     private void checkUserProfile() {
         DocumentReference docRef = fStore.collection("users").document(fAuth.getCurrentUser().getUid());
@@ -187,7 +194,11 @@ public class PhoneRegister extends AppCompatActivity {
                     finish();
                 }else {
                     //Toast.makeText(Register.this, "Profile Do not Exists.", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(getApplicationContext(),Details.class));
+                    Intent intent = new Intent ( PhoneRegister.this, Validation.class );
+                    intent.putExtra ( "phoneno", phone.getText().toString() );
+                    startActivity(intent);
+
+                   // startActivity(new Intent(getApplicationContext(),Details.class));
                     finish();
                 }
             }
