@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MDM Haroa Block</string>
+    <string name="app_name">MDM, Haroa Block</string>
 
     <string-array name="schoolname">
         <item>....Select School Name....</item>
