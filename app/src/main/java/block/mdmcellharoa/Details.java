@@ -87,7 +87,7 @@ public class Details extends AppCompatActivity {
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(firstName.getText().toString().isEmpty()||school.getSelectedItem().toString().isEmpty() ||catagory.getSelectedItem().toString().isEmpty() ||gpname.getSelectedItem().toString().isEmpty()){
+                if(firstName.getText().toString().isEmpty()||school.getSelectedItem().toString().isEmpty() ||catagory.getSelectedItem().toString().isEmpty() ||gpname.getSelectedItem().toString().isEmpty() ||phone.getText().toString().isEmpty()){
                     Toast.makeText(Details.this, "Fill the required Details", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -98,6 +98,7 @@ public class Details extends AppCompatActivity {
                 user.put("School",school.getSelectedItem().toString());
                 user.put("Category",catagory.getSelectedItem().toString());
                 user.put("GPName",gpname.getSelectedItem().toString());
+                user.put("Mobile",phone.getText().toString());
                 progressBar.setVisibility(View.VISIBLE);
                 //add user to database
                 docRef.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {

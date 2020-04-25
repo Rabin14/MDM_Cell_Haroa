@@ -499,7 +499,7 @@
         <item>Primary</item>
         <item></item>
         <item>Upper Primary </item>
-
+        <item></item>
 
     </string-array>
 
@@ -520,6 +520,7 @@
         <item>Bokjuri</item>
         <item></item>
         <item>Kulti</item>
+        <item></item>
 
 
     </string-array>
