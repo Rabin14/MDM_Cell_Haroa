@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -61,6 +62,11 @@ public class PhoneRegister extends AppCompatActivity {
         setContentView(R.layout.activity_phone_register);
         phone = findViewById(R.id.phone);
 
+        // Get the value of shared preference back
+        SharedPreferences getShared = getSharedPreferences("demo", MODE_PRIVATE);
+        String value = getShared.getString("str1","Enter Mobile Number");
+        phone.setText(value);
+
 
 
         optEnter = findViewById(R.id.codeEnter);
@@ -94,6 +100,7 @@ public class PhoneRegister extends AppCompatActivity {
                         String phoneNum = "+"+countryCodePicker.getSelectedCountryCode()+phone.getText().toString();
                         Log.d("phone", "Phone No.: " + phoneNum);
                         requestPhoneAuth(phoneNum);
+                        savemobile();
                     }else {
                         next.setEnabled(false);
                         optEnter.setVisibility(View.GONE);
@@ -199,12 +206,6 @@ public class PhoneRegister extends AppCompatActivity {
 
 
 
-
-
-
-
-
-
     private void checkUserProfile() {
         DocumentReference docRef = fStore.collection("users").document(fAuth.getCurrentUser().getUid());
         docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
@@ -230,4 +231,21 @@ public class PhoneRegister extends AppCompatActivity {
             }
         });
     }
+    private void savemobile() {
+
+        String msg = phone.getText().toString();
+
+        SharedPreferences shrd = getSharedPreferences("demo", MODE_PRIVATE);
+        SharedPreferences.Editor editor = shrd.edit();
+
+        editor.putString("str1", msg);
+
+        editor.apply();
+
+
+
+    }
+
+
+
 }
