@@ -1,11 +1,13 @@
 package block.mdmcellharoa;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -32,7 +34,6 @@ import com.rilixtech.widget.countrycodepicker.CountryCodePicker;
 
 import java.util.concurrent.TimeUnit;
 
-import javax.annotation.Nullable;
 import android.os.Bundle;
 
 public class PhoneRegister extends AppCompatActivity {
@@ -50,11 +51,18 @@ public class PhoneRegister extends AppCompatActivity {
     PhoneAuthProvider.ForceResendingToken token;
     FirebaseFirestore fStore;
 
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phone_register);
         phone = findViewById(R.id.phone);
+
+
+
         optEnter = findViewById(R.id.codeEnter);
         countryCodePicker = findViewById(R.id.ccp);
         next = findViewById(R.id.nextBtn);
@@ -63,6 +71,9 @@ public class PhoneRegister extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar);
         state = findViewById(R.id.state);
         resend = findViewById(R.id.resendOtpBtn);
+
+
+
 
         resend.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -175,8 +186,18 @@ public class PhoneRegister extends AppCompatActivity {
             state.setVisibility(View.VISIBLE);
 
             checkUserProfile();
+
         }
     }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -194,7 +215,7 @@ public class PhoneRegister extends AppCompatActivity {
                     finish();
                 }else {
                     //Toast.makeText(Register.this, "Profile Do not Exists.", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent ( PhoneRegister.this, Validation.class );
+                   Intent intent = new Intent ( PhoneRegister.this, Validation.class );
                     intent.putExtra ( "phoneno", phone.getText().toString() );
                     startActivity(intent);
 

@@ -42,6 +42,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
+        android:text="9732"
         android:hint="Mobile Number"
         android:inputType="phone"
         android:textColor="#F2F1F3"
@@ -133,6 +134,8 @@
         app:layout_constraintHorizontal_bias="0.92"
         app:layout_constraintStart_toEndOf="@+id/progressBar"
         app:layout_constraintTop_toTopOf="@+id/codeEnter" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

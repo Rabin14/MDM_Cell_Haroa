@@ -64,7 +64,7 @@ public class Validation extends AppCompatActivity {
 
                 rabin.setText(documentSnapshot.getString("mobile"));
                 String getvalue = rabin.getText().toString().trim();
-                checkUserProfile();
+                checkUserProfile2();
 
 
             }
@@ -73,7 +73,7 @@ public class Validation extends AppCompatActivity {
 
     }
 
-    private void checkUserProfile() {
+    private void checkUserProfile2() {
         String getvalue = rabin.getText().toString().trim();
 
         if (TextUtils.isEmpty(getvalue)) {
@@ -82,10 +82,10 @@ public class Validation extends AppCompatActivity {
             finish();
         } else {
             //Toast.makeText(Register.this, "Profile Do not Exists.", Toast.LENGTH_SHORT).show();
-            // Intent intent = new Intent ( Validation.this, Details.class );
-            // startActivity(intent);
+             Intent intent = new Intent ( Validation.this, Details.class );
+             startActivity(intent);
 
-            startActivity(new Intent(getApplicationContext(), Details.class));
+            //startActivity(new Intent(getApplicationContext(), Details.class));
             finish();
         }
     }
