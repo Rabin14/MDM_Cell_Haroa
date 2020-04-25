@@ -15,21 +15,23 @@
         android:layout_gravity="center"
         android:layout_marginTop="12dp"
         android:layout_marginBottom="10dp"
-        android:text="MDM,Haroa Block"
+        android:text="MDM, Haroa Block"
         android:textColor="#FFFFFE"
         android:textSize="30sp"
         android:textStyle="bold" />
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_margin="5dp"
         android:background="@color/hintTextColor" />
+
     <TextView
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="10dp"
         android:text="Enter Your Full Name"
         android:textColor="#FFFFFE"
@@ -49,12 +51,13 @@
         android:textAlignment="center"
         android:textColor="#030304"
         android:textColorHint="#070707" />
+
     <TextView
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="9dp"
+
         android:layout_marginBottom="8dp"
         android:text="Select School Name"
         android:textColor="#FFFFFE"
@@ -76,12 +79,13 @@
         android:background="@drawable/background"
         android:spinnerMode="dropdown"
         android:textAlignment="center" />
+
     <TextView
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="9dp"
+
         android:layout_marginBottom="8dp"
         android:text="Select Category"
         android:textColor="#FFFFFE"
@@ -99,12 +103,13 @@
         android:background="@drawable/background"
         android:spinnerMode="dropdown"
         android:textAlignment="center" />
+
     <TextView
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="9dp"
+
         android:layout_marginBottom="8dp"
         android:text="Select GP Name"
         android:textColor="#FFFFFE"
@@ -118,7 +123,7 @@
         android:layout_gravity="center"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="7dp"
         android:background="@drawable/background"
         android:spinnerMode="dropdown"
         android:textAlignment="center" />
@@ -128,8 +133,8 @@
         android:layout_width="250dp"
         android:layout_height="60dp"
         android:layout_gravity="center"
+        android:layout_marginTop="3dp"
         android:layout_marginBottom="12dp"
-
         android:background="@drawable/background2"
         android:text="Register"
         android:textColor="#F9FAF8"
@@ -142,5 +147,18 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:visibility="invisible" />
+
+    <TextView
+
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="00000000"
+        android:textColor="#FFFFFE"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+       />
 
 </LinearLayout>

@@ -2,7 +2,7 @@
     <string name="app_name">MDM, Haroa Block</string>
 
     <string-array name="schoolname">
-        <item>....Select School Name....</item>
+        <item></item>
 
 
         <item>ADAMPUR F P SCHOOL(19111308103)</item>
@@ -495,22 +495,30 @@
 
     </string-array>
     <string-array name="catagoryname">
-        <item>....Select Category....</item>
+        <item></item>
         <item>Primary</item>
+        <item></item>
         <item>Upper Primary </item>
 
 
     </string-array>
 
     <string-array name="gpname">
-        <item>....Select GP Name....</item>
+        <item></item>
         <item>Haroa</item>
+        <item></item>
         <item>Khasbalanda </item>
+        <item></item>
         <item>Gopalpur-I</item>
+        <item></item>
         <item>Gopalpur-II </item>
+        <item></item>
         <item>Salipur</item>
+        <item></item>
         <item>Sonapukur Sankarpur</item>
+        <item></item>
         <item>Bokjuri</item>
+        <item></item>
         <item>Kulti</item>
 
 

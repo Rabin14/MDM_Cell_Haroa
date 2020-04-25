@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.NonNull;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -26,6 +28,7 @@ import java.util.Map;
 public class Details extends AppCompatActivity {
     public static final String TAG = "TAG";
     EditText firstName;
+    TextView phone;
     Spinner school;
     Spinner catagory;
     Spinner gpname;
@@ -48,6 +51,16 @@ public class Details extends AppCompatActivity {
         gpname = findViewById(R.id.spinner3);
         saveBtn = findViewById(R.id.saveBtn);
         progressBar = findViewById(R.id.progressBar2);
+        phone = findViewById(R.id.phone);
+
+        // Get the value of shared preference back
+        SharedPreferences getShared = getSharedPreferences("demo", MODE_PRIVATE);
+        String value = getShared.getString("str1","Enter Mobile Number");
+        phone.setText(value);
+
+
+
+
 
         schoollist= getResources().getStringArray(R.array.schoolname);
         ArrayAdapter<String> adapter= new ArrayAdapter<>(this,android.R.layout.simple_spinner_item,schoollist);
