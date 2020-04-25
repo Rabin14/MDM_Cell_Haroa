@@ -93,7 +93,7 @@
                     android:layout_marginTop="9dp"
                     android:background="@drawable/background"
                     android:ems="10"
-                    android:hint="Class One"
+                    android:hint="Class V"
                     android:inputType="number"
                     android:textAlignment="center"
                     android:textColor="#030304"
@@ -108,7 +108,7 @@
                     android:layout_marginTop="9dp"
                     android:background="@drawable/background"
                     android:ems="10"
-                    android:hint="Class Two"
+                    android:hint="Class I-IV/ VI-VIII"
                     android:inputType="number"
                     android:textAlignment="center"
                     android:textColor="#030304"
@@ -116,95 +116,9 @@
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/class_three"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="9dp"
-                    android:background="@drawable/background"
-                    android:ems="10"
-                    android:hint="Class Three"
-                    android:inputType="number"
-                    android:textAlignment="center"
-                    android:textColor="#030304"
-                    android:textColorHint="#7A7474"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/class_four"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="9dp"
-                    android:background="@drawable/background"
-                    android:ems="10"
-                    android:hint="Class Four"
-                    android:inputType="number"
-                    android:textAlignment="center"
-                    android:textColor="#030304"
-                    android:textColorHint="#7A7474"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/class_five"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="9dp"
-                    android:background="@drawable/background"
-                    android:ems="10"
-                    android:hint="Class Five"
-                    android:inputType="number"
-                    android:textAlignment="center"
-                    android:textColor="#030304"
-                    android:textColorHint="#7A7474"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/class_six"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="9dp"
-                    android:background="@drawable/background"
-                    android:ems="10"
-                    android:hint="Class Six"
-                    android:inputType="number"
-                    android:textAlignment="center"
-                    android:textColor="#030304"
-                    android:textColorHint="#7A7474"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/class_seven"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="9dp"
-                    android:background="@drawable/background"
-                    android:ems="10"
-                    android:hint="Class Seven"
-                    android:inputType="number"
-                    android:textAlignment="center"
-                    android:textColor="#030304"
-                    android:textColorHint="#7A7474"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/class_eight"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="9dp"
-                    android:background="@drawable/background"
-                    android:ems="10"
-                    android:hint="Class Eight"
-                    android:inputType="number"
-                    android:textAlignment="center"
-                    android:textColor="#030304"
-                    android:textColorHint="#7A7474"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/btn_add_item"

@@ -65,12 +65,7 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
         class_pp  = (EditText) findViewById(R.id.class_pp);
         class_one  = (EditText) findViewById(R.id.class_one);
         class_two  = (EditText) findViewById(R.id.class_two);
-        class_three  = (EditText) findViewById(R.id.class_three);
-        class_four  = (EditText) findViewById(R.id.class_four);
-        class_five  = (EditText) findViewById(R.id.class_five);
-        class_six  = (EditText) findViewById(R.id.class_six);
-        class_seven  = (EditText) findViewById(R.id.class_seven);
-        class_eight  = (EditText) findViewById(R.id.class_eight);
+
 
 
         buttonAddItem = (Button)findViewById(R.id.btn_add_item);
@@ -117,12 +112,7 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
         final String class_pp1 = class_pp.getText().toString().trim();
         final String class_one1 = class_one.getText().toString().trim();
         final String class_two2 = class_two.getText().toString().trim();
-        final String class_three2 = class_three.getText().toString().trim();
-        final String class_four2 = class_four.getText().toString().trim();
-        final String class_five2 = class_five.getText().toString().trim();
-        final String class_six2 = class_six.getText().toString().trim();
-        final String class_seven2 = class_seven.getText().toString().trim();
-        final String class_eight2 = class_eight.getText().toString().trim();
+
 
 
 
@@ -163,12 +153,7 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
                 parmas.put("class_pp",class_pp1);
                 parmas.put("class_one",class_one1);
                 parmas.put("class_two",class_two2);
-                parmas.put("class_three",class_three2);
-                parmas.put("class_four",class_four2);
-                parmas.put("class_five",class_five2);
-                parmas.put("class_six",class_six2);
-                parmas.put("class_seven",class_seven2);
-                parmas.put("class_eight",class_eight2);
+               
 
 
 
