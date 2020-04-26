@@ -20,7 +20,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 
 public class MainActivity extends AppCompatActivity {
-    TextView fullName,school;
+    TextView fullName, school;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
@@ -57,8 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menuitem,menu);
-
+        getMenuInflater().inflate(R.menu.menuitem, menu);
 
 
         return super.onCreateOptionsMenu(menu);
@@ -67,23 +66,22 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
-        if (item.getItemId()==R.id.signout){
+        if (item.getItemId() == R.id.signout) {
 
             FirebaseAuth.getInstance().signOut();//logout
-            startActivity(new Intent(getApplicationContext(),PhoneRegister.class));
+            startActivity(new Intent(getApplicationContext(), PhoneRegister.class));
             finish();
 
-        }
-
-
-        else if (item.getItemId()==R.id.privacy ){
-            Intent intent = new Intent (MainActivity.this, web.class);
+        } else if (item.getItemId() == R.id.privacy) {
+            Intent intent = new Intent(MainActivity.this, web.class);
             intent.putExtra("url", "https://mdm-cell-haroa.web.app/");
             startActivity(intent);
 
-        }
+        } else if (item.getItemId() == R.id.feedback) {
+            Intent intent = new Intent(MainActivity.this, Feedback.class);
+            startActivity(intent);
 
-        else if (item.getItemId()==R.id.share ){
+        } else if (item.getItemId() == R.id.share) {
             try {
                 Intent i = new Intent(Intent.ACTION_SEND);
                 i.setType("text/plain");
@@ -101,16 +99,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
     public void covid19(View view) {
-        Intent intent = new Intent(getApplicationContext(),Distribution.class);
+        Intent intent = new Intent(getApplicationContext(), Attendance.class);
         startActivity(intent);
 
     }
 
     public void share(View view) {
-        Intent intent = new Intent (MainActivity.this, Feedback.class);
+        Intent intent = new Intent(MainActivity.this, Feedback.class);
 
         startActivity(intent);
 
@@ -118,14 +114,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void coverage(View view) {
-        Intent intent = new Intent(getApplicationContext(),Coverage.class);
+        Intent intent = new Intent(getApplicationContext(), Coverage.class);
         startActivity(intent);
 
 
     }
 
     public void notification(View view) {
-        Intent intent = new Intent(getApplicationContext(),ListItem.class);
+        Intent intent = new Intent(getApplicationContext(), ListItem.class);
         startActivity(intent);
 
 

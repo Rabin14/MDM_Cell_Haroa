@@ -49,7 +49,7 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
-    EditText teachers,class_pp,class_one,class_two,class_three,class_four,class_five,class_six,class_seven,class_eight;
+    EditText teachers,class_pp,class_one,class_two;
     Button buttonAddItem;
 
     @Override
@@ -101,6 +101,11 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
     //This is the part where data is transafeered from Your Android phone to Sheet by using HTTP Rest API calls
 
     private void   addItemToSheet() {
+
+        if(teachers.getText().toString().isEmpty() ||class_two.getText().toString().isEmpty()){
+            Toast.makeText(Coverage.this, "Fill the required Details", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         final ProgressDialog loading = ProgressDialog.show(this,"Adding Coverage","Please wait");
         final String school1 = school.getText().toString().trim();

@@ -83,6 +83,10 @@ public class Distribution extends AppCompatActivity implements View.OnClickListe
     //This is the part where data is transafeered from Your Android phone to Sheet by using HTTP Rest API calls
 
     private void   addItemToSheet() {
+        if(total.getText().toString().isEmpty() ||distribution.getText().toString().isEmpty()) {
+            Toast.makeText(Distribution.this, "Fill the required Details", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         final ProgressDialog loading = ProgressDialog.show(this,"Adding Item","Please wait");
         final String school1 = school.getText().toString().trim();
@@ -155,6 +159,7 @@ public class Distribution extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if(v==buttonAddItem){
+
             addItemToSheet();
 
             //Define what to do when button is clicked

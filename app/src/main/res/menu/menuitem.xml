@@ -10,7 +10,7 @@
 
     <item
 
-        android:title=" Privacy Policy"
+        android:title="Privacy Policy"
         android:id="@+id/privacy"
 
         />
@@ -19,6 +19,11 @@
         android:title="Share"
         android:id="@+id/share"
 
+        />
+    <item
+
+        android:title="Feedback"
+        android:id="@+id/feedback"
         />
 
 

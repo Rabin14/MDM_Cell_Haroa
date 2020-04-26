@@ -6,29 +6,53 @@
     android:layout_height="match_parent"
     android:background="#540561"
     android:orientation="vertical"
-    tools:context=".Feedback">
+    tools:context=".Attendance">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
 
         android:clipToPadding="false"
         android:gravity="center"
         android:orientation="vertical">
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="15dp"
-            android:text="Feedback"
+            android:text="Teacher/Staff Attendance"
             android:textColor="#fff"
             android:textSize="30sp"
             android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:background="#540561"
+            android:gravity="center"
+            android:orientation="horizontal">
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@mipmap/logo" />
 
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/dateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:text="Date"
+            android:textColor="#FFFF00"
+            android:textSize="22sp"
+            android:textStyle="bold" />
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -62,23 +86,33 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:text="category"
+            android:textColor="#fff"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
             android:id="@+id/gp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="15dp"
-
+            android:text="gp"
             android:textColor="#fff"
             android:textSize="22sp"
             android:textStyle="bold" />
-
         <TextView
             android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="15dp"
-
+            android:text="name"
             android:textColor="#fff"
             android:textSize="22sp"
             android:textStyle="bold" />
@@ -96,20 +130,20 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/subject"
+            android:id="@+id/total"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@drawable/background"
             android:ems="10"
-            android:hint="Subject"
-            android:layout_marginBottom="10dp"
+            android:hint="Total Staff/Teacher"
 
-
+            android:inputType="number"
             android:textAlignment="center"
             android:textColor="#030304"
             android:textColorHint="#7A7474"
             android:textSize="25sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            />
 
     </LinearLayout>
 
@@ -118,28 +152,26 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="3dp"
         android:layout_marginBottom="3dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="#540561"
         android:clipToPadding="false"
         android:gravity="center"
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/feedback"
+            android:id="@+id/distribution"
             android:layout_width="match_parent"
-            android:layout_height="240dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:background="#fff"
+            android:layout_height="60dp"
+            android:background="@drawable/background"
             android:ems="10"
-            android:hint="Your Views/Feedback"
-            android:lines="14"
-            android:maxLines="14"
+            android:hint="Today Present"
 
+            android:inputType="number"
             android:textAlignment="center"
             android:textColor="#030304"
             android:textColorHint="#7A7474"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textSize="25sp"
+            android:textStyle="bold"
+            />
 
     </LinearLayout>
 
@@ -150,18 +182,20 @@
         android:layout_marginTop="30dp"
         android:layout_marginBottom="5dp"
         android:clipToPadding="false"
-        android:gravity="center">
+        android:gravity="center"
+        >
 
         <Button
             android:id="@+id/btn_add_item"
             android:layout_width="match_parent"
             android:layout_height="60dp"
 
+            android:textStyle="bold"
             android:background="@drawable/background2"
             android:text="Submit"
             android:textColor="#FFFFFF"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+            android:textSize="25sp" />
+
 
 
     </LinearLayout>
