@@ -24,11 +24,40 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="15dp"
-            android:text="Daily MDM Coverage(Attendance)"
+            android:text="Today's MDM Coverage"
             android:textAlignment="center"
             android:textColor="#fff"
-            android:textSize="21sp"
+            android:textSize="28sp"
             android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:background="#540561"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@mipmap/logo" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:text="Please use this option only when you are not able to send coverage via SMS/WBMDMS app"
+                android:textAlignment="center"
+                android:textColor="#9BF433"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+
         <TextView
             android:id="@+id/dateText"
             android:layout_width="wrap_content"
@@ -56,20 +85,7 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <EditText
-                    android:id="@+id/teachers"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="9dp"
-                    android:background="@drawable/background"
-                    android:ems="10"
-                    android:hint="Total Teachers Attendance"
-                    android:inputType="number"
-                    android:textAlignment="center"
-                    android:textColor="#030304"
-                    android:textColorHint="#7A7474"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+
 
                 <EditText
                     android:id="@+id/class_pp"

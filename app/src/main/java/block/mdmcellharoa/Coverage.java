@@ -49,7 +49,7 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
-    EditText teachers,class_pp,class_one,class_two;
+    EditText class_pp,class_one,class_two;
     Button buttonAddItem;
 
     @Override
@@ -61,7 +61,7 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
         category = (TextView) findViewById(R.id.category);
         gp = (TextView) findViewById(R.id.gp);
         name = (TextView) findViewById(R.id.name);
-        teachers  = (EditText) findViewById(R.id.teachers);
+
         class_pp  = (EditText) findViewById(R.id.class_pp);
         class_one  = (EditText) findViewById(R.id.class_one);
         class_two  = (EditText) findViewById(R.id.class_two);
@@ -102,7 +102,7 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
 
     private void   addItemToSheet() {
 
-        if(teachers.getText().toString().isEmpty() ||class_two.getText().toString().isEmpty()){
+        if(class_two.getText().toString().isEmpty()){
             Toast.makeText(Coverage.this, "Fill the required Details", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -113,7 +113,7 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
         final String gp1 = gp.getText().toString().trim();
 
         final String name1 = name.getText().toString().trim();
-        final String teachers1 = teachers.getText().toString().trim();
+
         final String class_pp1 = class_pp.getText().toString().trim();
         final String class_one1 = class_one.getText().toString().trim();
         final String class_two2 = class_two.getText().toString().trim();
@@ -154,7 +154,7 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
                 parmas.put("category",category1);
                 parmas.put("gp",gp1);
                 parmas.put("name",name1);
-                parmas.put("teachers",teachers1);
+
                 parmas.put("class_pp",class_pp1);
                 parmas.put("class_one",class_one1);
                 parmas.put("class_two",class_two2);

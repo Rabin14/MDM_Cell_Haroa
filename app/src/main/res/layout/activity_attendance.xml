@@ -163,7 +163,7 @@
             android:layout_height="60dp"
             android:background="@drawable/background"
             android:ems="10"
-            android:hint="Today Present"
+            android:hint="Today's Present"
 
             android:inputType="number"
             android:textAlignment="center"
