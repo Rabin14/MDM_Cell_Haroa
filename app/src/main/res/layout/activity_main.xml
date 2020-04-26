@@ -83,7 +83,7 @@
             app:cardCornerRadius="5dp"
             android:clickable="true"
             app:cardElevation="3dp"
-            android:onClick="covid19"
+            android:onClick="attendance"
             android:foreground="?android:attr/selectableItemBackground"
 
             >
@@ -260,7 +260,7 @@
             app:cardCornerRadius="5dp"
             app:cardElevation="3dp"
             android:clickable="true"
-            android:onClick="share"
+            android:onClick="extra"
             android:foreground="?android:attr/selectableItemBackground"
 
             >

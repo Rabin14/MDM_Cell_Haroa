@@ -99,14 +99,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void covid19(View view) {
+    public void attendance(View view) {
         Intent intent = new Intent(getApplicationContext(), Attendance.class);
         startActivity(intent);
 
     }
 
-    public void share(View view) {
-        Intent intent = new Intent(MainActivity.this, Distribution.class);
+    public void extra(View view) {
+        Intent intent = new Intent(MainActivity.this, Miscellaneous.class);
 
         startActivity(intent);
 
