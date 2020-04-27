@@ -56,15 +56,18 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coverage);
+
+        class_pp  = findViewById(R.id.class_pp);
+        class_one  = findViewById(R.id.class_one);
+        class_two  = findViewById(R.id.class_two);
        TextView dateText  = (TextView) findViewById(R.id.dateText);
         school    = (TextView) findViewById(R.id.school);
         category = (TextView) findViewById(R.id.category);
         gp = (TextView) findViewById(R.id.gp);
         name = (TextView) findViewById(R.id.name);
 
-        class_pp  = (EditText) findViewById(R.id.class_pp);
-        class_one  = (EditText) findViewById(R.id.class_one);
-        class_two  = (EditText) findViewById(R.id.class_two);
+
+
 
 
 

@@ -40,8 +40,8 @@
                 android:layout_marginBottom="5dp"
                 android:textAlignment="center"
                 android:text="Rice and Potato Distribution"
-                android:textColor="#fff"
-                android:textSize="24sp"
+                android:textColor="#18FFFF"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
             <ImageView
@@ -91,9 +91,9 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:textAlignment="center"
-                android:text="Miscellaneous1"
-                android:textColor="#fff"
-                android:textSize="24sp"
+                android:text="Miscellaneous"
+                android:textColor="#18FFFF"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
             <ImageView
@@ -141,10 +141,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
-                android:text="Miscellaneous2"
+                android:text="Miscellaneous"
                 android:textAlignment="center"
-                android:textColor="#fff"
-                android:textSize="24sp"
+                android:textColor="#18FFFF"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
             <ImageView
