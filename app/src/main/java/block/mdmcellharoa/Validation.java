@@ -77,7 +77,7 @@ public class Validation extends AppCompatActivity {
         String getvalue = rabin.getText().toString().trim();
 
         if (TextUtils.isEmpty(getvalue)) {
-            Toast.makeText(Validation.this, "Your Mobile Number is not Register", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Validation.this, "Your Mobile Number is not Registered", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(getApplicationContext(), ErrorPage.class));
             finish();
         } else {

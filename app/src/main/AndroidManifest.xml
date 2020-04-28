@@ -10,14 +10,17 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:usesCleartextTraffic="true"
-        android:hardwareAccelerated="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".Miscellaneous"></activity>
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Mobile_Registration"></activity>
+        <activity android:name=".Admin_Dashboard" />
+        <activity android:name=".Admin_Login" />
+        <activity android:name=".Miscellaneous" />
         <activity android:name=".Attendance" />
         <activity android:name=".ErrorPage" />
         <activity android:name=".Validation" />
@@ -47,13 +50,13 @@
         <activity android:name=".Login" />
         <activity android:name=".ListItem" />
 
-
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@drawable/logo" />
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/colorPrimary" />
+
         <service
             android:name=".MyFcmTextMessagingService"
             android:enabled="true"

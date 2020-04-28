@@ -25,6 +25,11 @@
         android:title="Feedback"
         android:id="@+id/feedback"
         />
+    <item
+
+        android:title="Admin"
+        android:id="@+id/admin"
+        />
 
 
 </menu>
