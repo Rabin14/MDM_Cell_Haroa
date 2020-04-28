@@ -36,7 +36,7 @@ import java.util.Map;
 import android.os.Bundle;
 import android.os.Bundle;
 
-public class Add_Notice extends AppCompatActivity {
+public class Add_Notice extends AppCompatActivity  implements View.OnClickListener {
     EditText dateText,subject,notice,web_address;
     Button buttonAddItem;
 
@@ -50,6 +50,7 @@ public class Add_Notice extends AppCompatActivity {
         web_address  = (EditText) findViewById(R.id.web_address);
 
         buttonAddItem = (Button)findViewById(R.id.btn_add_item);
+        buttonAddItem.setOnClickListener(this);
 
         String date_n = new SimpleDateFormat("MMM dd, yyyy", Locale.getDefault()).format(new Date());
         //set it as current date.
@@ -64,7 +65,7 @@ public class Add_Notice extends AppCompatActivity {
             return;
         }
 
-        final ProgressDialog loading = ProgressDialog.show(this,"Sending Notice","Please wait");
+        final ProgressDialog loading = ProgressDialog.show(this,"Adding Notice","Please wait");
         final String dateText1 = dateText.getText().toString().trim();
         final String subject1 = subject.getText().toString().trim();
         final String notice1 = notice.getText().toString().trim();
@@ -74,7 +75,9 @@ public class Add_Notice extends AppCompatActivity {
 
 
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbyzQ5jFuSNj5e9t3nz259uBe0zQ2c3yglz9ul6ZUU5bmEDBmHs/exec?action=getItems",
+
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbzb6Ky2e-bX1U3qdJ73Agmd8QoASDV0i12BsnJ6ALTJW3dJpW2F/exec",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -102,8 +105,8 @@ public class Add_Notice extends AppCompatActivity {
                 parmas.put("dateText",dateText1);
                 parmas.put("subject",subject1);
                 parmas.put("notice",notice1);
-                parmas.put("web_address",web_address1);
 
+                parmas.put("web_address",web_address1);
 
 
                 return parmas;
@@ -123,7 +126,21 @@ public class Add_Notice extends AppCompatActivity {
     }
 
 
-    public void additem(View view) {
-        addItemToSheet();
+
+
+
+
+
+
+
+    @Override
+    public void onClick(View v) {
+        if(v==buttonAddItem){
+
+            addItemToSheet();
+
+            //Define what to do when button is clicked
+        }
+
     }
 }

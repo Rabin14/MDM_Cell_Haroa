@@ -332,7 +332,7 @@
         android:text="An Initiative By : Haroa Block Mid Day Meal Cell"
         android:textAlignment="center"
 
-        android:textColor="#F6F62D"
+        android:textColor="#fff"
         android:textSize="13sp"
         android:textStyle="bold" />
 </RelativeLayout>
