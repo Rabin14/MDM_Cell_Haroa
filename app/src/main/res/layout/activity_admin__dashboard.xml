@@ -54,6 +54,7 @@
         android:layout_height="60dp"
         android:layout_gravity="center"
         android:layout_marginTop="28dp"
+        android:onClick="addnotice"
         android:background="@drawable/background2"
         android:text="Add Notification"
         android:textColor="#FFFFFF"

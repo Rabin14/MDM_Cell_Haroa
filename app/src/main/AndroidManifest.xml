@@ -17,7 +17,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Mobile_Registration"></activity>
+        <activity android:name=".Add_Notice"></activity>
+        <activity android:name=".Mobile_Registration" />
         <activity android:name=".Admin_Dashboard" />
         <activity android:name=".Admin_Login" />
         <activity android:name=".Miscellaneous" />

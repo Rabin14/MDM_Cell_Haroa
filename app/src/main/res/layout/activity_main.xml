@@ -8,26 +8,27 @@
     android:background="#540561"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="10dp"
+
     tools:context=".MainActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
         android:clipToPadding="false"
         android:gravity="center"
-        android:layout_marginBottom="5dp"
         android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/profileName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/profileName"
-            android:textAlignment="center"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="15dp"
+            android:text="Rabindranath Sardar"
+            android:textAlignment="center"
             android:textColor="#fff"
             android:textSize="20sp"
-            android:text="Rabindranath Sardar"
             android:textStyle="bold" />
     </LinearLayout>
 
@@ -42,8 +43,8 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="100dp"
-            android:padding="10dp"
             android:layout_marginBottom="10dp"
+            android:padding="10dp"
             android:src="@mipmap/logo" />
 
     </LinearLayout>
@@ -51,23 +52,24 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
         android:clipToPadding="false"
         android:gravity="center"
-        android:layout_marginBottom="15dp"
         android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/schoolname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/schoolname"
-            android:textAlignment="center"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="15dp"
+            android:text="Rabindranath Sardar"
+            android:textAlignment="center"
             android:textColor="#fff"
             android:textSize="15sp"
-            android:text="Rabindranath Sardar"
             android:textStyle="bold" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -80,11 +82,11 @@
             android:layout_width="160dp"
             android:layout_height="130dp"
             android:layout_margin="10dp"
-            app:cardCornerRadius="5dp"
             android:clickable="true"
-            app:cardElevation="3dp"
-            android:onClick="attendance"
             android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="attendance"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="3dp"
 
             >
 
@@ -134,11 +136,11 @@
             android:layout_width="160dp"
             android:layout_height="130dp"
             android:layout_margin="10dp"
-            app:cardCornerRadius="5dp"
             android:clickable="true"
-            android:onClick="coverage"
-            app:cardElevation="3dp"
             android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="coverage"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="3dp"
 
             >
 
@@ -181,7 +183,7 @@
                     android:gravity="center"
                     android:padding="5dp"
                     android:text="MDM taker"
-                    android:textColor="#fff"/>
+                    android:textColor="#fff" />
 
 
             </LinearLayout>
@@ -191,10 +193,10 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/scroll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clipToPadding="false"
-        android:id="@+id/scroll"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -203,11 +205,11 @@
             android:layout_width="160dp"
             android:layout_height="130dp"
             android:layout_margin="10dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="notification"
             app:cardCornerRadius="5dp"
             app:cardElevation="3dp"
-            android:clickable="true"
-            android:onClick="notification"
-            android:foreground="?android:attr/selectableItemBackground"
 
             >
 
@@ -245,8 +247,7 @@
                     android:gravity="center"
                     android:padding="5dp"
                     android:text="View Order/Notice "
-                    android:textColor="#fff"
-                    />
+                    android:textColor="#fff" />
 
 
             </LinearLayout>
@@ -257,11 +258,11 @@
             android:layout_width="160dp"
             android:layout_height="130dp"
             android:layout_margin="10dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="extra"
             app:cardCornerRadius="5dp"
             app:cardElevation="3dp"
-            android:clickable="true"
-            android:onClick="extra"
-            android:foreground="?android:attr/selectableItemBackground"
 
             >
 
@@ -279,7 +280,7 @@
                     android:layout_height="64dp"
 
                     android:padding="10dp"
-                    android:src="@mipmap/logo"/>
+                    android:src="@mipmap/logo" />
 
 
                 <TextView
@@ -304,8 +305,7 @@
                     android:gravity="center"
                     android:padding="1dp"
                     android:text="Extra Menu"
-                    android:textColor="#fff"
-                   />
+                    android:textColor="#fff" />
 
 
             </LinearLayout>
@@ -313,14 +313,28 @@
 
 
     </LinearLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
 
-    <FrameLayout
-        android:id="@+id/ad_view_container"
+
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        android:layout_below="@+id/scroll"
-    </FrameLayout>
+        android:layout_height="40dp"
 
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5dp"
+
+        android:background="#900BE4"
+        android:gravity="center"
+
+        android:text="An Initiative By : Haroa Block Mid Day Meal Cell"
+        android:textAlignment="center"
+
+        android:textColor="#F6F62D"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+</RelativeLayout>
 
 </LinearLayout>

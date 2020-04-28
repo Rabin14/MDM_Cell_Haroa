@@ -19,4 +19,9 @@ public class Admin_Dashboard extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+    public void addnotice(View view) {
+        Intent intent = new Intent(Admin_Dashboard.this, Add_Notice.class);
+        startActivity(intent);
+    }
 }
