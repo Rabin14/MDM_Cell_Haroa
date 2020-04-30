@@ -30,6 +30,7 @@ public class web extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web);
+        getSupportActionBar().hide();
 
 // btn = (Button) findViewById(R.id.button);
         // txt = (TextView) findViewById(R.id.editText);

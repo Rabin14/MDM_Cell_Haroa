@@ -86,6 +86,7 @@ public class Add_Notice extends AppCompatActivity  implements View.OnClickListen
                         Toast.makeText(Add_Notice.this,response,Toast.LENGTH_LONG).show();
                         Intent intent = new Intent(getApplicationContext(),Admin_Dashboard.class);
                         startActivity(intent);
+                        finish();
 
                     }
                 },

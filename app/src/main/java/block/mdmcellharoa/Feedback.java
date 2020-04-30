@@ -121,7 +121,9 @@ public class Feedback extends AppCompatActivity implements View.OnClickListener 
                         loading.dismiss();
                         Toast.makeText(Feedback.this,response,Toast.LENGTH_LONG).show();
                         Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+
                         startActivity(intent);
+                        finish();
 
                     }
                 },

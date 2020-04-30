@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:background="#540561"
+        android:background="#1D0222"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,11 +55,7 @@
                 android:textSize="22sp"
                 android:textStyle="bold" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_margin="5dp"
-                android:background="@color/hintTextColor" />
+
 
             <TextView
                 android:id="@+id/description"
@@ -84,7 +80,8 @@
                 android:text="Description"
                 android:autoLink="web"
                 android:textAlignment="center"
-                android:textColor="#18FFFF"
+                android:textColorLink="#B8F4F4"
+                android:textColor="#B6F6F6"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 

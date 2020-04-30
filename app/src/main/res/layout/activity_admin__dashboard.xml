@@ -7,6 +7,9 @@
     android:background="@drawable/backgroundnew"
     android:orientation="vertical"
     tools:context=".Admin_Dashboard">
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,60 +33,96 @@
             android:padding="10dp"
             android:layout_marginBottom="10dp"
             android:src="@mipmap/logo" />
-
+        <Button
+            android:id="@+id/add_mobile"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:background="@drawable/background2"
+            android:text="New Mobile Registration"
+            android:onClick="addmobile"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/add_notice"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="28dp"
+            android:onClick="addnotice"
+            android:background="@drawable/background2"
+            android:text="Add New Notification"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/attendance"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="28dp"
+            android:onClick="attendance"
+            android:background="@drawable/background2"
+            android:text="Report(Teacher Attendance)"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/coverage"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="28dp"
+            android:onClick="coverage"
+            android:background="@drawable/background2"
+            android:text="Report(MDM Daily Coverage)"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/savexl"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="28dp"
+            android:onClick="savexl"
+            android:background="@drawable/background2"
+            android:text="Save Report As Excel"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/savepdf"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="28dp"
+            android:onClick="savepdf"
+            android:background="@drawable/background2"
+            android:text="Save Report As PDF"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/send"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="28dp"
+            android:onClick="send"
+            android:background="@drawable/background2"
+            android:text="Send/Share Excel Report"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
 
 
-    <Button
-        android:id="@+id/add_mobile"
-        android:layout_width="300dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="15dp"
-        android:layout_gravity="center"
-        android:background="@drawable/background2"
-        android:text="New Mobile Registration"
-        android:onClick="addmobile"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
-        android:textStyle="bold" />
-    <Button
-        android:id="@+id/add_notice"
-        android:layout_width="300dp"
-        android:layout_height="60dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="28dp"
-        android:onClick="addnotice"
-        android:background="@drawable/background2"
-        android:text="Add New Notification"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
-        android:textStyle="bold" />
-    <Button
-        android:id="@+id/attendance"
-        android:layout_width="300dp"
-        android:layout_height="60dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="28dp"
-        android:onClick="attendance"
-        android:background="@drawable/background2"
-        android:text="Report(Teacher Attendance)"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
-        android:textStyle="bold" />
-    <Button
-        android:id="@+id/coverage"
-        android:layout_width="300dp"
-        android:layout_height="60dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="28dp"
-        android:onClick="coverage"
-        android:background="@drawable/background2"
-        android:text="Report(MDM Daily Coverage)"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
-        android:textStyle="bold" />
 
 
+</ScrollView>
 </LinearLayout>
