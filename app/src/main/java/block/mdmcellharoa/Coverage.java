@@ -45,7 +45,7 @@ import java.util.Date;
 import java.util.Locale;
 
 public class Coverage extends AppCompatActivity implements View.OnClickListener {
-    TextView school,category,gp,name;
+    TextView school,category,gp,name,dateText;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
@@ -60,7 +60,7 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
         class_pp  = findViewById(R.id.class_pp);
         class_one  = findViewById(R.id.class_one);
         class_two  = findViewById(R.id.class_two);
-       TextView dateText  = (TextView) findViewById(R.id.dateText);
+        dateText  = (TextView) findViewById(R.id.dateText);
         school    = (TextView) findViewById(R.id.school);
         category = (TextView) findViewById(R.id.category);
         gp = (TextView) findViewById(R.id.gp);
@@ -120,7 +120,7 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
         final String class_pp1 = class_pp.getText().toString().trim();
         final String class_one1 = class_one.getText().toString().trim();
         final String class_two2 = class_two.getText().toString().trim();
-
+        final String dateText1 = dateText.getText().toString().trim();
 
 
 
@@ -161,6 +161,7 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
                 parmas.put("class_pp",class_pp1);
                 parmas.put("class_one",class_one1);
                 parmas.put("class_two",class_two2);
+                parmas.put("dateText",dateText1);
 
 
 

@@ -1,5 +1,4 @@
 package block.mdmcellharoa;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -43,18 +42,18 @@ public class Admin_Login extends AppCompatActivity {
             return;
         }
 
-            if (user_password1.matches("2558000") && (user_id1.matches("7003454646"))){
-                Intent intent = new Intent(Admin_Login.this, Admin_Dashboard.class);
-                startActivity(intent);
-                finish();
-                progressBar.setVisibility(View.VISIBLE);
-            }else {
-                Toast.makeText(Admin_Login.this, "Please Enter Valid User Id and Password ! ", Toast.LENGTH_SHORT).show();
-                progressBar.setVisibility(View.GONE);
-            }
-
-
-
-
+        if (user_password1.matches("2558000") && (user_id1.matches("7003454646"))){
+            Intent intent = new Intent(Admin_Login.this, Admin_Dashboard.class);
+            startActivity(intent);
+            finish();
+            progressBar.setVisibility(View.VISIBLE);
+        }else {
+            Toast.makeText(Admin_Login.this, "Please Enter Valid User Id and Password ! ", Toast.LENGTH_SHORT).show();
+            progressBar.setVisibility(View.GONE);
         }
+
+
+
+
     }
+}

@@ -43,10 +43,10 @@
         android:layout_marginTop="15dp"
         android:layout_gravity="center"
         android:background="@drawable/background2"
-        android:text="Mobile Registration"
+        android:text="New Mobile Registration"
         android:onClick="addmobile"
         android:textColor="#FFFFFF"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:textStyle="bold" />
     <Button
         android:id="@+id/add_notice"
@@ -56,9 +56,33 @@
         android:layout_marginTop="28dp"
         android:onClick="addnotice"
         android:background="@drawable/background2"
-        android:text="Add Notification"
+        android:text="Add New Notification"
         android:textColor="#FFFFFF"
-        android:textSize="18sp"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+    <Button
+        android:id="@+id/attendance"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="28dp"
+        android:onClick="attendance"
+        android:background="@drawable/background2"
+        android:text="Report(Teacher Attendance)"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+    <Button
+        android:id="@+id/coverage"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="28dp"
+        android:onClick="coverage"
+        android:background="@drawable/background2"
+        android:text="Report(MDM Daily Coverage)"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
         android:textStyle="bold" />
 
 

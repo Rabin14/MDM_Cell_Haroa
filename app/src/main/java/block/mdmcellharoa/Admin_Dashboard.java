@@ -24,4 +24,14 @@ public class Admin_Dashboard extends AppCompatActivity {
         Intent intent = new Intent(Admin_Dashboard.this, Add_Notice.class);
         startActivity(intent);
     }
+
+    public void attendance(View view) {
+        Intent intent = new Intent(Admin_Dashboard.this, Report_attendance.class);
+        startActivity(intent);
+    }
+
+    public void coverage(View view) {
+        Intent intent = new Intent(Admin_Dashboard.this, Report_Coverage.class);
+        startActivity(intent);
+    }
 }
