@@ -3,6 +3,9 @@ package block.mdmcellharoa;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -30,8 +33,9 @@ public class ListItem extends AppCompatActivity {
 
 
     ListView listView;
-    ListAdapter adapter;
+    SimpleAdapter adapter;
     ProgressDialog loading;
+    EditText et_search;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -39,6 +43,7 @@ public class ListItem extends AppCompatActivity {
         setContentView(R.layout.list_item);
 
         listView = (ListView) findViewById(R.id.lv_items);
+        et_search = (EditText) findViewById(R.id.et_search);
 
         getItems();
 
@@ -47,7 +52,7 @@ public class ListItem extends AppCompatActivity {
 
     private void getItems() {
 
-        loading =  ProgressDialog.show(this,"Loading","please wait",false,true);
+        loading = ProgressDialog.show(this, "Loading", "please wait", false, true);
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, "https://script.google.com/macros/s/AKfycbyX2HJ0IA9s664SGm2fcMzIwHuT3l4cTCgpmYiAlQzellhtsCyY/exec?action=getItems",
                 new Response.Listener<String>() {
@@ -94,13 +99,11 @@ public class ListItem extends AppCompatActivity {
                 String download1 = jo.getString("download");
 
 
-
-
                 HashMap<String, String> item = new HashMap<>();
                 item.put("date_n", date_n1);
                 item.put("subject", subject1);
                 item.put("description", description1);
-                item.put("download",download1);
+                item.put("download", download1);
 
 
                 list.add(item);
@@ -112,13 +115,31 @@ public class ListItem extends AppCompatActivity {
         }
 
 
-        adapter = new SimpleAdapter(this,list,R.layout.list_item_row,
-                new String[]{"date_n","subject","description","download"},new int[]{R.id.date_n,R.id.subject,R.id.description,R.id.download});
+        adapter = new SimpleAdapter(this, list, R.layout.list_item_row,
+                new String[]{"date_n", "subject", "description", "download"}, new int[]{R.id.date_n, R.id.subject, R.id.description, R.id.download});
 
 
         listView.setAdapter(adapter);
         loading.dismiss();
+
+
+        et_search.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                ListItem.this.adapter.getFilter().filter(s);
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
     }
-
-
 }

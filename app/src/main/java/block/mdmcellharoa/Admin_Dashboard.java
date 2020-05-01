@@ -62,4 +62,10 @@ public class Admin_Dashboard extends AppCompatActivity {
             Log.e(">>>", "Error: " + e);
         }
     }
+
+    public void feedback(View view) {
+        Intent intent = new Intent(Admin_Dashboard.this, Report_Feedback.class);
+        startActivity(intent);
+
+    }
 }

@@ -65,7 +65,7 @@
             android:layout_marginTop="28dp"
             android:onClick="attendance"
             android:background="@drawable/background2"
-            android:text="Report(Teacher Attendance)"
+            android:text="View Teacher Attendance"
             android:textColor="#FFFFFF"
             android:textSize="14sp"
             android:textStyle="bold" />
@@ -77,7 +77,19 @@
             android:layout_marginTop="28dp"
             android:onClick="coverage"
             android:background="@drawable/background2"
-            android:text="Report(MDM Daily Coverage)"
+            android:text="View MDM Daily Coverage"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/feedback"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="28dp"
+            android:onClick="feedback"
+            android:background="@drawable/background2"
+            android:text="View User Feedback"
             android:textColor="#FFFFFF"
             android:textSize="14sp"
             android:textStyle="bold" />

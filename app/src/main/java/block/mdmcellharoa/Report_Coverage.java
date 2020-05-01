@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -32,14 +35,16 @@ import android.os.Bundle;
 
 public class Report_Coverage extends AppCompatActivity {
     ListView listView;
-    ListAdapter adapter;
+    SimpleAdapter adapter;
     ProgressDialog loading;
+    EditText et_search;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_report__coverage);
         listView = (ListView) findViewById(R.id.lv_items);
+        et_search = (EditText) findViewById(R.id.et_search);
 
         getItems();
     }
@@ -118,6 +123,26 @@ public class Report_Coverage extends AppCompatActivity {
 
         listView.setAdapter(adapter);
         loading.dismiss();
+
+        et_search.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                Report_Coverage.this.adapter.getFilter().filter(s);
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+
     }
 
 
