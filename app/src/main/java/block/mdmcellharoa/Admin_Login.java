@@ -42,7 +42,7 @@ public class Admin_Login extends AppCompatActivity {
             return;
         }
 
-        if (user_password1.matches("2558000") && (user_id1.matches("7003454646"))){
+        if (user_password1.matches("avijit@123") && (user_id1.matches("9153818852"))){
             Intent intent = new Intent(Admin_Login.this, Admin_Dashboard.class);
             startActivity(intent);
             finish();

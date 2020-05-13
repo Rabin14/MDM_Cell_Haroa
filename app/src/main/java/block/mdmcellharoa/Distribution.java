@@ -37,26 +37,58 @@ import java.util.Map;
 import android.os.Bundle;
 
 public class Distribution extends AppCompatActivity implements View.OnClickListener{
-    TextView school,category,gp;
+    TextView school,category,gp,name,dateText;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
-    EditText total,distribution;
+    EditText class_pp,class_one,class_two,class_three,class_four,class_five,class_six,class_seven,class_eight,class_pp_total,class_one_total,class_two_total,class_three_total,class_four_total,class_five_total,class_six_total,class_seven_total,class_eight_total;
     Button buttonAddItem;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_distribution);
+        class_pp  = findViewById(R.id.class_pp);
+        class_one  = findViewById(R.id.class_one);
+        class_two  = findViewById(R.id.class_two);
+        class_three  = findViewById(R.id.class_three);
+        class_four  = findViewById(R.id.class_four);
+        class_five  = findViewById(R.id.class_five);
+        class_six  = findViewById(R.id.class_six);
+        class_seven  = findViewById(R.id.class_seven);
+        class_eight  = findViewById(R.id.class_eight);
+
+        class_pp_total  = findViewById(R.id.class_pp_total);
+        class_one_total  = findViewById(R.id.class_one_total);
+        class_two_total  = findViewById(R.id.class_two_total);
+        class_three_total  = findViewById(R.id.class_three_total);
+        class_four_total  = findViewById(R.id.class_four_total);
+        class_five_total  = findViewById(R.id.class_five_total);
+        class_six_total  = findViewById(R.id.class_six_total);
+        class_seven_total  = findViewById(R.id.class_seven_total);
+        class_eight_total  = findViewById(R.id.class_eight_total);
+
+
+
+
+        dateText  = (TextView) findViewById(R.id.dateText);
         school    = (TextView) findViewById(R.id.school);
         category = (TextView) findViewById(R.id.category);
         gp = (TextView) findViewById(R.id.gp);
-        total = (EditText)findViewById(R.id.total);
-        distribution  = (EditText) findViewById(R.id.distribution);
+        name = (TextView) findViewById(R.id.name);
+
+
+
+
+
+
         buttonAddItem = (Button)findViewById(R.id.btn_add_item);
         buttonAddItem.setOnClickListener(this);
 
-
+        String date_n = new SimpleDateFormat("MMM dd, yyyy", Locale.getDefault()).format(new Date());
+        //set it as current date.
+        dateText.setText(date_n);
 
 
 
@@ -73,6 +105,7 @@ public class Distribution extends AppCompatActivity implements View.OnClickListe
                 school.setText(documentSnapshot.getString("School"));
                 category.setText(documentSnapshot.getString("Category"));
                 gp.setText(documentSnapshot.getString("GPName"));
+                name.setText(documentSnapshot.getString("Name"));
 
             }
         });
@@ -83,17 +116,39 @@ public class Distribution extends AppCompatActivity implements View.OnClickListe
     //This is the part where data is transafeered from Your Android phone to Sheet by using HTTP Rest API calls
 
     private void   addItemToSheet() {
-        if(total.getText().toString().isEmpty() ||distribution.getText().toString().isEmpty()) {
-            Toast.makeText(Distribution.this, "Fill the required Details", Toast.LENGTH_SHORT).show();
-            return;
-        }
 
-        final ProgressDialog loading = ProgressDialog.show(this,"Adding Item","Please wait");
+
+        final ProgressDialog loading = ProgressDialog.show(this,"Adding Distribution Report","Please wait");
         final String school1 = school.getText().toString().trim();
         final String category1 = category.getText().toString().trim();
         final String gp1 = gp.getText().toString().trim();
-        final String total1 = total.getText().toString().trim();
-        final String distribution1 = distribution.getText().toString().trim();
+
+        final String name1 = name.getText().toString().trim();
+
+        final String class_pp1 = class_pp.getText().toString().trim();
+        final String class_one1 = class_one.getText().toString().trim();
+        final String class_two2 = class_two.getText().toString().trim();
+        final String class_three2 = class_three.getText().toString().trim();
+        final String class_four2 = class_four.getText().toString().trim();
+        final String class_five2 = class_five.getText().toString().trim();
+        final String class_six2 = class_six.getText().toString().trim();
+        final String class_seven2 = class_seven.getText().toString().trim();
+        final String class_eight2 = class_eight.getText().toString().trim();
+
+
+        final String class_pp1_total = class_pp_total.getText().toString().trim();
+        final String class_one1_total = class_one_total.getText().toString().trim();
+        final String class_two2_total = class_two_total.getText().toString().trim();
+        final String class_three2_total = class_three_total.getText().toString().trim();
+        final String class_four2_total = class_four_total.getText().toString().trim();
+        final String class_five2_total = class_five_total.getText().toString().trim();
+        final String class_six2_total = class_six_total.getText().toString().trim();
+        final String class_seven2_total = class_seven_total.getText().toString().trim();
+        final String class_eight2_total = class_eight_total.getText().toString().trim();
+
+
+        final String dateText1 = dateText.getText().toString().trim();
+
 
 
 
@@ -130,8 +185,36 @@ public class Distribution extends AppCompatActivity implements View.OnClickListe
                 parmas.put("school",school1);
                 parmas.put("category",category1);
                 parmas.put("gp",gp1);
-                parmas.put("total",total1);
-                parmas.put("distribution",distribution1);
+                parmas.put("name",name1);
+
+                parmas.put("class_pp",class_pp1);
+                parmas.put("class_one",class_one1);
+                parmas.put("class_two",class_two2);
+                parmas.put("class_three",class_three2);
+                parmas.put("class_four",class_four2);
+                parmas.put("class_five",class_five2);
+                parmas.put("class_six",class_six2);
+                parmas.put("class_seven",class_seven2);
+                parmas.put("class_eight",class_eight2);
+                parmas.put("class_pp_total",class_pp1_total);
+                parmas.put("class_one_total",class_one1_total);
+                parmas.put("class_two_total",class_two2_total);
+                parmas.put("class_three_total",class_three2_total);
+                parmas.put("class_four_total",class_four2_total);
+                parmas.put("class_five_total",class_five2_total);
+                parmas.put("class_six_total",class_six2_total);
+                parmas.put("class_seven_total",class_seven2_total);
+                parmas.put("class_eight_total",class_eight2_total);
+
+
+
+
+
+
+                parmas.put("dateText",dateText1);
+
+
+
 
 
                 return parmas;
@@ -158,10 +241,16 @@ public class Distribution extends AppCompatActivity implements View.OnClickListe
 
 
 
+
+
+
+
+
+
+
     @Override
     public void onClick(View v) {
         if(v==buttonAddItem){
-
             addItemToSheet();
 
             //Define what to do when button is clicked
