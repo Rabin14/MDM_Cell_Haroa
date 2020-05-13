@@ -19,4 +19,9 @@ public class Miscellaneous extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+    public void sampleformat(View view) {
+        Intent intent = new Intent(getApplicationContext(), Sample_Format.class);
+        startActivity(intent);
+    }
 }
