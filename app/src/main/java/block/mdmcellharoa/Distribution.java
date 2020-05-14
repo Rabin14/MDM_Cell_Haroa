@@ -6,6 +6,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -37,24 +38,28 @@ import java.util.Map;
 import android.os.Bundle;
 
 public class Distribution extends AppCompatActivity implements View.OnClickListener{
-    TextView school,category,gp,name,dateText;
+    TextView school,category,gp,name,dateText,pp1,pp2,pp,pp3,pp4,pp6,pp7,pp8;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
     EditText class_pp,class_one,class_two,class_three,class_four,class_five,class_six,class_seven,class_eight,class_pp_total,class_one_total,class_two_total,class_three_total,class_four_total,class_five_total,class_six_total,class_seven_total,class_eight_total;
     Button buttonAddItem;
+    private View mViewGroup1,mViewGroup2;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_distribution);
+
         class_pp  = findViewById(R.id.class_pp);
         class_one  = findViewById(R.id.class_one);
         class_two  = findViewById(R.id.class_two);
         class_three  = findViewById(R.id.class_three);
         class_four  = findViewById(R.id.class_four);
+
         class_five  = findViewById(R.id.class_five);
+
         class_six  = findViewById(R.id.class_six);
         class_seven  = findViewById(R.id.class_seven);
         class_eight  = findViewById(R.id.class_eight);
@@ -69,7 +74,7 @@ public class Distribution extends AppCompatActivity implements View.OnClickListe
         class_seven_total  = findViewById(R.id.class_seven_total);
         class_eight_total  = findViewById(R.id.class_eight_total);
 
-
+        class_pp_total.requestFocus();
 
 
         dateText  = (TextView) findViewById(R.id.dateText);
@@ -78,8 +83,18 @@ public class Distribution extends AppCompatActivity implements View.OnClickListe
         gp = (TextView) findViewById(R.id.gp);
         name = (TextView) findViewById(R.id.name);
 
+        pp = (TextView) findViewById(R.id.pp);
+        pp1 = (TextView) findViewById(R.id.pp1);
+        pp2 = (TextView) findViewById(R.id.pp2);
+        pp3 = (TextView) findViewById(R.id.pp3);
+        pp4 = (TextView) findViewById(R.id.pp4);
+        pp6 = (TextView) findViewById(R.id.pp6);
+        pp7 = (TextView) findViewById(R.id.pp7);
+        pp8 = (TextView) findViewById(R.id.pp8);
 
 
+        mViewGroup1 = findViewById(R.id.layout_to_hide1);
+        mViewGroup2 = findViewById(R.id.layout_to_hide2);
 
 
 
@@ -89,7 +104,8 @@ public class Distribution extends AppCompatActivity implements View.OnClickListe
         String date_n = new SimpleDateFormat("MMM dd, yyyy", Locale.getDefault()).format(new Date());
         //set it as current date.
         dateText.setText(date_n);
-
+        getWindow().setSoftInputMode(
+                WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
 
         fAuth = FirebaseAuth.getInstance();
@@ -107,8 +123,14 @@ public class Distribution extends AppCompatActivity implements View.OnClickListe
                 gp.setText(documentSnapshot.getString("GPName"));
                 name.setText(documentSnapshot.getString("Name"));
 
+                show();
             }
         });
+
+
+
+
+
 
 
     }
@@ -118,7 +140,8 @@ public class Distribution extends AppCompatActivity implements View.OnClickListe
     private void   addItemToSheet() {
 
 
-        final ProgressDialog loading = ProgressDialog.show(this,"Adding Distribution Report","Please wait");
+
+        final ProgressDialog loading = ProgressDialog.show(this,"Adding Coverage","Please wait");
         final String school1 = school.getText().toString().trim();
         final String category1 = category.getText().toString().trim();
         final String gp1 = gp.getText().toString().trim();
@@ -255,6 +278,54 @@ public class Distribution extends AppCompatActivity implements View.OnClickListe
 
             //Define what to do when button is clicked
         }
+
+    }
+
+
+
+
+    private void show() {
+
+        final String category1 = category.getText().toString().trim();
+
+        if (category1.matches("Primary")) {
+            class_six.setVisibility(View.INVISIBLE);
+            class_seven.setVisibility(View.INVISIBLE);
+            class_eight.setVisibility(View.INVISIBLE);
+            class_six_total.setVisibility(View.INVISIBLE);
+            class_seven_total.setVisibility(View.INVISIBLE);
+            class_eight_total.setVisibility(View.INVISIBLE);
+            pp6.setVisibility(View.INVISIBLE);
+            pp7.setVisibility(View.INVISIBLE);
+            pp8.setVisibility(View.INVISIBLE);
+            mViewGroup2.setVisibility(View.GONE);
+
+
+
+        }
+
+        if (category1.matches("Upper Primary")) {
+            class_pp.setVisibility(View.INVISIBLE);
+            class_one.setVisibility(View.INVISIBLE);
+            class_two.setVisibility(View.INVISIBLE);
+            class_three.setVisibility(View.INVISIBLE);
+            class_four.setVisibility(View.INVISIBLE);
+
+            class_pp_total.setVisibility(View.INVISIBLE);
+            class_one_total.setVisibility(View.INVISIBLE);
+            class_two_total.setVisibility(View.INVISIBLE);
+            class_three_total.setVisibility(View.INVISIBLE);
+            class_four_total.setVisibility(View.INVISIBLE);
+
+            pp.setVisibility(View.INVISIBLE);
+            pp1.setVisibility(View.INVISIBLE);
+            pp2.setVisibility(View.INVISIBLE);
+            pp3.setVisibility(View.INVISIBLE);
+            pp4.setVisibility(View.INVISIBLE);
+            mViewGroup1.setVisibility(View.GONE);
+        }
+
+
 
     }
 }

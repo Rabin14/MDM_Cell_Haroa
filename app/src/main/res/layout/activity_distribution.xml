@@ -17,15 +17,17 @@
         android:clipToPadding="false"
         android:gravity="center"
         android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="15dp"
-            android:textAlignment="center"
+            android:fontFamily="@font/rammetto_one"
             android:text="Potato and Rice Distribution Report"
-            android:textColor="#fff"
-            android:textSize="30sp"
+            android:textAlignment="center"
+            android:textColor="#FFFF00"
+            android:textSize="23sp"
             android:textStyle="bold" />
 
         <TextView
@@ -53,6 +55,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -62,71 +65,320 @@
             android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/layout_to_hide1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:paddingHorizontal="10dp">
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
 
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="10dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:text="Class PP:-"
-                    android:textAlignment="center"
-                    android:textColor="#EFEF24"
-                    android:textSize="17sp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="10dp">
 
-                    android:textStyle="bold" />
-                <EditText
-                    android:id="@+id/class_pp_total"
-                    android:layout_width="105dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
 
-                    android:background="@drawable/background"
-                    android:ems="10"
-                    android:hint="Total Student"
-                    android:inputType="number"
-                    android:textAlignment="center"
-                    android:textColor="#030304"
-                    android:textColorHint="#7A7474"
+                    <TextView
+                        android:id="@+id/pp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Class PP:-"
+                        android:textAlignment="center"
+                        android:textColor="#EFEF24"
+                        android:textSize="17sp"
+
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/class_pp_total"
+                        android:layout_width="105dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/background"
+                        android:ems="10"
+                        android:hint="Total Student"
+                        android:inputType="number"
+                        android:textAlignment="center"
+                        android:textColor="#030304"
+                        android:textColorHint="#7A7474"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/class_pp"
+                        android:layout_width="105dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/background"
+                        android:ems="10"
+                        android:hint="Distributed"
+                        android:inputType="number"
+                        android:textAlignment="center"
+                        android:textColor="#030304"
+                        android:textColorHint="#7A7474"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="10dp">
 
-                <EditText
-                    android:id="@+id/class_pp"
-                    android:layout_width="105dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
-                    android:background="@drawable/background"
+
+                    <TextView
+                        android:id="@+id/pp1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Class 01:-"
+                        android:textAlignment="center"
+                        android:textColor="#EFEF24"
+                        android:textSize="17sp"
+
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/class_one_total"
+                        android:layout_width="105dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/background"
+                        android:ems="10"
+                        android:hint="Total Student"
+                        android:inputType="number"
+
+                        android:textAlignment="center"
+                        android:textColor="#030304"
+                        android:textColorHint="#7A7474"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/class_one"
+                        android:layout_width="105dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/background"
+                        android:ems="10"
+                        android:hint="Distributed"
+                        android:inputType="number"
+                        android:textAlignment="center"
+                        android:textColor="#030304"
+                        android:textColorHint="#7A7474"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:ems="10"
-                    android:hint="Meal Served"
-                    android:inputType="number"
-                    android:textAlignment="center"
-                    android:textColor="#030304"
-                    android:textColorHint="#7A7474"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="10dp">
 
 
+                    <TextView
+                        android:id="@+id/pp2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Class 02:-"
+                        android:textAlignment="center"
+                        android:textColor="#EFEF24"
+                        android:textSize="17sp"
+
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/class_two_total"
+                        android:layout_width="105dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/background"
+                        android:ems="10"
+                        android:hint="Total Student"
+                        android:inputType="number"
+                        android:textAlignment="center"
+                        android:textColor="#030304"
+                        android:textColorHint="#7A7474"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/class_two"
+                        android:layout_width="105dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/background"
+                        android:ems="10"
+                        android:hint="Distributed"
+                        android:inputType="number"
+                        android:textAlignment="center"
+                        android:textColor="#030304"
+                        android:textColorHint="#7A7474"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="10dp">
+
+
+                    <TextView
+                        android:id="@+id/pp3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Class 03:-"
+                        android:textAlignment="center"
+                        android:textColor="#EFEF24"
+                        android:textSize="17sp"
+
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/class_three_total"
+                        android:layout_width="105dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/background"
+                        android:ems="10"
+                        android:hint="Total Student"
+                        android:inputType="number"
+                        android:textAlignment="center"
+                        android:textColor="#030304"
+                        android:textColorHint="#7A7474"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/class_three"
+                        android:layout_width="105dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/background"
+                        android:ems="10"
+                        android:hint="Distributed"
+                        android:inputType="number"
+                        android:textAlignment="center"
+                        android:textColor="#030304"
+                        android:textColorHint="#7A7474"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="10dp">
+
+
+                    <TextView
+                        android:id="@+id/pp4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Class 04:-"
+                        android:textAlignment="center"
+                        android:textColor="#EFEF24"
+                        android:textSize="17sp"
+
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/class_four_total"
+                        android:layout_width="105dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/background"
+                        android:ems="10"
+                        android:hint="Total Student"
+                        android:inputType="number"
+                        android:textAlignment="center"
+                        android:textColor="#030304"
+                        android:textColorHint="#7A7474"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/class_four"
+                        android:layout_width="105dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/background"
+                        android:ems="10"
+                        android:hint="Distributed"
+                        android:inputType="number"
+                        android:textAlignment="center"
+                        android:textColor="#030304"
+                        android:textColorHint="#7A7474"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal"
                 android:layout_gravity="center"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
+                android:orientation="horizontal"
                 android:paddingHorizontal="10dp">
 
 
@@ -134,259 +386,23 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="10dp"
-                    android:layout_gravity="center"
-                    android:text="Class 01:-"
-                    android:textAlignment="center"
-                    android:textColor="#EFEF24"
-                    android:textSize="17sp"
-
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/class_one_total"
-                    android:layout_width="105dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-
-                    android:layout_marginLeft="10dp"
-                    android:background="@drawable/background"
-                    android:ems="10"
-                    android:hint="Total Student"
-                    android:inputType="number"
-
-                    android:textAlignment="center"
-                    android:textColor="#030304"
-                    android:textColorHint="#7A7474"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/class_one"
-                    android:layout_width="105dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
-                    android:background="@drawable/background"
-                    android:layout_gravity="center"
-                    android:ems="10"
-                    android:hint="Meal Served"
-                    android:inputType="number"
-                    android:textAlignment="center"
-                    android:textColor="#030304"
-                    android:textColorHint="#7A7474"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:paddingHorizontal="10dp">
-
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_gravity="center"
-                    android:text="Class 02:-"
-                    android:textAlignment="center"
-                    android:textColor="#EFEF24"
-                    android:textSize="17sp"
-
-                    android:textStyle="bold" />
-                <EditText
-                    android:id="@+id/class_two_total"
-                    android:layout_width="105dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
-
-                    android:background="@drawable/background"
-                    android:ems="10"
-                    android:hint="Total Student"
-                    android:inputType="number"
-                    android:textAlignment="center"
-                    android:textColor="#030304"
-                    android:textColorHint="#7A7474"
-                    android:layout_gravity="center"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/class_two"
-                    android:layout_width="105dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
-                    android:background="@drawable/background"
-                    android:layout_gravity="center"
-                    android:ems="10"
-                    android:hint="Meal Served"
-                    android:inputType="number"
-                    android:textAlignment="center"
-                    android:textColor="#030304"
-                    android:textColorHint="#7A7474"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:paddingHorizontal="10dp">
-
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_gravity="center"
-                    android:text="Class 03:-"
-                    android:textAlignment="center"
-                    android:textColor="#EFEF24"
-                    android:textSize="17sp"
-
-                    android:textStyle="bold" />
-                <EditText
-                    android:id="@+id/class_three_total"
-                    android:layout_width="105dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
-
-                    android:background="@drawable/background"
-                    android:ems="10"
-                    android:hint="Total Student"
-                    android:inputType="number"
-                    android:textAlignment="center"
-                    android:textColor="#030304"
-                    android:textColorHint="#7A7474"
-                    android:layout_gravity="center"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/class_three"
-                    android:layout_width="105dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
-                    android:background="@drawable/background"
-                    android:layout_gravity="center"
-                    android:ems="10"
-                    android:hint="Meal Served"
-                    android:inputType="number"
-                    android:textAlignment="center"
-                    android:textColor="#030304"
-                    android:textColorHint="#7A7474"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:paddingHorizontal="10dp">
-
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_gravity="center"
-                    android:text="Class 04:-"
-                    android:textAlignment="center"
-                    android:textColor="#EFEF24"
-                    android:textSize="17sp"
-
-                    android:textStyle="bold" />
-                <EditText
-                    android:id="@+id/class_four_total"
-                    android:layout_width="105dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
-
-                    android:background="@drawable/background"
-                    android:ems="10"
-                    android:hint="Total Student"
-                    android:inputType="number"
-                    android:textAlignment="center"
-                    android:textColor="#030304"
-                    android:textColorHint="#7A7474"
-                    android:layout_gravity="center"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/class_four"
-                    android:layout_width="105dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
-                    android:background="@drawable/background"
-                    android:layout_gravity="center"
-                    android:ems="10"
-                    android:hint="Meal Served"
-                    android:inputType="number"
-                    android:textAlignment="center"
-                    android:textColor="#030304"
-                    android:textColorHint="#7A7474"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:paddingHorizontal="10dp">
-
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_gravity="center"
                     android:text="Class 05:-"
                     android:textAlignment="center"
                     android:textColor="#EFEF24"
                     android:textSize="17sp"
 
                     android:textStyle="bold" />
+
                 <EditText
                     android:id="@+id/class_five_total"
                     android:layout_width="105dp"
                     android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center"
 
+                    android:layout_marginLeft="10dp"
                     android:background="@drawable/background"
                     android:ems="10"
                     android:hint="Total Student"
@@ -394,7 +410,6 @@
                     android:textAlignment="center"
                     android:textColor="#030304"
                     android:textColorHint="#7A7474"
-                    android:layout_gravity="center"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
@@ -402,11 +417,11 @@
                     android:id="@+id/class_five"
                     android:layout_width="105dp"
                     android:layout_height="40dp"
+                    android:layout_gravity="center"
                     android:layout_marginLeft="10dp"
                     android:background="@drawable/background"
-                    android:layout_gravity="center"
                     android:ems="10"
-                    android:hint="Meal Served"
+                    android:hint="Distributed"
                     android:inputType="number"
                     android:textAlignment="center"
                     android:textColor="#030304"
@@ -416,198 +431,198 @@
 
 
             </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout_to_hide2"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="10dp">
+
+
+                    <TextView
+                        android:id="@+id/pp6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Class 06:-"
+                        android:textAlignment="center"
+                        android:textColor="#EFEF24"
+                        android:textSize="17sp"
+
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/class_six_total"
+                        android:layout_width="105dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/background"
+                        android:ems="10"
+                        android:hint="Total Student"
+                        android:inputType="number"
+                        android:textAlignment="center"
+                        android:textColor="#030304"
+                        android:textColorHint="#7A7474"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/class_six"
+                        android:layout_width="105dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/background"
+                        android:ems="10"
+                        android:hint="Distributed"
+                        android:inputType="number"
+                        android:textAlignment="center"
+                        android:textColor="#030304"
+                        android:textColorHint="#7A7474"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="10dp">
+
+
+                    <TextView
+                        android:id="@+id/pp7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Class 07:-"
+                        android:textAlignment="center"
+                        android:textColor="#EFEF24"
+                        android:textSize="17sp"
+
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/class_seven_total"
+                        android:layout_width="105dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/background"
+                        android:ems="10"
+                        android:hint="Total Student"
+                        android:inputType="number"
+                        android:textAlignment="center"
+                        android:textColor="#030304"
+                        android:textColorHint="#7A7474"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/class_seven"
+                        android:layout_width="105dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/background"
+                        android:ems="10"
+                        android:hint="Distributed"
+                        android:inputType="number"
+                        android:textAlignment="center"
+                        android:textColor="#030304"
+                        android:textColorHint="#7A7474"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="10dp">
+
+
+                    <TextView
+                        android:id="@+id/pp8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Class 08:-"
+                        android:textAlignment="center"
+                        android:textColor="#EFEF24"
+                        android:textSize="17sp"
+
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/class_eight_total"
+                        android:layout_width="105dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/background"
+                        android:ems="10"
+                        android:hint="Total Student"
+                        android:inputType="number"
+                        android:textAlignment="center"
+                        android:textColor="#030304"
+                        android:textColorHint="#7A7474"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/class_eight"
+                        android:layout_width="105dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/background"
+                        android:ems="10"
+                        android:hint="Distributed"
+                        android:inputType="number"
+                        android:textAlignment="center"
+                        android:textColor="#030304"
+                        android:textColorHint="#7A7474"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="10dp"
-                android:orientation="horizontal"
-                android:layout_gravity="center"
                 android:gravity="center"
-                android:paddingHorizontal="10dp">
-
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_gravity="center"
-                    android:text="Class 06:-"
-                    android:textAlignment="center"
-                    android:textColor="#EFEF24"
-                    android:textSize="17sp"
-
-                    android:textStyle="bold" />
-                <EditText
-                    android:id="@+id/class_six_total"
-                    android:layout_width="105dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
-
-                    android:background="@drawable/background"
-                    android:ems="10"
-                    android:hint="Total Student"
-                    android:inputType="number"
-                    android:textAlignment="center"
-                    android:textColor="#030304"
-                    android:textColorHint="#7A7474"
-                    android:layout_gravity="center"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/class_six"
-                    android:layout_width="105dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
-                    android:background="@drawable/background"
-                    android:layout_gravity="center"
-                    android:ems="10"
-                    android:hint="Meal Served"
-                    android:inputType="number"
-                    android:textAlignment="center"
-                    android:textColor="#030304"
-                    android:textColorHint="#7A7474"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:paddingHorizontal="10dp">
-
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_gravity="center"
-                    android:text="Class 07:-"
-                    android:textAlignment="center"
-                    android:textColor="#EFEF24"
-                    android:textSize="17sp"
-
-                    android:textStyle="bold" />
-                <EditText
-                    android:id="@+id/class_seven_total"
-                    android:layout_width="105dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
-
-                    android:background="@drawable/background"
-                    android:ems="10"
-                    android:hint="Total Student"
-                    android:inputType="number"
-                    android:textAlignment="center"
-                    android:textColor="#030304"
-                    android:textColorHint="#7A7474"
-                    android:layout_gravity="center"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/class_seven"
-                    android:layout_width="105dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
-                    android:background="@drawable/background"
-                    android:layout_gravity="center"
-                    android:ems="10"
-                    android:hint="Meal Served"
-                    android:inputType="number"
-                    android:textAlignment="center"
-                    android:textColor="#030304"
-                    android:textColorHint="#7A7474"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:paddingHorizontal="10dp">
-
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_gravity="center"
-                    android:text="Class 08:-"
-                    android:textAlignment="center"
-                    android:textColor="#EFEF24"
-                    android:textSize="17sp"
-
-                    android:textStyle="bold" />
-                <EditText
-                    android:id="@+id/class_eight_total"
-                    android:layout_width="105dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
-
-                    android:background="@drawable/background"
-                    android:ems="10"
-                    android:hint="Total Student"
-                    android:inputType="number"
-                    android:textAlignment="center"
-                    android:textColor="#030304"
-                    android:textColorHint="#7A7474"
-                    android:layout_gravity="center"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/class_eight"
-                    android:layout_width="105dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
-                    android:background="@drawable/background"
-                    android:layout_gravity="center"
-                    android:ems="10"
-                    android:hint="Meal Served"
-                    android:inputType="number"
-                    android:textAlignment="center"
-                    android:textColor="#030304"
-                    android:textColorHint="#7A7474"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-
-            </LinearLayout>
-
-
-
-
-
-
-
-
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
                 android:orientation="vertical">
 
 
@@ -617,8 +632,10 @@
                     android:layout_height="60dp"
                     android:layout_marginTop="15dp"
                     android:background="@drawable/background2"
+                    android:gravity="center"
                     android:text="Submit"
                     android:textColor="#FFFFFF"
+
                     android:textSize="25sp"
                     android:textStyle="bold" />
 
@@ -681,8 +698,11 @@
                 </LinearLayout>
 
             </LinearLayout>
-
         </LinearLayout>
     </ScrollView>
+
 </LinearLayout>
+
+
+
 

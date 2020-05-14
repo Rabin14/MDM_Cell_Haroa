@@ -85,6 +85,11 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, Admin_Login.class);
             startActivity(intent);
 
+        } else if (item.getItemId() == R.id.contactus) {
+            Intent intent = new Intent(MainActivity.this, ContactUs.class);
+            startActivity(intent);
+
+
         } else if (item.getItemId() == R.id.share) {
             try {
                 Intent i = new Intent(Intent.ACTION_SEND);

@@ -102,7 +102,7 @@
                     android:layout_height="64dp"
 
                     android:padding="10dp"
-                    android:src="@mipmap/logo" />
+                    android:src="@mipmap/teacher" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -158,14 +158,14 @@
                     android:layout_height="64dp"
 
                     android:padding="10dp"
-                    android:src="@mipmap/logo" />
+                    android:src="@mipmap/humanpictos" />
 
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="Daily MDM Coverage"
+                    android:text="MDM Coverage"
                     android:textColor="#fff"
                     android:textStyle="bold" />
 
@@ -182,7 +182,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:padding="5dp"
-                    android:text="MDM taker"
+                    android:text="Today's Report"
                     android:textColor="#fff" />
 
 
@@ -225,7 +225,7 @@
                     android:layout_height="64dp"
 
                     android:padding="10dp"
-                    android:src="@mipmap/logo" />
+                    android:src="@mipmap/ssss" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -280,7 +280,7 @@
                     android:layout_height="64dp"
 
                     android:padding="10dp"
-                    android:src="@mipmap/logo" />
+                    android:src="@mipmap/menuu" />
 
 
                 <TextView
@@ -304,7 +304,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:padding="1dp"
-                    android:text="Extra Menu"
+                    android:text="More Menu"
                     android:textColor="#fff" />
 
 
