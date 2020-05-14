@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-
     android:background="#540561"
+
+    android:orientation="vertical"
     tools:context=".Miscellaneous">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,7 +23,7 @@
             android:layout_margin="10dp"
             android:clickable="true"
             android:foreground="?android:attr/selectableItemBackground"
-        android:onClick="distribution"
+            android:onClick="distribution"
             app:cardCornerRadius="5dp"
             app:cardElevation="3dp"
 
@@ -198,7 +199,7 @@
             android:layout_margin="10dp"
             android:clickable="true"
             android:foreground="?android:attr/selectableItemBackground"
-
+            android:onClick="cch"
             app:cardCornerRadius="5dp"
             app:cardElevation="3dp"
 
@@ -251,6 +252,7 @@
 
 
     </LinearLayout>
+
     <LinearLayout
 
         android:layout_width="match_parent"
@@ -319,7 +321,7 @@
             android:layout_margin="10dp"
             android:clickable="true"
             android:foreground="?android:attr/selectableItemBackground"
-             android:onClick="allotment"
+            android:onClick="allotment"
             app:cardCornerRadius="5dp"
             app:cardElevation="3dp"
 
@@ -372,10 +374,10 @@
 
 
     </LinearLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
 
 
         <TextView
