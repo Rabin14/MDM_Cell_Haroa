@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#540561"
+    android:background="@drawable/backgroundnew"
     android:orientation="vertical"
     tools:context=".Attendance">
 
@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clipToPadding="false"
-            android:background="#540561"
+            android:background="@drawable/backgroundnew"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -40,7 +40,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="100dp"
                 android:padding="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="0dp"
                 android:src="@mipmap/logo" />
 
         </LinearLayout>
@@ -125,20 +125,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="3dp"
-        android:layout_marginBottom="3dp"
-        android:background="#540561"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/backgroundnew"
         android:clipToPadding="false"
         android:gravity="center"
         android:orientation="vertical">
 
         <EditText
             android:id="@+id/total"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="40dp"
-            android:background="@drawable/background"
+            android:background="#fff"
             android:ems="10"
             android:hint="Total Staff/Teacher"
-
+            android:drawableStart="@drawable/ic_man"
             android:inputType="number"
             android:textAlignment="center"
             android:textColor="#030304"
@@ -152,21 +152,21 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="3dp"
-        android:background="#540561"
+        android:background="@drawable/backgroundnew"
         android:clipToPadding="false"
         android:gravity="center"
         android:orientation="vertical">
 
         <EditText
             android:id="@+id/distribution"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="40dp"
-            android:background="@drawable/background"
+            android:background="#fff"
             android:ems="10"
             android:hint="Today's Present"
-
+            android:drawableStart="@drawable/ic_person_black_24dp"
             android:inputType="number"
             android:textAlignment="center"
             android:textColor="#030304"
@@ -189,7 +189,7 @@
 
         <Button
             android:id="@+id/btn_add_item"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="60dp"
 
             android:textStyle="bold"
