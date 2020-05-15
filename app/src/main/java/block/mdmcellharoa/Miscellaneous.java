@@ -34,4 +34,9 @@ public class Miscellaneous extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), CCH_Details.class);
         startActivity(intent);
     }
+
+    public void teacher(View view) {
+        Intent intent = new Intent(getApplicationContext(), Teacher_Details.class);
+        startActivity(intent);
+    }
 }
