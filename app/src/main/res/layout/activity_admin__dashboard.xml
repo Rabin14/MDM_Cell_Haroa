@@ -69,18 +69,7 @@
             android:textColor="#FFFFFF"
             android:textSize="14sp"
             android:textStyle="bold" />
-        <Button
-            android:id="@+id/coverage"
-            android:layout_width="300dp"
-            android:layout_height="60dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="28dp"
-            android:onClick="coverage"
-            android:background="@drawable/background2"
-            android:text="View MDM Daily Coverage"
-            android:textColor="#FFFFFF"
-            android:textSize="14sp"
-            android:textStyle="bold" />
+
         <Button
             android:id="@+id/feedback"
             android:layout_width="300dp"

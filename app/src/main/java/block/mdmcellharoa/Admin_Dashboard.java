@@ -31,10 +31,7 @@ public class Admin_Dashboard extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void coverage(View view) {
-        Intent intent = new Intent(Admin_Dashboard.this, Report_Coverage.class);
-        startActivity(intent);
-    }
+
 
     public void savexl(View view) {
         Intent intent = new Intent(Admin_Dashboard.this, web.class);

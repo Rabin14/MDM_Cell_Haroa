@@ -94,7 +94,7 @@ public class Teacher_Details extends AppCompatActivity implements View.OnClickLi
             return;
         }
 
-        final ProgressDialog loading = ProgressDialog.show(this,"Sending CCH Details","Please wait");
+        final ProgressDialog loading = ProgressDialog.show(this,"Sending Teacher's Details","Please wait");
         final String school1 = school.getText().toString().trim();
         final String category1 = category.getText().toString().trim();
         final String gp1 = gp.getText().toString().trim();
