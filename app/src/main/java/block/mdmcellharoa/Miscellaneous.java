@@ -39,4 +39,9 @@ public class Miscellaneous extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), Teacher_Details.class);
         startActivity(intent);
     }
+
+    public void smsdata(View view) {
+        Intent intent = new Intent(getApplicationContext(), SMS_Data.class);
+        startActivity(intent);
+    }
 }
