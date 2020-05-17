@@ -3,6 +3,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
 import android.app.DownloadManager;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -128,6 +129,7 @@ public class web extends AppCompatActivity {
             progressBar.setVisibility(View.GONE);
             String javaScript ="javascript:(function() { var a= document.getElementsByTagName('header');a[0].hidden='true';a=document.getElementsByClassName('page_body');a[0].style.padding='0px';})()";
             wv.loadUrl(javaScript);
+            startActivity(new Intent(DownloadManager.ACTION_VIEW_DOWNLOADS));
         }
 
     }

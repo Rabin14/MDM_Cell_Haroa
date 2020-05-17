@@ -767,7 +767,7 @@
                                 android:textAlignment="center"
                                 android:textColor="#030304"
                                 android:textColorHint="#7A7474"
-                                android:textSize="17sp"
+                                android:textSize="15sp"
                                 android:textStyle="bold" />
 
 
