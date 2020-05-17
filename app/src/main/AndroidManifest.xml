@@ -17,7 +17,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".WebView"></activity>
         <activity android:name=".SMS_Data" />
         <activity android:name=".Teacher_Details" />
         <activity android:name=".CCH_Details" />
