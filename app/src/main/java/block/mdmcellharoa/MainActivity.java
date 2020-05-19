@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
             finish();
 
         } else if (item.getItemId() == R.id.privacy) {
-            Intent intent = new Intent(MainActivity.this, web.class);
+            Intent intent = new Intent(MainActivity.this, Web2.class);
             intent.putExtra("url", "https://mdm-cell-haroa.web.app/");
             startActivity(intent);
 

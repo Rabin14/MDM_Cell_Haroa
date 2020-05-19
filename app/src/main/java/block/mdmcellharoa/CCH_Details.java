@@ -39,7 +39,7 @@ public class CCH_Details extends AppCompatActivity implements View.OnClickListen
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
-    EditText cch_name,mobile,caste,account,bank_name,branch_name,ifsc;
+    EditText shg_name,cch_name,mobile,caste,account,bank_name,branch_name,ifsc;
     Button buttonAddItem;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +53,7 @@ public class CCH_Details extends AppCompatActivity implements View.OnClickListen
         gp = (TextView) findViewById(R.id.gp);
         name = (TextView) findViewById(R.id.name);
 
-
+        shg_name = (EditText)findViewById(R.id.shg_name);
         cch_name = (EditText)findViewById(R.id.cch_name);
         mobile = (EditText)findViewById(R.id.mobile);
         caste = (EditText)findViewById(R.id.caste);
@@ -93,7 +93,7 @@ public class CCH_Details extends AppCompatActivity implements View.OnClickListen
     //This is the part where data is transafeered from Your Android phone to Sheet by using HTTP Rest API calls
 
     private void   addItemToSheet() {
-        if(cch_name.getText().toString().isEmpty()||mobile.getText().toString().isEmpty()||caste.getText().toString().isEmpty()||account.getText().toString().isEmpty()||bank_name.getText().toString().isEmpty()||branch_name.getText().toString().isEmpty()||ifsc.getText().toString().isEmpty()) {
+        if(shg_name.getText().toString().isEmpty()||cch_name.getText().toString().isEmpty()||mobile.getText().toString().isEmpty()||caste.getText().toString().isEmpty()||account.getText().toString().isEmpty()||bank_name.getText().toString().isEmpty()||branch_name.getText().toString().isEmpty()||ifsc.getText().toString().isEmpty()) {
             Toast.makeText(CCH_Details.this, "Fill the required Details", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -103,7 +103,7 @@ public class CCH_Details extends AppCompatActivity implements View.OnClickListen
         final String category1 = category.getText().toString().trim();
         final String gp1 = gp.getText().toString().trim();
         final String name1 = name.getText().toString().trim();
-
+        final String shg_name1 = shg_name.getText().toString().trim();
         final String cch_name1 = cch_name.getText().toString().trim();
         final String mobile1 = mobile.getText().toString().trim();
         final String caste1 = caste.getText().toString().trim();
@@ -148,7 +148,7 @@ public class CCH_Details extends AppCompatActivity implements View.OnClickListen
                 parmas.put("category",category1);
                 parmas.put("gp",gp1);
                 parmas.put("name",name1);
-
+                parmas.put("shg_name",shg_name1);
                 parmas.put("cch_name",cch_name1);
                 parmas.put("mobile",mobile1);
                 parmas.put("caste",caste1);

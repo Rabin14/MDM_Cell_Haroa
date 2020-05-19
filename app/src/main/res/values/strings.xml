@@ -65,7 +65,7 @@
         <item> CHOUHATA ADARSHA VIDYAPITH(19111301302)</item>
 
 
-        <item>  CHOWDHUCHAK SANTIMAY SIKSHA NIKETAN (H.S)(19111304802)</item>
+        <item>  CHOWDHURICHAK SANTIMAY SIKSHA NIKETAN (H.S)(19111304802)</item>
 
 
         <item> CHOWDHURICHAK F P SCHOOL(19111304604)</item>
@@ -500,7 +500,8 @@
         <item></item>
         <item>Upper Primary </item>
         <item></item>
-
+        <item>Primary With Upper Primary </item>
+        <item></item>
     </string-array>
 
     <string-array name="gpname">
