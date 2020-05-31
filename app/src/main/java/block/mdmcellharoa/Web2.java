@@ -18,7 +18,7 @@ public class Web2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_web);
+        setContentView(R.layout.activity_web2);
 
         // btn = (Button) findViewById(R.id.button);
         // txt = (TextView) findViewById(R.id.editText);
