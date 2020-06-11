@@ -289,6 +289,7 @@ public class Distribution extends AppCompatActivity implements View.OnClickListe
             }else {
                 addItemToSheet();
                 aladyreenter();
+
             }
 
 
