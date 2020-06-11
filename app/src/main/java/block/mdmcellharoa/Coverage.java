@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -46,7 +47,7 @@ import java.util.Date;
 import java.util.Locale;
 
 public class Coverage extends AppCompatActivity implements View.OnClickListener {
-    TextView school,category,gp,name,dateText,pp1,pp2,pp,pp3,pp4,pp6,pp7,pp8;
+    TextView school,category,gp,name,dateText,dateText2,pp1,pp2,pp,pp3,pp4,pp6,pp7,pp8;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
@@ -83,7 +84,7 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
 
         class_pp_total.requestFocus();
 
-
+        dateText2  = (TextView) findViewById(R.id.dateText2);
         dateText  = (TextView) findViewById(R.id.dateText);
         school    = (TextView) findViewById(R.id.school);
         category = (TextView) findViewById(R.id.category);
@@ -113,6 +114,12 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
         dateText.setText(date_n);
         getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+
+
+        // Get the value of shared preference back
+        SharedPreferences getShared = getSharedPreferences("demo3", MODE_PRIVATE);
+        String value = getShared.getString("str3","Enter coverage");
+        dateText2.setText(value);
 
 
         fAuth = FirebaseAuth.getInstance();
@@ -281,9 +288,15 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
     @Override
     public void onClick(View v) {
         if(v==buttonAddItem){
-            addItemToSheet();
+            final String dateTextn = dateText.getText().toString().trim();
+            final String dateTextnn = dateText2.getText().toString().trim();
 
-            //Define what to do when button is clicked
+            if (dateTextn.matches(dateTextnn)){
+                Toast.makeText(Coverage.this, " Coverage already added Today ! ", Toast.LENGTH_SHORT).show();
+            }else {
+                addItemToSheet();
+                aladyreenter();
+            }
         }
 
     }
@@ -331,6 +344,19 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
             pp4.setVisibility(View.INVISIBLE);
             mViewGroup1.setVisibility(View.GONE);
         }
+
+
+
+    }
+    private void aladyreenter() {
+        String msg2 = dateText.getText().toString();
+
+        SharedPreferences shrd = getSharedPreferences("demo3", MODE_PRIVATE);
+        SharedPreferences.Editor editor = shrd.edit();
+
+        editor.putString("str3", msg2);
+
+        editor.apply();
 
 
 

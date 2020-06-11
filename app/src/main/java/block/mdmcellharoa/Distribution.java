@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -38,7 +39,7 @@ import java.util.Map;
 import android.os.Bundle;
 
 public class Distribution extends AppCompatActivity implements View.OnClickListener{
-    TextView school,category,gp,name,dateText,pp1,pp2,pp,pp3,pp4,pp6,pp7,pp8;
+    TextView school,category,gp,name,dateText,dateText2,pp1,pp2,pp,pp3,pp4,pp6,pp7,pp8;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
@@ -76,7 +77,7 @@ public class Distribution extends AppCompatActivity implements View.OnClickListe
 
         class_pp_total.requestFocus();
 
-
+        dateText2  = (TextView) findViewById(R.id.dateText2);
         dateText  = (TextView) findViewById(R.id.dateText);
         school    = (TextView) findViewById(R.id.school);
         category = (TextView) findViewById(R.id.category);
@@ -107,6 +108,12 @@ public class Distribution extends AppCompatActivity implements View.OnClickListe
         getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
+
+
+        // Get the value of shared preference back
+        SharedPreferences getShared = getSharedPreferences("demo4", MODE_PRIVATE);
+        String value = getShared.getString("str4","Enter coverage");
+        dateText2.setText(value);
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
@@ -274,7 +281,20 @@ public class Distribution extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if(v==buttonAddItem){
-            addItemToSheet();
+            final String dateTextn = dateText.getText().toString().trim();
+            final String dateTextnn = dateText2.getText().toString().trim();
+
+            if (dateTextn.matches(dateTextnn)){
+                Toast.makeText(Distribution.this, " Distribution already added Today ! ", Toast.LENGTH_SHORT).show();
+            }else {
+                addItemToSheet();
+                aladyreenter();
+            }
+
+
+
+
+
 
             //Define what to do when button is clicked
         }
@@ -324,6 +344,19 @@ public class Distribution extends AppCompatActivity implements View.OnClickListe
             pp4.setVisibility(View.INVISIBLE);
             mViewGroup1.setVisibility(View.GONE);
         }
+
+
+
+    }
+    private void aladyreenter() {
+        String msg2 = dateText.getText().toString();
+
+        SharedPreferences shrd = getSharedPreferences("demo4", MODE_PRIVATE);
+        SharedPreferences.Editor editor = shrd.edit();
+
+        editor.putString("str4", msg2);
+
+        editor.apply();
 
 
 

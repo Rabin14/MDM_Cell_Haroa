@@ -118,7 +118,7 @@ public class PhoneRegister extends AppCompatActivity {
                     }
 
                 }else {
-                    phone.setError("Valid Phone Required");
+                    phone.setError("Enter Correct Mobile Number");
                 }
             }
         });
