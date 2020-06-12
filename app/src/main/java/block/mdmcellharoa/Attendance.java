@@ -144,12 +144,12 @@ public class Attendance extends AppCompatActivity implements View.OnClickListene
 
                         loading.dismiss();
                         Toast.makeText(Attendance.this,response,Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(getApplicationContext(),ChartAttendance.class);
+                        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
 
                         startActivity(intent);
                         finish();
 
-                    } 
+                    }
                 },
                 new Response.ErrorListener() {
                     @Override
