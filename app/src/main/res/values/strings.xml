@@ -526,4 +526,6 @@
     </string-array>
 
 
+    <string name="election_results">Staff Attendance</string>
+    <string name="pie_chart">Pie Chart</string>
 </resources>

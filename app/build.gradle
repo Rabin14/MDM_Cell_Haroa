@@ -38,6 +38,10 @@ dependencies {
 
     implementation 'com.airbnb.android:lottie:3.4.0'
     implementation 'com.google.firebase:firebase-inappmessaging-display:19.0.7'
-    implementation 'com.google.firebase:firebase-analytics:17.4.2'
+    implementation 'com.google.firebase:firebase-analytics:17.4.3'
+
+    implementation 'com.github.AnyChart:AnyChart-Android:1.1.2'
+
+
 
 }
