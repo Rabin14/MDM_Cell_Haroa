@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Piechart_Coverage"
+
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/profileName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+        android:text="MDM Coverage"
+        android:textAlignment="center"
+        android:textColor="#6C0303"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+    <lecho.lib.hellocharts.view.PieChartView
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <TextView
+        android:id="@+id/demototal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+
+        android:textColor="#FFFF00"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+    <TextView
+        android:id="@+id/demodistri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+
+        android:textColor="#FFFF00"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+</LinearLayout>
