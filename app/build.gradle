@@ -41,7 +41,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-inappmessaging-display:19.0.7'
     implementation 'com.google.firebase:firebase-analytics:17.4.3'
 
-
+    implementation 'com.github.lecho:hellocharts-library:1.5.8@aar'
 
 
 

@@ -144,7 +144,7 @@ public class Attendance extends AppCompatActivity implements View.OnClickListene
 
                         loading.dismiss();
                         Toast.makeText(Attendance.this,response,Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                        Intent intent = new Intent(getApplicationContext(),Piechart_Attendance.class);
 
                         startActivity(intent);
                         finish();
@@ -206,6 +206,9 @@ public class Attendance extends AppCompatActivity implements View.OnClickListene
 
             if (dateTextn.matches(dateTextnn)){
                 Toast.makeText(Attendance.this, " Attendance already added Today ! ", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(),Piechart_Attendance.class);
+                startActivity(intent);
+                finish();
             }else {
                 addItemToSheet();
                 aladyreenter();
