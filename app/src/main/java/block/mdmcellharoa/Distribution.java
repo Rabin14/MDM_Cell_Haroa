@@ -39,7 +39,7 @@ import java.util.Map;
 import android.os.Bundle;
 
 public class Distribution extends AppCompatActivity implements View.OnClickListener{
-    TextView school,category,gp,name,dateText,dateText2,pp1,pp2,pp,pp3,pp4,pp6,pp7,pp8;
+    TextView school,category,gp,demototal,demodistri,name,dateText,dateText2,pp1,pp2,pp,pp3,pp4,pp6,pp7,pp8;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
@@ -76,7 +76,8 @@ public class Distribution extends AppCompatActivity implements View.OnClickListe
         class_eight_total  = findViewById(R.id.class_eight_total);
 
         class_pp_total.requestFocus();
-
+        demototal  = (TextView) findViewById(R.id.demototal);
+        demodistri  = (TextView) findViewById(R.id.demodistri);
         dateText2  = (TextView) findViewById(R.id.dateText2);
         dateText  = (TextView) findViewById(R.id.dateText);
         school    = (TextView) findViewById(R.id.school);
@@ -112,8 +113,15 @@ public class Distribution extends AppCompatActivity implements View.OnClickListe
 
         // Get the value of shared preference back
         SharedPreferences getShared = getSharedPreferences("demo4", MODE_PRIVATE);
-        String value = getShared.getString("str4","Enter coverage");
+        String value = getShared.getString("str2","Enter coverage");
+
+        String value3 = getShared.getString("str3","0");
+        String value4 = getShared.getString("str4","0");
         dateText2.setText(value);
+        demototal.setText(value3);
+        demodistri.setText(value4);
+
+
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
@@ -179,6 +187,89 @@ public class Distribution extends AppCompatActivity implements View.OnClickListe
 
         final String dateText1 = dateText.getText().toString().trim();
 
+        //add sum function
+        if (class_pp_total.getText().toString().length() == 0) {
+            class_pp_total.setText("0");
+        }
+        if (class_one_total.getText().toString().length() == 0) {
+            class_one_total.setText("0");
+        }
+        if (class_two_total.getText().toString().length() == 0) {
+            class_two_total.setText("0");
+        }
+        if (class_three_total.getText().toString().length() == 0) {
+            class_three_total.setText("0");
+        }
+
+        if (class_four_total.getText().toString().length() == 0) {
+            class_four_total.setText("0");
+        }
+        if (class_five_total.getText().toString().length() == 0) {
+            class_five_total.setText("0");
+        }
+        if (class_six_total.getText().toString().length() == 0) {
+            class_six_total.setText("0");
+        }
+        if (class_seven_total.getText().toString().length() == 0) {
+            class_seven_total.setText("0");
+        }
+        if (class_eight_total.getText().toString().length() == 0) {
+            class_eight_total.setText("0");
+        }
+        int num1 = Integer.parseInt(class_pp_total.getText().toString());
+        int num2 = Integer.parseInt(class_one_total.getText().toString());
+        int num3 = Integer.parseInt(class_two_total.getText().toString());
+        int num4 = Integer.parseInt(class_three_total.getText().toString());
+        int num5 = Integer.parseInt(class_four_total.getText().toString());
+        int num6 = Integer.parseInt(class_five_total.getText().toString());
+        int num7 = Integer.parseInt(class_six_total.getText().toString());
+        int num8 = Integer.parseInt(class_seven_total.getText().toString());
+        int num9 = Integer.parseInt(class_eight_total.getText().toString());
+        int sum = num1 + num2+num3+num4+num5+num6+num7+num8+num9;
+        demototal.setText(String.valueOf(sum));
+
+
+        if (class_pp.getText().toString().length() == 0) {
+            class_pp.setText("0");
+        }
+        if (class_one.getText().toString().length() == 0) {
+            class_one.setText("0");
+        }
+        if (class_two.getText().toString().length() == 0) {
+            class_two.setText("0");
+        }
+        if (class_three.getText().toString().length() == 0) {
+            class_three.setText("0");
+        }
+
+        if (class_four.getText().toString().length() == 0) {
+            class_four.setText("0");
+        }
+        if (class_five.getText().toString().length() == 0) {
+            class_five.setText("0");
+        }
+        if (class_six.getText().toString().length() == 0) {
+            class_six.setText("0");
+        }
+        if (class_seven.getText().toString().length() == 0) {
+            class_seven.setText("0");
+        }
+        if (class_eight.getText().toString().length() == 0) {
+            class_eight.setText("0");
+        }
+        int num100 = Integer.parseInt(class_pp.getText().toString());
+        int num200 = Integer.parseInt(class_one.getText().toString());
+        int num300 = Integer.parseInt(class_two.getText().toString());
+        int num400 = Integer.parseInt(class_three.getText().toString());
+        int num500 = Integer.parseInt(class_four.getText().toString());
+        int num600 = Integer.parseInt(class_five.getText().toString());
+        int num700 = Integer.parseInt(class_six.getText().toString());
+        int num800 = Integer.parseInt(class_seven.getText().toString());
+        int num900 = Integer.parseInt(class_eight.getText().toString());
+        int sum2 = num100+ num200+num300+num400+num500+num600+num700+num800+num900;
+        demodistri.setText(String.valueOf(sum2));
+
+
 
 
 
@@ -192,7 +283,7 @@ public class Distribution extends AppCompatActivity implements View.OnClickListe
 
                         loading.dismiss();
                         Toast.makeText(Distribution.this,response,Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                        Intent intent = new Intent(getApplicationContext(),Piechart_Distribution.class);
 
                         startActivity(intent);
                         finish();
@@ -264,20 +355,6 @@ public class Distribution extends AppCompatActivity implements View.OnClickListe
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     @Override
     public void onClick(View v) {
         if(v==buttonAddItem){
@@ -285,11 +362,13 @@ public class Distribution extends AppCompatActivity implements View.OnClickListe
             final String dateTextnn = dateText2.getText().toString().trim();
 
             if (dateTextn.matches(dateTextnn)){
-                Toast.makeText(Distribution.this, " Distribution already added Today ! ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Distribution.this, " Distribution already added For Today ! ", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(),Piechart_Distribution.class);
+                startActivity(intent);
+                finish();
             }else {
                 addItemToSheet();
                 aladyreenter();
-
             }
 
 
@@ -351,14 +430,16 @@ public class Distribution extends AppCompatActivity implements View.OnClickListe
     }
     private void aladyreenter() {
         String msg2 = dateText.getText().toString();
-
+        String totalp = demototal.getText().toString();
+        String distrip = demodistri.getText().toString();
         SharedPreferences shrd = getSharedPreferences("demo4", MODE_PRIVATE);
         SharedPreferences.Editor editor = shrd.edit();
 
-        editor.putString("str4", msg2);
+        editor.putString("str2", msg2);
+        editor.putString("str3", totalp);
+        editor.putString("str4", distrip);
 
         editor.apply();
-
 
 
     }

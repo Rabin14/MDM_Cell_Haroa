@@ -45,7 +45,7 @@ public class Piechart_Attendance extends AppCompatActivity {
 
         PieChartData pieChartData = new PieChartData(pieData);
         pieChartData.setHasLabels(true).setValueLabelTextSize(14);
-        pieChartData.setHasCenterCircle(true).setCenterText1("Today's Attendance").setCenterText1FontSize(20).setCenterText1Color(Color.parseColor("#0097A7"));
+        pieChartData.setHasCenterCircle(true).setCenterText1("Today's Attendance").setCenterText1FontSize(20).setCenterText1Color(Color.parseColor("#62ed2f"));
         pieChartView.setPieChartData(pieChartData);
     }
 }

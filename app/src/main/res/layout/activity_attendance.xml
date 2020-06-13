@@ -216,7 +216,7 @@
             android:layout_marginBottom="15dp"
             android:text="Date"
             android:textColor="#FFFF00"
-            android:textSize="22sp"
+            android:textSize="1sp"
             android:textStyle="bold"
             android:visibility="invisible" />
         <TextView
@@ -227,7 +227,7 @@
             android:layout_marginBottom="15dp"
 
             android:textColor="#FFFF00"
-            android:textSize="22sp"
+            android:textSize="1sp"
             android:textStyle="bold"
             android:visibility="invisible" />
         <TextView
@@ -238,7 +238,7 @@
             android:layout_marginBottom="15dp"
 
             android:textColor="#FFFF00"
-            android:textSize="22sp"
+            android:textSize="1sp"
             android:textStyle="bold"
             android:visibility="invisible" />
     </LinearLayout>

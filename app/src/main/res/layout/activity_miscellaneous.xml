@@ -402,5 +402,33 @@
             android:textSize="13sp"
             android:textStyle="bold" />
     </RelativeLayout>
+        <TextView
+            android:id="@+id/dateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:inputType="date"
+            android:text="TodayDate"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="1sp"
+
+            android:textStyle="bold"
+            android:visibility="invisible" />
+        <TextView
+            android:id="@+id/dateText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:inputType="date"
+            android:text="TodayDate"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="1sp"
+
+            android:textStyle="bold"
+            android:visibility="invisible" />
     </LinearLayout>
 </ScrollView>

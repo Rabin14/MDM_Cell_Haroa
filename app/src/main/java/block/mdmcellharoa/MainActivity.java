@@ -5,12 +5,14 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
@@ -19,8 +21,12 @@ import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
-    TextView fullName, school;
+    TextView fullName, school,dateText,dateText2,dateText3;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
@@ -35,6 +41,27 @@ public class MainActivity extends AppCompatActivity {
 
         school = findViewById(R.id.schoolname);
         fullName = findViewById(R.id.profileName);
+        dateText3  = (TextView) findViewById(R.id.dateText3);
+        dateText2  = (TextView) findViewById(R.id.dateText2);
+        dateText  = (TextView) findViewById(R.id.dateText);
+
+        String date_n = new SimpleDateFormat("MMM dd, yyyy", Locale.getDefault()).format(new Date());
+        //set it as current date.
+        dateText.setText(date_n);
+
+        // Get the value of shared preference back
+        SharedPreferences getShared = getSharedPreferences("demo2", MODE_PRIVATE);
+        String value = getShared.getString("str2","attendance");
+        dateText2.setText(value);
+
+        // Get the value of shared preference back
+        SharedPreferences getShared2 = getSharedPreferences("demo3", MODE_PRIVATE);
+        String value2 = getShared2.getString("str2","coverage");
+        dateText3.setText(value2);
+
+
+
+
 
 
         fAuth = FirebaseAuth.getInstance();
@@ -109,8 +136,22 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void attendance(View view) {
-        Intent intent = new Intent(getApplicationContext(), Attendance.class);
-        startActivity(intent);
+        final String dateTextn = dateText.getText().toString().trim();
+        final String dateTextnn = dateText2.getText().toString().trim();
+
+        if (dateTextn.matches(dateTextnn)){
+            Toast.makeText(MainActivity.this, " Attendance already added Today ! ", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(),Piechart_Attendance.class);
+            startActivity(intent);
+
+        }else {
+            Intent intent = new Intent(getApplicationContext(), Attendance.class);
+            startActivity(intent);
+        }
+
+
+
+
 
     }
 
@@ -123,8 +164,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void coverage(View view) {
-        Intent intent = new Intent(getApplicationContext(), Coverage.class);
-        startActivity(intent);
+        final String dateTextn1 = dateText.getText().toString().trim();
+        final String dateTextnn1 = dateText3.getText().toString().trim();
+
+        if (dateTextn1.matches(dateTextnn1)){
+            Toast.makeText(MainActivity.this, " Coverage already added Today ! ", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(),Piechart_Coverage.class);
+
+            startActivity(intent);
+
+        }else {
+            Intent intent = new Intent(getApplicationContext(), Coverage.class);
+            startActivity(intent);
+
+        }
+
+
+
+
 
 
     }
