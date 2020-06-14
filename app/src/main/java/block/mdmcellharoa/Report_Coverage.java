@@ -38,7 +38,6 @@ public class Report_Coverage extends AppCompatActivity {
     SimpleAdapter adapter;
     ProgressDialog loading;
     EditText et_search;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

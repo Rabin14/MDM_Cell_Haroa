@@ -185,4 +185,11 @@ public class Teacher_Details extends AppCompatActivity implements View.OnClickLi
         }
 
     }
+
+    public void view(View view) {
+
+        Intent intent = new Intent(getApplicationContext(),List_Item_teacher.class);
+        startActivity(intent);
+        finish();
+    }
 }
