@@ -19,6 +19,7 @@ import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import java.util.Objects;
 
 
 public class web extends AppCompatActivity {
@@ -47,7 +48,7 @@ public class web extends AppCompatActivity {
         wv.getSettings().setBuiltInZoomControls(true);
         wv.getSettings().setDisplayZoomControls(false);
 
-        wv.loadUrl(getIntent().getExtras().getString("url"));
+        wv.loadUrl(Objects.requireNonNull(getIntent().getExtras()).getString("url"));
 
 //Runtime External storage permission for saving download files
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
@@ -70,7 +71,7 @@ public class web extends AppCompatActivity {
                         Uri.parse(url));
                 request.setMimeType(mimeType);
                 String cookies = CookieManager.getInstance().getCookie(url);
-                request.addRequestHeader("cookie", cookies);
+               request.addRequestHeader("cookie", cookies);
                 request.addRequestHeader("User-Agent", userAgent);
                 request.setDescription("Downloading File...");
                 request.setTitle(URLUtil.guessFileName(url, contentDisposition, mimeType));
@@ -108,27 +109,33 @@ public class web extends AppCompatActivity {
 
         @Override
         public void onPageStarted(WebView view, String url, Bitmap favicon) {
-
+            progressBar.setVisibility(View.VISIBLE);
             super.onPageStarted(view, url, favicon);
+            progressBar.setVisibility(View.GONE);
         }
 
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
 
-            progressBar.setVisibility(View.VISIBLE);
-            view.loadUrl(url);
-            return true;
 
+            view.loadUrl(url);
+
+
+            Intent intent = new Intent(getApplicationContext(), Sample_Format.class);
+            startActivity(intent);
+            return true;
         }
 
         @Override
         public void onPageFinished(WebView view, String url) {
 
+
             super.onPageFinished(view, url);
 
-            progressBar.setVisibility(View.GONE);
+
             String javaScript ="javascript:(function() { var a= document.getElementsByTagName('header');a[0].hidden='true';a=document.getElementsByClassName('page_body');a[0].style.padding='0px';})()";
             wv.loadUrl(javaScript);
+
             startActivity(new Intent(DownloadManager.ACTION_VIEW_DOWNLOADS));
         }
 

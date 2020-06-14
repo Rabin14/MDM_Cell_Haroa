@@ -194,4 +194,11 @@ public class CCH_Details extends AppCompatActivity implements View.OnClickListen
         }
 
     }
+
+    public void view(View view) {
+
+        Intent intent = new Intent(getApplicationContext(),List_item_CCH.class);
+        startActivity(intent);
+        finish();
+    }
 }

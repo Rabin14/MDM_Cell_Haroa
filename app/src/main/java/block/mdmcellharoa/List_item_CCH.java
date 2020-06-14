@@ -1,5 +1,7 @@
 package block.mdmcellharoa;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -34,8 +36,9 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class List_Item_teacher extends AppCompatActivity {
+import android.os.Bundle;
 
+public class List_item_CCH extends AppCompatActivity {
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
@@ -46,7 +49,8 @@ public class List_Item_teacher extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list__item_teacher);
+        setContentView(R.layout.activity_list_item__c_c_h);
+
         listView = (ListView) findViewById(R.id.lv_items);
         et_search = (EditText) findViewById(R.id.et_search);
 
@@ -75,7 +79,7 @@ public class List_Item_teacher extends AppCompatActivity {
 
         loading =  ProgressDialog.show(this,"Loading","please wait",false,true);
 
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, "https://script.google.com/macros/s/AKfycbxtPfv7bTfZ8D_2u17ck9rixms7DrEzkmhQd8e1eztV8H7uZNQ/exec?action=getItems",
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, "https://script.google.com/macros/s/AKfycbyCImaULqiirPK2AJBD7iSjSMgGdXKJ_cTz7cz8yv-fWpoEr3w/exec?action=getItems",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -119,19 +123,22 @@ public class List_Item_teacher extends AppCompatActivity {
 
                 JSONObject jo = jarray.getJSONObject(i);
                 if (jo.getString("school").equals(schooln)){
-                    String school100 = jo.getString("school");
-                    String school1 = jo.getString("teacher_name");
-                    String class_pp1 = jo.getString("designation");
-                    String class_v1 = jo.getString("mobile");
-                    String class_vi1 = jo.getString("email");
-
+                    String school100n = jo.getString("school");
+                    String school100 = jo.getString("shg_name");
+                    String school1 = jo.getString("cch_name");
+                    String class_pp1 = jo.getString("mobile");
+                    String class_v1 = jo.getString("caste");
+                    String class_vi1 = jo.getString("account");
+                    String class_vi11 = jo.getString("ifsc");
 
                     HashMap<String, String> item = new HashMap<>();
-                    item.put("school", school100);
-                    item.put("teacher_name", school1);
-                    item.put("designation", class_pp1);
-                    item.put("mobile",class_v1);
-                    item.put("email",class_vi1);
+                    item.put("school", school100n);
+                    item.put("shg_name", school100);
+                    item.put("cch_name", school1);
+                    item.put("mobile", class_pp1);
+                    item.put("caste",class_v1);
+                    item.put("account",class_vi1);
+                    item.put("ifsc",class_vi11);
                     list.add(item);
                 }
 
@@ -143,8 +150,8 @@ public class List_Item_teacher extends AppCompatActivity {
         }
 
 
-        adapter = new SimpleAdapter(this,list,R.layout.list_item_teachers,
-                new String[]{"school","teacher_name","designation","mobile","email"},new int[]{R.id.school_name,R.id.teacher_name,R.id.designation,R.id.mobile_no,R.id.email_id});
+        adapter = new SimpleAdapter(this,list,R.layout.list_item_cchdetails,
+                new String[]{"school","shg_name","cch_name","mobile","caste","account","ifsc"},new int[]{R.id.school,R.id.shg_name,R.id.cch_name,R.id.mobile_number,R.id.caste,R.id.ac_number,R.id.ifsc_code});
 
 
         listView.setAdapter(adapter);
@@ -156,7 +163,8 @@ public class List_Item_teacher extends AppCompatActivity {
     }
 
 
+
+
+
+
 }
-
-
-
