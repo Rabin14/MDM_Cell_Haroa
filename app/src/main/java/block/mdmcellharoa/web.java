@@ -83,6 +83,7 @@ public class web extends AppCompatActivity {
                 DownloadManager dm = (DownloadManager) getSystemService(DOWNLOAD_SERVICE);
                 dm.enqueue(request);
                 Toast.makeText(getApplicationContext(), "Downloading File", Toast.LENGTH_LONG).show();
+
             }});
 
     }
@@ -111,7 +112,7 @@ public class web extends AppCompatActivity {
         public void onPageStarted(WebView view, String url, Bitmap favicon) {
             progressBar.setVisibility(View.VISIBLE);
             super.onPageStarted(view, url, favicon);
-            progressBar.setVisibility(View.GONE);
+
         }
 
         @Override
@@ -131,7 +132,7 @@ public class web extends AppCompatActivity {
 
 
             super.onPageFinished(view, url);
-
+            progressBar.setVisibility(View.GONE);
 
             String javaScript ="javascript:(function() { var a= document.getElementsByTagName('header');a[0].hidden='true';a=document.getElementsByClassName('page_body');a[0].style.padding='0px';})()";
             wv.loadUrl(javaScript);
