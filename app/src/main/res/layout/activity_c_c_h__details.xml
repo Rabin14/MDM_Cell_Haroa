@@ -13,13 +13,13 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="5dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="5dp"
 
         android:fontFamily="@font/rammetto_one"
         android:text="CCH Details As Per Roll Strength"
         android:textAlignment="center"
         android:textColor="#FFFF00"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <View

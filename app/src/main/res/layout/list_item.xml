@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#900BE4"
     android:orientation="vertical"
     android:focusableInTouchMode="true"
     tools:context=".ListItem">
@@ -13,6 +14,8 @@
         android:layout_height="40dp"
         android:drawableStart="@drawable/ic_search1"
         android:id="@+id/et_search"
+
+        android:textColorHint="#fff"
         android:hint="Search"
         />
 

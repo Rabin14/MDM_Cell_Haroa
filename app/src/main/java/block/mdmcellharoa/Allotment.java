@@ -41,7 +41,7 @@ public class Allotment extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_allotment);
-
+        getSupportActionBar().hide();
         listView = (ListView) findViewById(R.id.lv_items);
         et_search = (EditText) findViewById(R.id.et_search);
 

@@ -28,6 +28,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import static android.os.Environment.DIRECTORY_DOWNLOADS;
+import static androidx.core.content.ContextCompat.startActivity;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -91,6 +92,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder>  {
 
 
     }
+
+
 
 
     @Override
@@ -158,9 +161,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder>  {
 
 // Close progressdialog
             mProgressDialog.dismiss();
-            Toast.makeText(mainActivity.getApplicationContext(), "Download Completed", Toast.LENGTH_LONG).show();
+            Toast.makeText(mainActivity.getApplicationContext(), "File Downloaded Successfully!!", Toast.LENGTH_LONG).show();
+
 
         }
+
+
+
+
     }
 
 }

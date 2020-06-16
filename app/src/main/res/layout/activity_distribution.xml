@@ -12,8 +12,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
 
         android:clipToPadding="false"
         android:gravity="center"
@@ -22,13 +22,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="15dp"
+
+            android:layout_marginBottom="8dp"
             android:fontFamily="@font/rammetto_one"
-            android:text="Potato and Rice Distribution Report"
+            android:text="Potato and Rice Distribution"
             android:textAlignment="center"
             android:textColor="#FFFF00"
-            android:textSize="23sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
@@ -36,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="5dp"
             android:inputType="date"
             android:text="TodayDate"
             android:textAlignment="center"
