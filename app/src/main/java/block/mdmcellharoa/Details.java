@@ -27,7 +27,7 @@ import java.util.Map;
 
 public class Details extends AppCompatActivity {
     public static final String TAG = "TAG";
-    EditText firstName;
+    EditText firstName,dise;
     TextView phone;
     Spinner school;
     Spinner catagory;
@@ -46,6 +46,7 @@ public class Details extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
         firstName = findViewById(R.id.firstName);
+        dise = findViewById(R.id.dise);
         school = findViewById(R.id.spinner);
         catagory = findViewById(R.id.spinner2);
         gpname = findViewById(R.id.spinner3);
@@ -87,7 +88,7 @@ public class Details extends AppCompatActivity {
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(firstName.getText().toString().isEmpty()||school.getSelectedItem().toString().isEmpty() ||catagory.getSelectedItem().toString().isEmpty() ||gpname.getSelectedItem().toString().isEmpty() ||phone.getText().toString().isEmpty()){
+                if(firstName.getText().toString().isEmpty()||dise.getText().toString().isEmpty()||school.getSelectedItem().toString().isEmpty() ||catagory.getSelectedItem().toString().isEmpty() ||gpname.getSelectedItem().toString().isEmpty() ||phone.getText().toString().isEmpty()){
                     Toast.makeText(Details.this, "Fill the required Details", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -95,6 +96,7 @@ public class Details extends AppCompatActivity {
                 DocumentReference docRef = fStore.collection("users").document(userID);
                 Map<String,Object> user = new HashMap<>();
                 user.put("Name",firstName.getText().toString());
+                user.put("dise",dise.getText().toString());
                 user.put("School",school.getSelectedItem().toString());
                 user.put("Category",catagory.getSelectedItem().toString());
                 user.put("GPName",gpname.getSelectedItem().toString());

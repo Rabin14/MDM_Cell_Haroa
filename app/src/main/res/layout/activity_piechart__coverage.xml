@@ -46,4 +46,15 @@
         android:textSize="22sp"
         android:textStyle="bold"
         android:visibility="invisible" />
+    <TextView
+        android:id="@+id/school"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+
+        android:textColor="#FFFF00"
+        android:textSize="5sp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
 </LinearLayout>

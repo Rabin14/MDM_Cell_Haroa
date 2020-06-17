@@ -22,7 +22,7 @@ public class Piechart_Coverage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_piechart__coverage);
-
+        getSupportActionBar().hide();
 
         demototal  = (TextView) findViewById(R.id.demototal);
         demodistri  = (TextView) findViewById(R.id.demodistri);

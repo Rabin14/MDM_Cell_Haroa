@@ -23,7 +23,7 @@ public class Piechart_Attendance extends AppCompatActivity {
         demototal  = (TextView) findViewById(R.id.demototal);
         demodistri  = (TextView) findViewById(R.id.demodistri);
         pieChartView = findViewById(R.id.chart);
-
+        getSupportActionBar().hide();
         // Get the value of shared preference back
         SharedPreferences getShared = getSharedPreferences("demo2", MODE_PRIVATE);
 

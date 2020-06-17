@@ -1,5 +1,6 @@
 package block.mdmcellharoa;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +9,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -26,6 +28,8 @@ import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -52,6 +56,7 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
+    public static final String TAG = "TAG";
     EditText class_pp,class_one,class_two,class_three,class_four,class_five,class_six,class_seven,class_eight,class_pp_total,class_one_total,class_two_total,class_three_total,class_four_total,class_five_total,class_six_total,class_seven_total,class_eight_total;
     Button buttonAddItem;
     private View mViewGroup1,mViewGroup2;
@@ -373,6 +378,7 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
             }else {
                 addItemToSheet();
                 aladyreenter();
+                addfirebase();
             }
         }
 
@@ -439,6 +445,34 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
         editor.apply();
 
 
+
+    }
+    private void addfirebase() {
+
+
+        String userID2 = school.getText().toString();
+
+        DocumentReference docRef = fStore.collection("coverage").document(userID2);
+        Map<String,Object> user = new HashMap<>();
+        user.put("date",dateText.getText().toString());
+        user.put("total",demototal.getText().toString());
+        user.put("present",demodistri.getText().toString());
+
+
+        //add user to database
+        docRef.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                Log.d(TAG, "Data Send" );
+
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Log.d(TAG, "Data Not Send " + e.toString());
+
+            }
+        });
 
     }
 }

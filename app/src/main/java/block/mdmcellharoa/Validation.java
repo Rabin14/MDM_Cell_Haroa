@@ -82,8 +82,8 @@ public class Validation extends AppCompatActivity {
             finish();
         } else {
             //Toast.makeText(Register.this, "Profile Do not Exists.", Toast.LENGTH_SHORT).show();
-             Intent intent = new Intent ( Validation.this, Details.class );
-             startActivity(intent);
+            Intent intent = new Intent ( Validation.this, Details.class );
+            startActivity(intent);
 
             //startActivity(new Intent(getApplicationContext(), Details.class));
             finish();

@@ -214,31 +214,44 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="15dp"
             android:text="Date"
+            android:visibility="invisible"
             android:textColor="#FFFF00"
-            android:textSize="1sp"
+            android:textSize="2sp"
             android:textStyle="bold"
-            android:visibility="invisible" />
+
+           />
         <TextView
             android:id="@+id/demototal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="15dp"
-
+            android:visibility="invisible"
             android:textColor="#FFFF00"
-            android:textSize="1sp"
+            android:textSize="2sp"
             android:textStyle="bold"
-            android:visibility="invisible" />
+          />
         <TextView
             android:id="@+id/demodistri"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="15dp"
-
+            android:visibility="invisible"
             android:textColor="#FFFF00"
-            android:textSize="1sp"
+            android:textSize="2sp"
             android:textStyle="bold"
-            android:visibility="invisible" />
+           />
+        <TextView
+            android:id="@+id/dise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:visibility="invisible"
+            android:textColor="#FFFF00"
+            android:textSize="2sp"
+            android:textStyle="bold"
+            />
     </LinearLayout>
 </ScrollView>

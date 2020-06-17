@@ -352,6 +352,19 @@
             android:textStyle="bold"
             android:visibility="invisible" />
         <TextView
+            android:id="@+id/dise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="1sp"
+
+            android:textStyle="bold"
+            android:visibility="invisible" />
+        <TextView
             android:id="@+id/dateText2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -361,10 +374,10 @@
             android:text="TodayDate"
             android:textAlignment="center"
             android:textColor="#fff"
-            android:textSize="1sp"
-
+            android:textSize="2sp"
+            android:visibility="invisible"
             android:textStyle="bold"
-            android:visibility="invisible" />
+          />
         <TextView
             android:id="@+id/dateText3"
             android:layout_width="wrap_content"

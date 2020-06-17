@@ -46,48 +46,59 @@ import java.util.Objects;
 
 import android.os.Bundle;
 
-public class Attendance extends AppCompatActivity implements View.OnClickListener{
-    TextView school,category,gp,name,dateText,dateText2,demototal,demodistri;
+public class Attendance extends AppCompatActivity implements View.OnClickListener {
+    TextView school, category, gp, name, dateText, dateText2, demototal, demodistri, dise;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
-
-    EditText total,distribution;
+    public static final String TAG = "TAG";
+    EditText total, distribution;
     Button buttonAddItem;
+    private static final String KEY_DATE = "date";
+    private static final String KEY_TOTAL = "total";
+    private static final String KEY_PRESENT = "present";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_attendance);
 
-
-        school    = (TextView) findViewById(R.id.school);
+        dise = (TextView) findViewById(R.id.dise);
+        school = (TextView) findViewById(R.id.school);
         category = (TextView) findViewById(R.id.category);
         gp = (TextView) findViewById(R.id.gp);
         name = (TextView) findViewById(R.id.name);
-        total = (EditText)findViewById(R.id.total);
-        distribution  = (EditText) findViewById(R.id.distribution);
-        buttonAddItem = (Button)findViewById(R.id.btn_add_item);
+        total = (EditText) findViewById(R.id.total);
+        distribution = (EditText) findViewById(R.id.distribution);
+        buttonAddItem = (Button) findViewById(R.id.btn_add_item);
         buttonAddItem.setOnClickListener(this);
-        dateText  = (TextView) findViewById(R.id.dateText);
-        dateText2  = (TextView) findViewById(R.id.dateText2);
-        demototal  = (TextView) findViewById(R.id.demototal);
-        demodistri  = (TextView) findViewById(R.id.demodistri);
+        dateText = (TextView) findViewById(R.id.dateText);
+        dateText2 = (TextView) findViewById(R.id.dateText2);
+        demototal = (TextView) findViewById(R.id.demototal);
+        demodistri = (TextView) findViewById(R.id.demodistri);
 
         String date_n = new SimpleDateFormat("MMM dd, yyyy", Locale.getDefault()).format(new Date());
         //set it as current date.
         dateText.setText(date_n);
 
-        // Get the value of shared preference back
-        SharedPreferences getShared = getSharedPreferences("demo2", MODE_PRIVATE);
-        String value = getShared.getString("str2","Enter coverage");
-        String value3 = getShared.getString("str3","0");
-        String value4 = getShared.getString("str4","0");
-        dateText2.setText(value);
-        demototal.setText(value3);
-        demodistri.setText(value4);
+        // Get the value of dise from share prefer  back
+        SharedPreferences getShared = getSharedPreferences("disecode", MODE_PRIVATE);
+        String value = getShared.getString("dise", "Enter coverage");
+        dise.setText(value);
 
 
+//load firebase
+        loadNote();
+        /**
+         SharedPreferences getShared = getSharedPreferences("demo2", MODE_PRIVATE);
+         String value = getShared.getString("str2","Enter coverage");
+         String value3 = getShared.getString("str3","0");
+         String value4 = getShared.getString("str4","0");
+         dateText2.setText(value);
+         demototal.setText(value3);
+         demodistri.setText(value4);
+         */
 
 
         getWindow().setSoftInputMode(
@@ -116,13 +127,13 @@ public class Attendance extends AppCompatActivity implements View.OnClickListene
 
     //This is the part where data is transafeered from Your Android phone to Sheet by using HTTP Rest API calls
 
-    private void   addItemToSheet() {
-        if(total.getText().toString().isEmpty() ||distribution.getText().toString().isEmpty()) {
+    private void addItemToSheet() {
+        if (total.getText().toString().isEmpty() || distribution.getText().toString().isEmpty()) {
             Toast.makeText(Attendance.this, "Fill the required Details", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        final ProgressDialog loading = ProgressDialog.show(this,"Sending Attendance","Please wait");
+        final ProgressDialog loading = ProgressDialog.show(this, "Sending Attendance", "Please wait");
         final String school1 = school.getText().toString().trim();
         final String category1 = category.getText().toString().trim();
         final String gp1 = gp.getText().toString().trim();
@@ -133,20 +144,15 @@ public class Attendance extends AppCompatActivity implements View.OnClickListene
         final String dateText1 = dateText.getText().toString().trim();
 
 
-
-
-
-
         StringRequest stringRequest = new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbyzQ5jFuSNj5e9t3nz259uBe0zQ2c3yglz9ul6ZUU5bmEDBmHs/exec",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
 
                         loading.dismiss();
-                        Toast.makeText(Attendance.this,response,Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(getApplicationContext(),Piechart_Attendance.class);
-
-                        startActivity(intent);
+                        Toast.makeText(Attendance.this, response, Toast.LENGTH_LONG).show();
+                        Intent ii = new Intent(Attendance.this, Piechart_Attendance.class);
+                        startActivity(ii);
                         finish();
 
                     }
@@ -163,14 +169,14 @@ public class Attendance extends AppCompatActivity implements View.OnClickListene
                 Map<String, String> parmas = new HashMap<>();
 
                 //here we pass params
-                parmas.put("action","addItem");
-                parmas.put("school",school1);
-                parmas.put("category",category1);
-                parmas.put("gp",gp1);
-                parmas.put("name",name1);
-                parmas.put("total",total1);
-                parmas.put("distribution",distribution1);
-                parmas.put("dateText",dateText1);
+                parmas.put("action", "addItem");
+                parmas.put("school", school1);
+                parmas.put("category", category1);
+                parmas.put("gp", gp1);
+                parmas.put("name", name1);
+                parmas.put("total", total1);
+                parmas.put("distribution", distribution1);
+                parmas.put("dateText", dateText1);
 
 
                 return parmas;
@@ -190,33 +196,36 @@ public class Attendance extends AppCompatActivity implements View.OnClickListene
     }
 
 
-
-
-
-
-
-
-
     @Override
     public void onClick(View v) {
 
-        if(v==buttonAddItem){
+        if (v == buttonAddItem) {
             final String dateTextn = dateText.getText().toString().trim();
             final String dateTextnn = dateText2.getText().toString().trim();
 
-            if (dateTextn.matches(dateTextnn)){
+            if (dateTextn.matches(dateTextnn)) {
                 Toast.makeText(Attendance.this, " Attendance already added Today ! ", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(getApplicationContext(),Piechart_Attendance.class);
-                startActivity(intent);
+                //share preference
+                String msg2 = dateText.getText().toString();
+                String totalp = demototal.getText().toString();
+                String distrip = demodistri.getText().toString();
+                SharedPreferences shrd = getSharedPreferences("demo2", MODE_PRIVATE);
+                SharedPreferences.Editor editor = shrd.edit();
+                editor.putString("str2", msg2);
+                editor.putString("str3", totalp);
+                editor.putString("str4", distrip);
+                editor.apply();
+                //
+
+                Intent ii = new Intent(Attendance.this, Piechart_Attendance.class);
+                startActivity(ii);
                 finish();
-            }else {
+            } else {
                 addItemToSheet();
+
+                addfirebase();
                 aladyreenter();
             }
-
-
-
-
 
 
             //Define what to do when button is clicked
@@ -241,10 +250,70 @@ public class Attendance extends AppCompatActivity implements View.OnClickListene
         editor.apply();
 
 
+    }
+
+    private void addfirebase() {
+
+
+        String userID2 = dise.getText().toString();
+
+        DocumentReference docRef = fStore.collection("attendance").document(userID2);
+        Map<String, Object> user = new HashMap<>();
+        user.put("date", dateText.getText().toString());
+        user.put("total", total.getText().toString());
+        user.put("present", distribution.getText().toString());
+
+
+        //add user to database
+        docRef.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                Log.d(TAG, "Data Send");
+
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Log.d(TAG, "Data Not Send " + e.toString());
+
+            }
+        });
 
     }
 
+    private void loadNote() {
 
+        String userID2 = dise.getText().toString();
+
+
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        DocumentReference noteRef = db.collection("attendance").document(userID2);
+        noteRef.get()
+                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+                        if (documentSnapshot.exists()) {
+                            String date = documentSnapshot.getString(KEY_DATE);
+                            String total = documentSnapshot.getString(KEY_TOTAL);
+                            String present = documentSnapshot.getString(KEY_PRESENT);
+                            //Map<String, Object> note = documentSnapshot.getData();
+                            dateText2.setText(date);
+                            demototal.setText(total);
+                            demodistri.setText(present);
+
+                        } else {
+                            Toast.makeText(Attendance.this, "Document does not exist", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(Attendance.this, "Error!", Toast.LENGTH_SHORT).show();
+                        Log.d(TAG, e.toString());
+                    }
+                });
     }
+}
 
 
