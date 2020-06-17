@@ -52,11 +52,14 @@ import java.util.Date;
 import java.util.Locale;
 
 public class Coverage extends AppCompatActivity implements View.OnClickListener {
-    TextView school,category,gp,name,dateText,dateText2,pp1,pp2,pp,pp3,pp4,pp6,pp7,pp8,demototal,demodistri;
+    TextView school,category,gp,name,dateText,dateText2,pp1,pp2,pp,pp3,pp4,pp6,pp7,pp8,demototal,demodistri,dise;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
     public static final String TAG = "TAG";
+    private static final String KEY_DATE = "date";
+    private static final String KEY_TOTAL = "total";
+    private static final String KEY_PRESENT = "present";
     EditText class_pp,class_one,class_two,class_three,class_four,class_five,class_six,class_seven,class_eight,class_pp_total,class_one_total,class_two_total,class_three_total,class_four_total,class_five_total,class_six_total,class_seven_total,class_eight_total;
     Button buttonAddItem;
     private View mViewGroup1,mViewGroup2;
@@ -65,7 +68,7 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coverage);
-
+        dise = (TextView) findViewById(R.id.dise);
         class_pp  = findViewById(R.id.class_pp);
         class_one  = findViewById(R.id.class_one);
         class_two  = findViewById(R.id.class_two);
@@ -122,8 +125,16 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
         getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
+        // Get the value of dise from share prefer  back
+        SharedPreferences getShared = getSharedPreferences("disecode", MODE_PRIVATE);
+        String value = getShared.getString("dise", "Enter coverage");
+        dise.setText(value);
 
-        // Get the value of shared preference back
+
+//load firebase
+        loadNote();
+
+        /** Get the value of shared preference back
         SharedPreferences getShared = getSharedPreferences("demo3", MODE_PRIVATE);
         String value = getShared.getString("str2","Enter coverage");
 
@@ -132,7 +143,7 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
         dateText2.setText(value);
         demototal.setText(value3);
         demodistri.setText(value4);
-
+*/
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
@@ -371,14 +382,32 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
 
             if (dateTextn.matches(dateTextnn)){
                 Toast.makeText(Coverage.this, " Coverage already added Today ! ", Toast.LENGTH_SHORT).show();
+
+                //share preference
+                String msg2 = dateText.getText().toString();
+                String totalp = demototal.getText().toString();
+                String distrip = demodistri.getText().toString();
+                SharedPreferences shrd = getSharedPreferences("demo3", MODE_PRIVATE);
+                SharedPreferences.Editor editor = shrd.edit();
+
+                editor.putString("str2", msg2);
+                editor.putString("str3", totalp);
+                editor.putString("str4", distrip);
+
+                editor.apply();
+                //
+
+
+
                 Intent intent = new Intent(getApplicationContext(),Piechart_Coverage.class);
 
                 startActivity(intent);
                 finish();
             }else {
                 addItemToSheet();
-                aladyreenter();
+
                 addfirebase();
+                aladyreenter();
             }
         }
 
@@ -450,7 +479,7 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
     private void addfirebase() {
 
 
-        String userID2 = school.getText().toString();
+        String userID2 = dise.getText().toString();
 
         DocumentReference docRef = fStore.collection("coverage").document(userID2);
         Map<String,Object> user = new HashMap<>();
@@ -474,5 +503,38 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
             }
         });
 
+    }
+    private void loadNote() {
+
+        String userID2 = dise.getText().toString();
+
+
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        DocumentReference noteRef = db.collection("coverage").document(userID2);
+        noteRef.get()
+                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+                        if (documentSnapshot.exists()) {
+                            String date = documentSnapshot.getString(KEY_DATE);
+                            String total = documentSnapshot.getString(KEY_TOTAL);
+                            String present = documentSnapshot.getString(KEY_PRESENT);
+                            //Map<String, Object> note = documentSnapshot.getData();
+                            dateText2.setText(date);
+                            demototal.setText(total);
+                            demodistri.setText(present);
+
+                        } else {
+                            Toast.makeText(Coverage.this, "Enter Your Coverage", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(Coverage.this, "Error!", Toast.LENGTH_SHORT).show();
+                        Log.d(TAG, e.toString());
+                    }
+                });
     }
 }

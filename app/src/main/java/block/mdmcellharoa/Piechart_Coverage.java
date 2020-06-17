@@ -27,7 +27,7 @@ public class Piechart_Coverage extends AppCompatActivity {
         demototal  = (TextView) findViewById(R.id.demototal);
         demodistri  = (TextView) findViewById(R.id.demodistri);
         pieChartView = findViewById(R.id.chart);
-
+        getSupportActionBar().hide();
         // Get the value of shared preference back
         SharedPreferences getShared = getSharedPreferences("demo3", MODE_PRIVATE);
 

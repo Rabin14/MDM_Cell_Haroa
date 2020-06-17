@@ -1,11 +1,13 @@
 package block.mdmcellharoa;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -24,6 +26,8 @@ import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -39,9 +43,13 @@ import java.util.Map;
 import android.os.Bundle;
 
 public class Distribution extends AppCompatActivity implements View.OnClickListener{
-    TextView school,category,gp,demototal,demodistri,name,dateText,dateText2,pp1,pp2,pp,pp3,pp4,pp6,pp7,pp8;
+    TextView school,category,gp,demototal,demodistri,name,dateText,dateText2,pp1,pp2,pp,pp3,pp4,pp6,pp7,pp8,dise;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
+    public static final String TAG = "TAG";
+    private static final String KEY_DATE = "date";
+    private static final String KEY_TOTAL = "total";
+    private static final String KEY_PRESENT = "present";
     String userId;
     EditText class_pp,class_one,class_two,class_three,class_four,class_five,class_six,class_seven,class_eight,class_pp_total,class_one_total,class_two_total,class_three_total,class_four_total,class_five_total,class_six_total,class_seven_total,class_eight_total;
     Button buttonAddItem;
@@ -52,7 +60,7 @@ public class Distribution extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_distribution);
-
+        dise = (TextView) findViewById(R.id.dise);
         class_pp  = findViewById(R.id.class_pp);
         class_one  = findViewById(R.id.class_one);
         class_two  = findViewById(R.id.class_two);
@@ -109,9 +117,17 @@ public class Distribution extends AppCompatActivity implements View.OnClickListe
         getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
+        // Get the value of dise from share prefer  back
+        SharedPreferences getShared = getSharedPreferences("disecode", MODE_PRIVATE);
+        String value = getShared.getString("dise", "Enter coverage");
+        dise.setText(value);
 
 
-        // Get the value of shared preference back
+//load firebase
+        loadNote();
+
+
+        /** Get the value of shared preference back
         SharedPreferences getShared = getSharedPreferences("demo4", MODE_PRIVATE);
         String value = getShared.getString("str2","Enter coverage");
 
@@ -120,7 +136,7 @@ public class Distribution extends AppCompatActivity implements View.OnClickListe
         dateText2.setText(value);
         demototal.setText(value3);
         demodistri.setText(value4);
-
+*/
 
 
         fAuth = FirebaseAuth.getInstance();
@@ -283,6 +299,8 @@ public class Distribution extends AppCompatActivity implements View.OnClickListe
 
                         loading.dismiss();
                         Toast.makeText(Distribution.this,response,Toast.LENGTH_LONG).show();
+
+
                         Intent intent = new Intent(getApplicationContext(),Piechart_Distribution.class);
 
                         startActivity(intent);
@@ -363,11 +381,25 @@ public class Distribution extends AppCompatActivity implements View.OnClickListe
 
             if (dateTextn.matches(dateTextnn)){
                 Toast.makeText(Distribution.this, " Distribution already added For Today ! ", Toast.LENGTH_SHORT).show();
+                String msg2 = dateText.getText().toString();
+                String totalp = demototal.getText().toString();
+                String distrip = demodistri.getText().toString();
+                SharedPreferences shrd = getSharedPreferences("demo4", MODE_PRIVATE);
+                SharedPreferences.Editor editor = shrd.edit();
+
+                editor.putString("str2", msg2);
+                editor.putString("str3", totalp);
+                editor.putString("str4", distrip);
+
+                editor.apply();
+
                 Intent intent = new Intent(getApplicationContext(),Piechart_Distribution.class);
                 startActivity(intent);
                 finish();
             }else {
                 addItemToSheet();
+
+                addfirebase();
                 aladyreenter();
             }
 
@@ -442,5 +474,66 @@ public class Distribution extends AppCompatActivity implements View.OnClickListe
         editor.apply();
 
 
+    }
+    private void addfirebase() {
+
+
+        String userID2 = dise.getText().toString();
+
+        DocumentReference docRef = fStore.collection("distribution").document(userID2);
+        Map<String,Object> user = new HashMap<>();
+        user.put("date",dateText.getText().toString());
+        user.put("total",demototal.getText().toString());
+        user.put("present",demodistri.getText().toString());
+
+
+        //add user to database
+        docRef.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                Log.d(TAG, "Data Send" );
+
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Log.d(TAG, "Data Not Send " + e.toString());
+
+            }
+        });
+
+    }
+    private void loadNote() {
+
+        String userID2 = dise.getText().toString();
+
+
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        DocumentReference noteRef = db.collection("distribution").document(userID2);
+        noteRef.get()
+                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+                        if (documentSnapshot.exists()) {
+                            String date = documentSnapshot.getString(KEY_DATE);
+                            String total = documentSnapshot.getString(KEY_TOTAL);
+                            String present = documentSnapshot.getString(KEY_PRESENT);
+                            //Map<String, Object> note = documentSnapshot.getData();
+                            dateText2.setText(date);
+                            demototal.setText(total);
+                            demodistri.setText(present);
+
+                        } else {
+                            Toast.makeText(Distribution.this, "Enter Your Coverage", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(Distribution.this, "Error!", Toast.LENGTH_SHORT).show();
+                        Log.d(TAG, e.toString());
+                    }
+                });
     }
 }

@@ -302,7 +302,7 @@ public class Attendance extends AppCompatActivity implements View.OnClickListene
                             demodistri.setText(present);
 
                         } else {
-                            Toast.makeText(Attendance.this, "Document does not exist", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Attendance.this, "Enter Your Attendance", Toast.LENGTH_SHORT).show();
                         }
                     }
                 })

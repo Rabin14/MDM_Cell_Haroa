@@ -170,6 +170,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void extra(View view) {
+        String msg2 = dise.getText().toString();
+        SharedPreferences shrd = getSharedPreferences("disecode", MODE_PRIVATE);
+        SharedPreferences.Editor editor = shrd.edit();
+        editor.putString("dise", msg2);
+        editor.apply();
         Intent intent = new Intent(MainActivity.this, Miscellaneous.class);
 
         startActivity(intent);
@@ -188,6 +193,11 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
 
         } else {
+            String msg2 = dise.getText().toString();
+            SharedPreferences shrd = getSharedPreferences("disecode", MODE_PRIVATE);
+            SharedPreferences.Editor editor = shrd.edit();
+            editor.putString("dise", msg2);
+            editor.apply();
             Intent intent = new Intent(getApplicationContext(), Coverage.class);
             startActivity(intent);
 
