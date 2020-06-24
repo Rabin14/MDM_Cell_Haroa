@@ -26,6 +26,7 @@
         <activity android:name=".Web2" />
         <activity android:name=".SMS_Data" />
         <activity android:name=".Teacher_Details" />
+
         <activity android:name=".CCH_Details" />
         <activity android:name=".Allotment" />
         <activity android:name=".ContactUs" />
