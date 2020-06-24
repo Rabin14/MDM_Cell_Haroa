@@ -17,7 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Monthly_Report"></activity>
+        <activity android:name=".MonthlyReportDasboard"/>
         <activity android:name=".List_item_CCH" />
         <activity android:name=".List_Item_teacher" />
         <activity android:name=".Piechart_Distribution" />
@@ -26,7 +26,6 @@
         <activity android:name=".Web2" />
         <activity android:name=".SMS_Data" />
         <activity android:name=".Teacher_Details" />
-
         <activity android:name=".CCH_Details" />
         <activity android:name=".Allotment" />
         <activity android:name=".ContactUs" />

@@ -394,7 +394,7 @@
           android:layout_margin="10dp"
           android:clickable="true"
           android:foreground="?android:attr/selectableItemBackground"
-          android:onClick="report"
+          android:onClick="report1"
           app:cardCornerRadius="5dp"
           app:cardElevation="3dp"
 

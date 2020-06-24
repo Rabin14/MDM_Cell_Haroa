@@ -79,13 +79,16 @@ public class Miscellaneous extends AppCompatActivity {
     startActivity(intent);
   }
 
-    public void report(View view) {
-      Intent intent = new Intent(getApplicationContext(), Monthly_Report.class);
-      startActivity(intent);
-    }
+
 
   public void feedback(View view) {
     Intent intent = new Intent(Miscellaneous.this, Feedback.class);
     startActivity(intent);
+  }
+
+  public void report1(View view) {
+    Intent intent = new Intent(Miscellaneous.this, MonthlyReportDasboard.class);
+    startActivity(intent);
+
   }
 }

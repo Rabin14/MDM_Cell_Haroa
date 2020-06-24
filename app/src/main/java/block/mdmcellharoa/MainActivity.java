@@ -252,7 +252,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                         } else {
-                            Toast.makeText(MainActivity.this, "Enter Your Coverage", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "Please Submit Today's MDM Coverage", Toast.LENGTH_SHORT).show();
                         }
                     }
                 })
@@ -301,7 +301,7 @@ public class MainActivity extends AppCompatActivity {
                             demodistri1.setText(present);
 
                         } else {
-                            Toast.makeText(MainActivity.this, "Enter Your Attendance", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "Please Submit Today's Staff Attendance", Toast.LENGTH_SHORT).show();
                         }
                     }
                 })
