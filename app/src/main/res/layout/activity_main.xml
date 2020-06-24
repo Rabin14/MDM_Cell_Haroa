@@ -341,6 +341,58 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
       android:visibility="invisible">
+      <TextView
+          android:id="@+id/demodistri1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp"
+          android:layout_marginBottom="10dp"
+
+          android:textAlignment="center"
+          android:textColor="#fff"
+          android:textSize="1sp"
+
+          android:textStyle="bold"
+          android:visibility="invisible" />
+      <TextView
+          android:id="@+id/demototal1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp"
+          android:layout_marginBottom="10dp"
+
+          android:textAlignment="center"
+          android:textColor="#fff"
+          android:textSize="1sp"
+
+          android:textStyle="bold"
+          android:visibility="invisible" />
+      <TextView
+          android:id="@+id/demodistri"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp"
+          android:layout_marginBottom="10dp"
+
+          android:textAlignment="center"
+          android:textColor="#fff"
+          android:textSize="1sp"
+
+          android:textStyle="bold"
+          android:visibility="invisible" />
+      <TextView
+          android:id="@+id/demototal"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp"
+          android:layout_marginBottom="10dp"
+
+          android:textAlignment="center"
+          android:textColor="#fff"
+          android:textSize="1sp"
+
+          android:textStyle="bold"
+          android:visibility="invisible" />
     <TextView
         android:id="@+id/dateText"
         android:layout_width="wrap_content"
