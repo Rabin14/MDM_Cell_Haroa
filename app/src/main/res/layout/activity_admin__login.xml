@@ -112,7 +112,7 @@
             android:hint="Enter Password"
             android:drawableStart="@drawable/ic_lock_black_24dp"
 
-           android:inputType="textPassword"
+            android:inputType="textPassword"
             android:textAlignment="center"
             android:textColor="#030304"
             android:textColorHint="#7A7474"

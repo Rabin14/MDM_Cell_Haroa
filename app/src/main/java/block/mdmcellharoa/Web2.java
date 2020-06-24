@@ -27,8 +27,8 @@ public class Web2 extends AppCompatActivity {
         // wv.setWebViewClient(new MyBrowser());
 
 
-       // wv.setInitialScale(70);
-       // wv.getSettings().setDefaultZoom(WebSettings.ZoomDensity.FAR);
+        // wv.setInitialScale(70);
+        // wv.getSettings().setDefaultZoom(WebSettings.ZoomDensity.FAR);
 
 
         wv.setWebViewClient(new myWebClient());

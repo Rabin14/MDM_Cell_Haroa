@@ -199,7 +199,7 @@
                     android:layout_marginTop="2dp"
 
                     android:text="UTBIHAR"
-                       android:textAlignment="center"
+                    android:textAlignment="center"
                     android:textColor="#FFF"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -211,4 +211,3 @@
     </LinearLayout>
 
 </LinearLayout>
-

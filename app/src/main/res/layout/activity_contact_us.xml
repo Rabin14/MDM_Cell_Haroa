@@ -13,100 +13,100 @@
         android:orientation="vertical"
         >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="15dp"
-        android:fontFamily="@font/rammetto_one"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/rammetto_one"
 
-        android:layout_gravity="center"
-        android:textAlignment="center"
-        android:text="Details Of MDM Staff"
-        android:textColor="#FB7D7D"
-        android:textSize="25sp"
-        android:textStyle="bold" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="15dp"
-        android:layout_gravity="center"
-        android:textAlignment="center"
-        android:textColor="#fff"
-        android:text="Contact Us"
-        android:textSize="22sp"
-        android:textStyle="bold" />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_margin="5dp"
-        android:background="@color/hintTextColor" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="5dp"
-        android:layout_gravity="center"
-        android:textAlignment="center"
-        android:text="BDO'S EMAIL ID:- bdoharoablock@gmail.com"
-        android:textColor="#FFFF00"
-        android:textSize="14sp"
-        android:textStyle="bold" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="15dp"
-        android:layout_gravity="center"
-        android:textAlignment="center"
-        android:text="MDM CELL EMAIL ID:- mdm.bdoharoa@gmail.com"
-        android:textColor="#FFFF00"
-        android:textSize="14sp"
-        android:textStyle="bold" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="15dp"
-        android:layout_gravity="center"
-        android:textAlignment="center"
-        android:text="1) MR.MANIK SARDAR, JT.BDO AND NODAL OFFICER: 9477057134"
-        android:textColor="#2AEA8C"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="15dp"
-        android:layout_gravity="center"
-        android:textAlignment="center"
-        android:text="2) MR.AVIJIT DEBNATH, DEO(MDM):9153818852"
-        android:textColor="#2AEA8C"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="15dp"
-        android:layout_gravity="center"
-        android:textAlignment="center"
-        android:text="3) MR.ASHOK JANA, ADEO(MDM):9647385942"
-        android:textColor="#2AEA8C"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="15dp"
-        android:layout_gravity="center"
-        android:textAlignment="center"
-        android:text="4) MR.LAYSEL HAQUE MISTRY, ASSISTANT.A/C:9733731555"
-        android:textColor="#2AEA8C"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:text="Details Of MDM Staff"
+            android:textColor="#FB7D7D"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:text="Contact Us"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="5dp"
+            android:background="@color/hintTextColor" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:text="BDO'S EMAIL ID:- bdoharoablock@gmail.com"
+            android:textColor="#FFFF00"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="15dp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:text="MDM CELL EMAIL ID:- mdm.bdoharoa@gmail.com"
+            android:textColor="#FFFF00"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:text="1) MR.MANIK SARDAR, JT.BDO AND NODAL OFFICER: 9477057134"
+            android:textColor="#2AEA8C"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:text="2) MR.AVIJIT DEBNATH, DEO(MDM):9153818852"
+            android:textColor="#2AEA8C"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:text="3) MR.ASHOK JANA, ADEO(MDM):9647385942"
+            android:textColor="#2AEA8C"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:text="4) MR.LAYSEL HAQUE MISTRY, ASSISTANT.A/C:9733731555"
+            android:textColor="#2AEA8C"
+            android:textSize="20sp"
+            android:textStyle="bold" />
     </LinearLayout>
 </ScrollView>

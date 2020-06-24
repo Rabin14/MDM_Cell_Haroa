@@ -394,7 +394,7 @@
           android:layout_margin="10dp"
           android:clickable="true"
           android:foreground="?android:attr/selectableItemBackground"
-          android:onClick="teacher"
+          android:onClick="report"
           app:cardCornerRadius="5dp"
           app:cardElevation="3dp"
 
@@ -447,7 +447,7 @@
           android:layout_margin="10dp"
           android:clickable="true"
           android:foreground="?android:attr/selectableItemBackground"
-          android:onClick="allotment"
+          android:onClick="feedback"
           app:cardCornerRadius="5dp"
           app:cardElevation="3dp"
 

@@ -146,6 +146,3 @@ public class Report_Coverage extends AppCompatActivity {
 
 
 }
-
-
-
