@@ -38,6 +38,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
@@ -52,6 +53,7 @@ import java.util.Date;
 import java.util.Locale;
 
 public class Coverage extends AppCompatActivity implements View.OnClickListener {
+
     TextView school,category,gp,name,dateText,dateText2,pp1,pp2,pp,pp3,pp4,pp6,pp7,pp8,demototal,demodistri,dise;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
@@ -60,7 +62,7 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
     private static final String KEY_DATE = "date";
     private static final String KEY_TOTAL = "total";
     private static final String KEY_PRESENT = "present";
-    EditText class_pp,class_one,class_two,class_three,class_four,class_five,class_six,class_seven,class_eight,class_pp_total,class_one_total,class_two_total,class_three_total,class_four_total,class_five_total,class_six_total,class_seven_total,class_eight_total;
+    EditText dyear, month,class_pp,class_one,class_two,class_three,class_four,class_five,class_six,class_seven,class_eight,class_pp_total,class_one_total,class_two_total,class_three_total,class_four_total,class_five_total,class_six_total,class_seven_total,class_eight_total;
     Button buttonAddItem;
     private View mViewGroup1,mViewGroup2;
 
@@ -69,6 +71,8 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coverage);
         dise = (TextView) findViewById(R.id.dise);
+        dyear = (EditText) findViewById(R.id.year);
+        month = (EditText) findViewById(R.id.month);
         class_pp  = findViewById(R.id.class_pp);
         class_one  = findViewById(R.id.class_one);
         class_two  = findViewById(R.id.class_two);
@@ -119,9 +123,19 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
         buttonAddItem = (Button)findViewById(R.id.btn_add_item);
         buttonAddItem.setOnClickListener(this);
 
-        String date_n = new SimpleDateFormat("MMM dd, yyyy", Locale.getDefault()).format(new Date());
+        //get month
+        String monthname = (String) android.text.format.DateFormat.format("MMM", new Date());
+        Calendar calendar = Calendar.getInstance();
+        month.setText(monthname);
+        //get year
+        Calendar calendar1 = Calendar.getInstance();
+        int year = calendar1.get(Calendar.YEAR);
+        dyear.setText("" + year);
+
+        String date_n = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
         //set it as current date.
         dateText.setText(date_n);
+
         getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
@@ -405,7 +419,7 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
                 finish();
             }else {
                 addItemToSheet();
-
+                addreport();
                 addfirebase();
                 aladyreenter();
             }
@@ -537,4 +551,43 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
                     }
                 });
     }
+
+    private void addreport() {
+
+        String userID = dise.getText().toString();
+        String userID2 = dyear.getText().toString();
+        String userID3 = month.getText().toString();
+
+
+        DocumentReference docRef = fStore
+                .collection("report").document(userID)
+                .collection("year").document(userID2)
+                .collection("month").document(userID3)
+                .collection("report").document();
+
+        Map<String, Object> user = new HashMap<>();
+
+        user.put("date", dateText.getText().toString());
+        user.put("total", demototal.getText().toString());
+        user.put("present", demodistri.getText().toString());
+
+        //add user to database
+        docRef.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                Log.d(TAG, "onSuccess: Data Added");
+                Toast.makeText(Coverage.this, "Data Added", Toast.LENGTH_SHORT).show();
+
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Log.d(TAG, "Data Not Send " + e.toString());
+                Toast.makeText(Coverage.this, "Data  Not Added", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+    }
+
 }

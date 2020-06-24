@@ -524,6 +524,50 @@
 
 
     </string-array>
+    <string-array name="yearlist">
+        <item></item>
+        <item>2020</item>
+        <item>2021</item>
+        <item>2022</item>
+        <item>2023</item>
+        <item>2024</item>
+        <item>2025</item>
+        <item>2026</item>
+        <item>2027</item>
+        <item></item>
+
+
+    </string-array>
+
+    <string-array name="monthlist">
+        <item></item>
+        <item>Jan</item>
+        <item></item>
+        <item>Feb</item>
+        <item></item>
+        <item>Mar</item>
+        <item></item>
+        <item>Apr</item>
+        <item></item>
+        <item>May</item>
+        <item></item>
+        <item>Jun</item>
+        <item></item>
+        <item>Jul</item>
+        <item></item>
+        <item>Aug</item>
+        <item></item>
+        <item>Sep</item>
+        <item></item>
+        <item>Oct</item>
+        <item></item>
+        <item>Nov</item>
+        <item></item>
+        <item>Dec</item>
+        <item></item>
+
+
+    </string-array>
 
 
     <string name="election_results">Staff Attendance</string>

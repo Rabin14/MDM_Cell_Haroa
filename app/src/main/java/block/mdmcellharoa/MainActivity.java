@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         dateText2 = (TextView) findViewById(R.id.dateText2);
         dateText = (TextView) findViewById(R.id.dateText);
 
-        String date_n = new SimpleDateFormat("MMM dd, yyyy", Locale.getDefault()).format(new Date());
+        String date_n = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
         //set it as current date.
         dateText.setText(date_n);
 

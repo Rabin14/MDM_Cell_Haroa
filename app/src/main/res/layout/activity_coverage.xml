@@ -659,6 +659,19 @@
                         android:gravity="center"
                         android:orientation="horizontal"
                         android:visibility="invisible">
+                        <EditText
+                            android:id="@+id/year"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Enter Year"
+                            android:inputType="number" />
+
+                        <EditText
+                            android:id="@+id/month"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Enter month"
+                            android:inputType="text" />
 
                         <TextView
                             android:id="@+id/school"

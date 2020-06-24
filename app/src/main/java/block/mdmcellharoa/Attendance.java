@@ -78,7 +78,7 @@ public class Attendance extends AppCompatActivity implements View.OnClickListene
         demototal = (TextView) findViewById(R.id.demototal);
         demodistri = (TextView) findViewById(R.id.demodistri);
 
-        String date_n = new SimpleDateFormat("MMM dd, yyyy", Locale.getDefault()).format(new Date());
+        String date_n = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
         //set it as current date.
         dateText.setText(date_n);
 

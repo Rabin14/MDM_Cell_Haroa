@@ -17,7 +17,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".List_item_CCH"></activity>
+        <activity android:name=".Monthly_Report"></activity>
+        <activity android:name=".List_item_CCH" />
         <activity android:name=".List_Item_teacher" />
         <activity android:name=".Piechart_Distribution" />
         <activity android:name=".Piechart_Coverage" />
