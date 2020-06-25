@@ -8,8 +8,8 @@ android {
         applicationId "block.mdmcellharoa"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 18
-        versionName "1.2.9"
+        versionCode 19
+        versionName "1.3.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
     }
