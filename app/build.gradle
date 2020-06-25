@@ -8,8 +8,8 @@ android {
         applicationId "block.mdmcellharoa"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 17
-        versionName "1.2.8"
+        versionCode 18
+        versionName "1.2.9"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
     }
@@ -44,6 +44,7 @@ dependencies {
 
     implementation 'com.github.lecho:hellocharts-library:1.5.8@aar'
 
-
+// FirebaseUI for Cloud Firestore
+    implementation 'com.firebaseui:firebase-ui-firestore:6.2.1'
 
 }
