@@ -25,10 +25,10 @@
 
             android:layout_marginBottom="8dp"
             android:fontFamily="@font/rammetto_one"
-            android:text="Potato and Rice Distribution"
+            android:text="Distribution Report"
             android:textAlignment="center"
             android:textColor="#FFFF00"
-            android:textSize="20sp"
+            android:textSize="19sp"
             android:textStyle="bold" />
 
         <TextView
@@ -734,6 +734,28 @@
                         android:visibility="invisible" />
                     <TextView
                         android:id="@+id/dise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="15dp"
+                        android:visibility="invisible"
+                        android:textColor="#FFFF00"
+                        android:textSize="2sp"
+                        android:textStyle="bold"
+                        />
+                    <TextView
+                        android:id="@+id/month"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="15dp"
+                        android:visibility="invisible"
+                        android:textColor="#FFFF00"
+                        android:textSize="2sp"
+                        android:textStyle="bold"
+                        />
+                    <TextView
+                        android:id="@+id/dyear"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"

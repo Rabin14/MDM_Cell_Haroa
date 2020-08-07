@@ -36,6 +36,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
@@ -43,7 +44,7 @@ import java.util.Map;
 import android.os.Bundle;
 
 public class Distribution extends AppCompatActivity implements View.OnClickListener{
-  TextView school,category,gp,demototal,demodistri,name,dateText,dateText2,pp1,pp2,pp,pp3,pp4,pp6,pp7,pp8,dise;
+  TextView school,category,gp,demototal,demodistri,name,dateText,dateText2,pp1,pp2,pp,pp3,pp4,pp6,pp7,pp8,dise,month,dyear;
   FirebaseAuth fAuth;
   FirebaseFirestore fStore;
   public static final String TAG = "TAG";
@@ -61,6 +62,8 @@ public class Distribution extends AppCompatActivity implements View.OnClickListe
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_distribution);
     dise = (TextView) findViewById(R.id.dise);
+    month = (TextView) findViewById(R.id.month);
+    dyear = (TextView) findViewById(R.id.dyear);
     class_pp  = findViewById(R.id.class_pp);
     class_one  = findViewById(R.id.class_one);
     class_two  = findViewById(R.id.class_two);
@@ -110,8 +113,19 @@ public class Distribution extends AppCompatActivity implements View.OnClickListe
 
     buttonAddItem = (Button)findViewById(R.id.btn_add_item);
     buttonAddItem.setOnClickListener(this);
+    //get month
+    String monthname = (String) android.text.format.DateFormat.format("MMM", new Date());
+    Calendar calendar = Calendar.getInstance();
+    month.setText(monthname);
+    //get year
+    Calendar calendar1 = Calendar.getInstance();
+    int year = calendar1.get(Calendar.YEAR);
+    dyear.setText("" + year);
+
 
     String date_n = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
+
+
     //set it as current date.
     dateText.setText(date_n);
     getWindow().setSoftInputMode(
@@ -397,7 +411,7 @@ public class Distribution extends AppCompatActivity implements View.OnClickListe
         finish();
       }else {
         addItemToSheet();
-
+        addreport();
         addfirebase();
         aladyreenter();
       }
@@ -535,4 +549,42 @@ public class Distribution extends AppCompatActivity implements View.OnClickListe
               }
             });
   }
+  private void addreport() {
+
+    String userID = dise.getText().toString();
+    String userID2 = dyear.getText().toString();
+    String userID3 = month.getText().toString();
+
+
+    DocumentReference docRef = fStore
+            .collection("report").document(userID)
+            .collection("year").document(userID2)
+            .collection("month").document(userID3)
+            .collection("report").document();
+
+    Map<String, Object> user = new HashMap<>();
+
+    user.put("date", dateText.getText().toString());
+    user.put("total", demototal.getText().toString());
+    user.put("present", demodistri.getText().toString());
+
+    //add user to database
+    docRef.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+      @Override
+      public void onSuccess(Void aVoid) {
+        Log.d(TAG, "onSuccess: Data Added");
+        Toast.makeText(Distribution.this, "Data Added", Toast.LENGTH_SHORT).show();
+
+      }
+    }).addOnFailureListener(new OnFailureListener() {
+      @Override
+      public void onFailure(@NonNull Exception e) {
+        Log.d(TAG, "Data Not Send " + e.toString());
+        Toast.makeText(Distribution.this, "Data  Not Added", Toast.LENGTH_SHORT).show();
+
+      }
+    });
+
+  }
+
 }
