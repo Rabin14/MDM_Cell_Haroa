@@ -329,4 +329,14 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    public void report1(View view) {
+        Intent intent = new Intent(MainActivity.this, MonthlyReportDasboard.class);
+        startActivity(intent);
+    }
+
+    public void allotment(View view) {
+        Intent intent = new Intent(getApplicationContext(), Allotment.class);
+        startActivity(intent);
+    }
 }

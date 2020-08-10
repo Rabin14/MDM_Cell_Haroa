@@ -59,10 +59,7 @@ public class Miscellaneous extends AppCompatActivity {
     startActivity(intent);
   }
 
-  public void allotment(View view) {
-    Intent intent = new Intent(getApplicationContext(), Allotment.class);
-    startActivity(intent);
-  }
+
 
   public void cch(View view) {
     Intent intent = new Intent(getApplicationContext(), CCH_Details.class);
@@ -86,8 +83,10 @@ public class Miscellaneous extends AppCompatActivity {
     startActivity(intent);
   }
 
-  public void report1(View view) {
-    Intent intent = new Intent(Miscellaneous.this, MonthlyReportDasboard.class);
+
+
+  public void contact(View view) {
+    Intent intent = new Intent(Miscellaneous.this, ContactUs.class);
     startActivity(intent);
 
   }

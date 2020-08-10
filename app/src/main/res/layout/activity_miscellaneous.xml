@@ -15,128 +15,6 @@
       >
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clipToPadding="false"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-      <androidx.cardview.widget.CardView
-          android:id="@+id/id1"
-          android:layout_width="160dp"
-          android:layout_height="130dp"
-          android:layout_margin="10dp"
-          android:clickable="true"
-          android:foreground="?android:attr/selectableItemBackground"
-          android:onClick="distribution"
-          app:cardCornerRadius="5dp"
-          app:cardElevation="3dp"
-
-          >
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#900BE4"
-            android:gravity="center"
-            android:orientation="vertical">
-
-          <ImageView
-              android:layout_width="64dp"
-              android:layout_height="64dp"
-
-              android:padding="10dp"
-              android:src="@mipmap/potato" />
-
-          <TextView
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_marginTop="5dp"
-              android:text="Distribution Report"
-              android:textColor="#fff"
-              android:textStyle="bold" />
-
-          <View
-              android:layout_width="match_parent"
-              android:layout_height="1dp"
-              android:layout_margin="1dp"
-              android:background="@color/hintTextColor" />
-
-          <TextView
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:gravity="center"
-
-
-              android:text="Potato/Rice"
-              android:textColor="#fff" />
-
-
-        </LinearLayout>
-      </androidx.cardview.widget.CardView>
-
-      <androidx.cardview.widget.CardView
-          android:id="@+id/id2"
-          android:layout_width="160dp"
-          android:layout_height="130dp"
-          android:layout_margin="10dp"
-          android:clickable="true"
-          android:foreground="?android:attr/selectableItemBackground"
-          android:onClick="sampleformat"
-          app:cardCornerRadius="5dp"
-          app:cardElevation="3dp"
-
-          >
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#900BE4"
-            android:gravity="center"
-            android:orientation="vertical">
-
-
-          <ImageView
-              android:layout_width="64dp"
-              android:layout_height="64dp"
-
-              android:padding="10dp"
-              android:src="@mipmap/down" />
-
-
-          <TextView
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_marginTop="5dp"
-              android:text="Download"
-              android:textColor="#fff"
-              android:textStyle="bold" />
-
-
-          <View
-              android:layout_width="match_parent"
-              android:layout_height="1dp"
-              android:layout_margin="1dp"
-              android:background="@color/hintTextColor" />
-
-
-          <TextView
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:gravity="center"
-
-              android:text="Sample Format"
-              android:textColor="#fff" />
-
-
-        </LinearLayout>
-      </androidx.cardview.widget.CardView>
-
-
-    </LinearLayout>
-
-    <LinearLayout
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -320,13 +198,13 @@
       </androidx.cardview.widget.CardView>
 
       <androidx.cardview.widget.CardView
-          android:id="@+id/id6"
+          android:id="@+id/id2"
           android:layout_width="160dp"
           android:layout_height="130dp"
           android:layout_margin="10dp"
           android:clickable="true"
           android:foreground="?android:attr/selectableItemBackground"
-          android:onClick="allotment"
+          android:onClick="sampleformat"
           app:cardCornerRadius="5dp"
           app:cardElevation="3dp"
 
@@ -346,14 +224,14 @@
               android:layout_height="64dp"
 
               android:padding="10dp"
-              android:src="@mipmap/order" />
+              android:src="@mipmap/down" />
 
 
           <TextView
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginTop="5dp"
-              android:text="Allotment "
+              android:text="Download"
               android:textColor="#fff"
               android:textStyle="bold" />
 
@@ -370,7 +248,7 @@
               android:layout_height="wrap_content"
               android:gravity="center"
 
-              android:text="Order Copy"
+              android:text="Sample Format"
               android:textColor="#fff" />
 
 
@@ -394,7 +272,7 @@
           android:layout_margin="10dp"
           android:clickable="true"
           android:foreground="?android:attr/selectableItemBackground"
-          android:onClick="report1"
+          android:onClick="contact"
           app:cardCornerRadius="5dp"
           app:cardElevation="3dp"
 
@@ -412,13 +290,13 @@
               android:layout_height="64dp"
 
               android:padding="10dp"
-              android:src="@mipmap/breport" />
+              android:src="@mipmap/call" />
 
           <TextView
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginTop="5dp"
-              android:text="Monthly Report"
+              android:text="Contact Us"
               android:textColor="#fff"
               android:textStyle="bold" />
 
@@ -433,7 +311,7 @@
               android:layout_height="wrap_content"
               android:gravity="center"
 
-              android:text="MDM Coverage"
+              android:text="Block MDM Cell"
               android:textColor="#fff" />
 
 

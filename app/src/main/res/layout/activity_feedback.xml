@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundnew"
+    android:background="@color/colorPrimaryDark"
     android:padding="10dp"
     tools:context=".Feedback">
     <LinearLayout
@@ -94,8 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
             android:layout_marginBottom="3dp"
-            android:background="@drawable/backgroundnew"
-            android:clipToPadding="false"
+            android:background="@color/colorPrimaryDark"            android:clipToPadding="false"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -103,11 +102,11 @@
                 android:id="@+id/subject"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:background="@drawable/background"
-                android:ems="10"
+                android:background="@color/ic_launcher_background"                android:ems="10"
                 android:hint="Subject"
                 android:layout_marginBottom="10dp"
-
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
 
                 android:textAlignment="center"
                 android:textColor="#030304"
