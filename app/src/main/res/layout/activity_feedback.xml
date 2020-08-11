@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="#540561"
     android:padding="10dp"
     tools:context=".Feedback">
     <LinearLayout
@@ -48,7 +48,7 @@
             android:layout_height="20dp"
             android:layout_marginTop="3dp"
             android:layout_marginBottom="5dp"
-            android:background="@color/colorPrimaryDark"
+            android:background="#540561"
             android:clipToPadding="false"
             android:gravity="center"
             android:orientation="horizontal"
@@ -94,7 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
             android:layout_marginBottom="3dp"
-            android:background="@color/colorPrimaryDark"            android:clipToPadding="false"
+            android:background="#540561"            android:clipToPadding="false"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -121,7 +121,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
             android:layout_marginBottom="3dp"
-            android:background="@color/colorPrimaryDark"
+            android:background="#540561"
             android:clipToPadding="false"
             android:gravity="center"
             android:orientation="vertical">
