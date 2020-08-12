@@ -14,14 +14,14 @@ import java.util.Date;
 import java.util.Locale;
 
 public class Miscellaneous extends AppCompatActivity {
-  TextView dateText,dateText2;
+  TextView dateText,dateText2,textView;
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_miscellaneous);
     dateText2  = (TextView) findViewById(R.id.dateText2);
     dateText  = (TextView) findViewById(R.id.dateText);
-
+    textView = findViewById(R.id.noti);
     String date_n = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
     //set it as current date.
     dateText.setText(date_n);
@@ -29,7 +29,7 @@ public class Miscellaneous extends AppCompatActivity {
     SharedPreferences getShared = getSharedPreferences("demo4", MODE_PRIVATE);
     String value = getShared.getString("str2","distribution");
     dateText2.setText(value);
-
+    textView.setSelected(true);
 
   }
 

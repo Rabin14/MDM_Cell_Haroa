@@ -4,8 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -29,7 +32,7 @@ import java.util.Date;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
-    TextView fullName, school, dateText, dateText2, dateText3,demototal,demodistri,dise,demototal1,demodistri1;
+    TextView fullName, school, dateText, dateText2, dateText3,demototal,demodistri,dise,demototal1,demodistri1,textView;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
@@ -48,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         this.setTitle("MDM, Haroa Block");
         demototal  = (TextView) findViewById(R.id.demototal);
         demodistri  = (TextView) findViewById(R.id.demodistri);
-
+        textView = findViewById(R.id.noti);
         demototal1  = (TextView) findViewById(R.id.demototal1);
         demodistri1  = (TextView) findViewById(R.id.demodistri1);
         dise = findViewById(R.id.dise);
@@ -57,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         dateText3 = (TextView) findViewById(R.id.dateText3);
         dateText2 = (TextView) findViewById(R.id.dateText2);
         dateText = (TextView) findViewById(R.id.dateText);
-
+        textView.setSelected(true);
         String date_n = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
         //set it as current date.
         dateText.setText(date_n);
@@ -74,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
         String value2 = getShared2.getString("str2", "coverage");
         dateText3.setText(value2);
 */
+        checkConnection();
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
@@ -331,12 +335,45 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void report1(View view) {
+
         Intent intent = new Intent(MainActivity.this, MonthlyReportDasboard.class);
         startActivity(intent);
     }
 
     public void allotment(View view) {
+
         Intent intent = new Intent(getApplicationContext(), Allotment.class);
         startActivity(intent);
+    }
+    public void checkConnection()
+    {
+        ConnectivityManager connectivityManager=(ConnectivityManager)
+
+                this.getSystemService(Context.CONNECTIVITY_SERVICE);
+
+
+        NetworkInfo wifi=connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+
+
+        NetworkInfo  network=connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+
+
+        if (wifi.isConnected())
+        {
+            //Internet available
+
+        }
+        else if(network.isConnected())
+        {
+            //Internet available
+
+
+        }
+        else
+        {
+            Intent intent = new Intent(getApplicationContext(), InternetConn.class);
+            startActivity(intent);
+            fileList();
+        }
     }
 }

@@ -25,21 +25,10 @@ TextView mobile1,mobile2,mobile3,mobile4;
     }
 
     public void callme1(View view) {
-        if (Build.VERSION.SDK_INT > 22) {
-
-            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-
-                ActivityCompat.requestPermissions(ContactUs.this, new String[]{Manifest.permission.CALL_PHONE}, 101);
-
-                return;
-            }
-            Intent callIntent = new Intent(Intent.ACTION_CALL);
-            callIntent.setData(Uri.parse("tel:" + mobile1.getText().toString().trim()));
-            startActivity(callIntent);
-        } else {
-
-            Intent callIntent = new Intent(Intent.ACTION_CALL);
-            callIntent.setData(Uri.parse("tel:" + mobile1.getText().toString().trim()));
+        String phoneNumber = mobile1.getText().toString().trim();
+        if (phoneNumber != null) {
+            Intent callIntent = new Intent(Intent.ACTION_DIAL);
+            callIntent.setData(Uri.parse("tel:" + phoneNumber));
             startActivity(callIntent);
         }
     }
@@ -53,21 +42,10 @@ TextView mobile1,mobile2,mobile3,mobile4;
 
 
     public void callme2(View view) {
-        if (Build.VERSION.SDK_INT > 22) {
-
-            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-
-                ActivityCompat.requestPermissions(ContactUs.this, new String[]{Manifest.permission.CALL_PHONE}, 101);
-
-                return;
-            }
-            Intent callIntent = new Intent(Intent.ACTION_CALL);
-            callIntent.setData(Uri.parse("tel:" + mobile2.getText().toString().trim()));
-            startActivity(callIntent);
-        } else {
-
-            Intent callIntent = new Intent(Intent.ACTION_CALL);
-            callIntent.setData(Uri.parse("tel:" + mobile2.getText().toString().trim()));
+        String phoneNumber = mobile2.getText().toString().trim();
+        if (phoneNumber != null) {
+            Intent callIntent = new Intent(Intent.ACTION_DIAL);
+            callIntent.setData(Uri.parse("tel:" + phoneNumber));
             startActivity(callIntent);
         }
     }
@@ -81,21 +59,10 @@ TextView mobile1,mobile2,mobile3,mobile4;
 
 
     public void callme3(View view) {
-        if (Build.VERSION.SDK_INT > 22) {
-
-            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-
-                ActivityCompat.requestPermissions(ContactUs.this, new String[]{Manifest.permission.CALL_PHONE}, 101);
-
-                return;
-            }
-            Intent callIntent = new Intent(Intent.ACTION_CALL);
-            callIntent.setData(Uri.parse("tel:" + mobile3.getText().toString().trim()));
-            startActivity(callIntent);
-        } else {
-
-            Intent callIntent = new Intent(Intent.ACTION_CALL);
-            callIntent.setData(Uri.parse("tel:" + mobile3.getText().toString().trim()));
+        String phoneNumber = mobile3.getText().toString().trim();
+        if (phoneNumber != null) {
+            Intent callIntent = new Intent(Intent.ACTION_DIAL);
+            callIntent.setData(Uri.parse("tel:" + phoneNumber));
             startActivity(callIntent);
         }
     }
@@ -108,21 +75,10 @@ TextView mobile1,mobile2,mobile3,mobile4;
     }
 
     public void callme4(View view) {
-        if (Build.VERSION.SDK_INT > 22) {
-
-            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-
-                ActivityCompat.requestPermissions(ContactUs.this, new String[]{Manifest.permission.CALL_PHONE}, 101);
-
-                return;
-            }
-            Intent callIntent = new Intent(Intent.ACTION_CALL);
-            callIntent.setData(Uri.parse("tel:" + mobile4.getText().toString().trim()));
-            startActivity(callIntent);
-        } else {
-
-            Intent callIntent = new Intent(Intent.ACTION_CALL);
-            callIntent.setData(Uri.parse("tel:" + mobile4.getText().toString().trim()));
+        String phoneNumber = mobile4.getText().toString().trim();
+        if (phoneNumber != null) {
+            Intent callIntent = new Intent(Intent.ACTION_DIAL);
+            callIntent.setData(Uri.parse("tel:" + phoneNumber));
             startActivity(callIntent);
         }
     }

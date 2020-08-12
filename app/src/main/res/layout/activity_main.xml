@@ -30,7 +30,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_marginTop="5dp"
-          android:layout_marginBottom="15dp"
+          android:layout_marginBottom="5dp"
           android:text="Rabindranath Sardar"
           android:textAlignment="center"
           android:textColor="#fff"
@@ -47,10 +47,10 @@
         android:orientation="horizontal">
 
       <ImageView
-          android:layout_width="wrap_content"
-          android:layout_height="100dp"
-          android:layout_marginBottom="10dp"
-          android:padding="10dp"
+          android:layout_width="80dp"
+          android:layout_height="80dp"
+          android:layout_marginBottom="3dp"
+          android:padding="1dp"
           android:src="@mipmap/logo" />
 
     </LinearLayout>
@@ -58,7 +58,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="5dp"
         android:clipToPadding="false"
         android:gravity="center"
         android:orientation="horizontal">
@@ -68,7 +68,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_marginTop="5dp"
-          android:layout_marginBottom="15dp"
+          android:layout_marginBottom="5dp"
           android:text="Rabindranath Sardar"
           android:textAlignment="center"
           android:textColor="#fff"
@@ -446,27 +446,39 @@
 
     </LinearLayout>
 
-
-
-
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="20dp"
-
-        android:layout_marginBottom="0dp"
+        android:layout_height="wrap_content"
         android:background="#900BE4"
-        android:gravity="center"
+        android:clipToPadding="false"
+        android:padding="3dp"
+        android:orientation="horizontal">
 
-        android:text="An Initiative By : Haroa Block Mid Day Meal Cell"
-        android:textAlignment="center"
 
-        android:textColor="#fff"
-        android:textSize="13sp"
-        android:textStyle="bold" />
+
+      <TextView
+          android:id="@+id/noti"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_marginTop="15dp"
+          android:layout_marginBottom="15dp"
+          android:ellipsize="marquee"
+          android:fadingEdge="horizontal"
+          android:marqueeRepeatLimit="marquee_forever"
+          android:scrollHorizontally="true"
+          android:singleLine="true"
+          android:text="Welcome To MDM, Haroa Block, This Android App Developed For Monitor the Mid-Day-Meal Scheme (WBMDMS) Performance By Collecting Various Information From School End From Registered Mobile Numbers ...... An Initiative By : Haroa Block Mid Day Meal Cell ****"
+          android:textAlignment="center"
+          android:textColor="#fff"
+          android:textSize="15sp"
+          android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -21,7 +21,7 @@
 
 
             android:fontFamily="@font/rammetto_one"
-            android:text="Upload Teacher's Details"
+            android:text="Upload Staff Details"
             android:textAlignment="center"
             android:textColor="#FFFF00"
             android:textSize="21sp"
@@ -61,7 +61,7 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="10dp"
-                        android:text="আপনাদের বিদ্যালয়ের মোট শিক্ষক-শিক্ষিকা যত জন  আছেন  সেই কয়জনের তথ্য এক এক করে এন্টার করে সাবমিট করুন।"
+                        android:text="আপনাদের বিদ্যালয়ের মোট শিক্ষক-শিক্ষিকা/কর্মচারী যত জন  আছেন  সেই কয়জনের তথ্য এক এক করে এন্টার করে সাবমিট করুন।"
                         android:textAlignment="center"
                         android:textColor="#EFEF24"
                         android:textSize="17sp"
@@ -75,7 +75,7 @@
                         android:layout_marginBottom="10dp"
                         android:background="#fff"
                         android:ems="10"
-                        android:hint="Teacher's Name"
+                        android:hint="Teacher/Staff Name"
                         android:textAlignment="center"
                         android:textColor="#030304"
                         android:textColorHint="#7A7474"
