@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MonthlyReportDasboard extends AppCompatActivity {
     TextView dise;
@@ -45,10 +46,14 @@ public class MonthlyReportDasboard extends AppCompatActivity {
 
 
     public void view(View view) {
+
         String dise1 = dise.getText().toString();
         String dyear1 = dyear.getSelectedItem().toString();
         String dmonth1 = dmonth.getSelectedItem().toString();
-
+        if(dyear1.isEmpty() ||dmonth1.isEmpty()) {
+            Toast.makeText(MonthlyReportDasboard.this, "Select Year/Month", Toast.LENGTH_SHORT).show();
+            return;
+        }
         SharedPreferences shrd = getSharedPreferences("sharenew", MODE_PRIVATE);
         SharedPreferences.Editor editor = shrd.edit();
 

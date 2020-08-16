@@ -411,7 +411,7 @@
             android:marqueeRepeatLimit="marquee_forever"
             android:scrollHorizontally="true"
             android:singleLine="true"
-            android:text="Welcome To MDM, Haroa Block, This Android App Developed For Monitor the Mid-Day-Meal Scheme (WBMDMS) Performance By Collecting Various Information From School End From Registered Mobile Numbers ...... An Initiative By : Haroa Block Mid Day Meal Cell ****"
+            android:text="Welcome To MDM, Haroa Block, A project of School Education Department, Govt. of West Bengal to monitor the Mid-Day-Meal Scheme (MDMS) performance by collecting various information from school end from registered mobile numbers on daily basis. ...... An Initiative By : Haroa Block Mid Day Meal Cell ****"
             android:textAlignment="center"
             android:textColor="#fff"
             android:textSize="15sp"

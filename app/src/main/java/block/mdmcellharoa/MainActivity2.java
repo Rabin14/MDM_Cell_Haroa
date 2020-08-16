@@ -36,9 +36,9 @@ public class MainActivity2 extends AppCompatActivity {
         // get shareprerference
 
         SharedPreferences getShared = getSharedPreferences("sharenew", MODE_PRIVATE);
-        String value = getShared.getString("str1", "Enter coverage");
-        String value2 = getShared.getString("str2", "Enter coverage");
-        String value3 = getShared.getString("str3", "Enter coverage");
+        String value = getShared.getString("str1", "000");
+        String value2 = getShared.getString("str2", "000");
+        String value3 = getShared.getString("str3", "000");
         dise.setText(value);
         dyear.setText(value2);
         dmonth.setText(value3);

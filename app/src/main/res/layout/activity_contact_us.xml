@@ -19,7 +19,7 @@
             android:layout_marginTop="2dp"
             android:layout_marginBottom="2dp"
             android:fontFamily="@font/rammetto_one"
-            android:text="Details Of MDM Staff"
+            android:text="Block MDM Cell"
             android:textAlignment="center"
             android:textColor="#3AF410"
             android:textSize="25sp"
@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="5dp"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="2dp"
             android:text="Contact Us"
             android:textAlignment="center"
             android:textColor="#fff"
@@ -39,7 +39,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_margin="5dp"
+            android:layout_margin="2dp"
             android:background="@color/hintTextColor" />
         <LinearLayout
             android:id="@+id/lout2"
@@ -121,7 +121,6 @@
 
                 </RelativeLayout>
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -136,7 +135,107 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="1) MR.MANIK SARDAR"
+                android:text="1)MR. DIPANKAR DAS "
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="WBCS [Exe.]"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:text="Contact:"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/mobilen1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:text=" 03217248243"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/callmen1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/round"
+                    android:onClick="callmen1"
+                    android:padding="25dp"
+                    android:src="@mipmap/calln"
+                    android:tint="#FFEB3B"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/msgmen1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/msgmen1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/round"
+                    android:onClick="msgmen1"
+                    android:padding="25dp"
+                    android:src="@mipmap/msgn"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/callmen1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#9C27B0"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="2) MR.MANIK SARDAR"
                 android:textColor="#fff"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -228,6 +327,106 @@
             android:clipToPadding="false"
             android:gravity="center"
             android:padding="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#9C27B0"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="3) MR.AZIZUL HAQ"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="SIS.(Haroa Circle)"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="5dp"
+                    android:text="Mobile:"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/mobilen2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:text="9051527172"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/callmen2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/round"
+                    android:onClick="callmen2"
+                    android:padding="25dp"
+                    android:src="@mipmap/calln"
+                    android:tint="#FFEB3B"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/msgmen2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/msgmen2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/round"
+                    android:onClick="msgmen2"
+                    android:padding="25dp"
+                    android:src="@mipmap/msgn"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/callmen2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:gravity="center"
+            android:padding="5dp"
             android:background="#9C27B0"
             android:layout_marginBottom="10dp"
 
@@ -236,7 +435,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="2) MR.AVIJIT DEBNATH"
+                android:text="4) MR.AVIJIT DEBNATH"
                 android:textColor="#fff"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -336,7 +535,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="3) MR.ASHOK JANA"
+                android:text="5) MR.ASHOK JANA"
                 android:textColor="#fff"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -435,7 +634,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="4) MR.LAYSEL HAQUE MISTRY"
+                android:text="6) MR.LAYSEL HAQUE MISTRY"
                 android:textColor="#fff"
                 android:textSize="20sp"
                 android:textStyle="bold" />

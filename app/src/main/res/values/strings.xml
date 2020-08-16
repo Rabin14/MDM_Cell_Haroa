@@ -496,9 +496,17 @@
     </string-array>
     <string-array name="catagoryname">
         <item></item>
-        <item>Primary</item>
+        <item>FPS</item>
         <item></item>
-        <item>Upper Primary </item>
+        <item>HS</item>
+        <item></item>
+        <item>JR.HS</item>
+        <item></item>
+        <item>MSK</item>
+        <item></item>
+        <item>SSK</item>
+        <item></item>
+        <item>MADRASAH</item>
         <item></item>
 
     </string-array>

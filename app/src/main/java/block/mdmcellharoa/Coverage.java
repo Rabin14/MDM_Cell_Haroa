@@ -434,7 +434,7 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
 
         final String category1 = category.getText().toString().trim();
 
-        if (category1.matches("Primary")) {
+        if (category1.matches("FPS")) {
             class_six.setVisibility(View.INVISIBLE);
             class_seven.setVisibility(View.INVISIBLE);
             class_eight.setVisibility(View.INVISIBLE);
@@ -450,7 +450,7 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
 
         }
 
-        if (category1.matches("Upper Primary")) {
+        if (category1.matches("HS")) {
             class_pp.setVisibility(View.INVISIBLE);
             class_one.setVisibility(View.INVISIBLE);
             class_two.setVisibility(View.INVISIBLE);
@@ -470,9 +470,81 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
             pp4.setVisibility(View.INVISIBLE);
             mViewGroup1.setVisibility(View.GONE);
         }
+        if (category1.matches("JR.HS")) {
+            class_pp.setVisibility(View.INVISIBLE);
+            class_one.setVisibility(View.INVISIBLE);
+            class_two.setVisibility(View.INVISIBLE);
+            class_three.setVisibility(View.INVISIBLE);
+            class_four.setVisibility(View.INVISIBLE);
+
+            class_pp_total.setVisibility(View.INVISIBLE);
+            class_one_total.setVisibility(View.INVISIBLE);
+            class_two_total.setVisibility(View.INVISIBLE);
+            class_three_total.setVisibility(View.INVISIBLE);
+            class_four_total.setVisibility(View.INVISIBLE);
+
+            pp.setVisibility(View.INVISIBLE);
+            pp1.setVisibility(View.INVISIBLE);
+            pp2.setVisibility(View.INVISIBLE);
+            pp3.setVisibility(View.INVISIBLE);
+            pp4.setVisibility(View.INVISIBLE);
+            mViewGroup1.setVisibility(View.GONE);
+        }
+        if (category1.matches("MSK")) {
+            class_pp.setVisibility(View.INVISIBLE);
+            class_one.setVisibility(View.INVISIBLE);
+            class_two.setVisibility(View.INVISIBLE);
+            class_three.setVisibility(View.INVISIBLE);
+            class_four.setVisibility(View.INVISIBLE);
+
+            class_pp_total.setVisibility(View.INVISIBLE);
+            class_one_total.setVisibility(View.INVISIBLE);
+            class_two_total.setVisibility(View.INVISIBLE);
+            class_three_total.setVisibility(View.INVISIBLE);
+            class_four_total.setVisibility(View.INVISIBLE);
+
+            pp.setVisibility(View.INVISIBLE);
+            pp1.setVisibility(View.INVISIBLE);
+            pp2.setVisibility(View.INVISIBLE);
+            pp3.setVisibility(View.INVISIBLE);
+            pp4.setVisibility(View.INVISIBLE);
+            mViewGroup1.setVisibility(View.GONE);
+        }
+        if (category1.matches("MADRASAH")) {
+            class_pp.setVisibility(View.INVISIBLE);
+            class_one.setVisibility(View.INVISIBLE);
+            class_two.setVisibility(View.INVISIBLE);
+            class_three.setVisibility(View.INVISIBLE);
+            class_four.setVisibility(View.INVISIBLE);
+
+            class_pp_total.setVisibility(View.INVISIBLE);
+            class_one_total.setVisibility(View.INVISIBLE);
+            class_two_total.setVisibility(View.INVISIBLE);
+            class_three_total.setVisibility(View.INVISIBLE);
+            class_four_total.setVisibility(View.INVISIBLE);
+
+            pp.setVisibility(View.INVISIBLE);
+            pp1.setVisibility(View.INVISIBLE);
+            pp2.setVisibility(View.INVISIBLE);
+            pp3.setVisibility(View.INVISIBLE);
+            pp4.setVisibility(View.INVISIBLE);
+            mViewGroup1.setVisibility(View.GONE);
+        }
+        if (category1.matches("SSK")) {
+            class_six.setVisibility(View.INVISIBLE);
+            class_seven.setVisibility(View.INVISIBLE);
+            class_eight.setVisibility(View.INVISIBLE);
+            class_six_total.setVisibility(View.INVISIBLE);
+            class_seven_total.setVisibility(View.INVISIBLE);
+            class_eight_total.setVisibility(View.INVISIBLE);
+            pp6.setVisibility(View.INVISIBLE);
+            pp7.setVisibility(View.INVISIBLE);
+            pp8.setVisibility(View.INVISIBLE);
+            mViewGroup2.setVisibility(View.GONE);
 
 
 
+        }
     }
     private void aladyreenter() {
         String msg2 = dateText.getText().toString();
