@@ -18,7 +18,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".InternetConn"></activity>
+        <activity android:name=".Aleart"></activity>
+        <activity android:name=".InternetConn" />
         <activity android:name=".MainActivity2" />
         <activity android:name=".MonthlyReportDasboard" />
         <activity android:name=".List_item_CCH" />

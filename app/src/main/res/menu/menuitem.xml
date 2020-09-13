@@ -38,8 +38,8 @@
         />
     <item
         app:showAsAction="always"
-         android:icon="@drawable/ic_updt"
-        android:title="Update"
+         android:icon="@drawable/ic_noti"
+        android:title="Notification"
         android:id="@+id/update"
         />
 

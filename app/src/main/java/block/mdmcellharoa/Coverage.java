@@ -70,6 +70,7 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coverage);
+
         dise = (TextView) findViewById(R.id.dise);
         dyear = (EditText) findViewById(R.id.year);
         month = (EditText) findViewById(R.id.month);

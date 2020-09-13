@@ -32,7 +32,7 @@ import java.util.Date;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
-    TextView fullName, school, dateText, dateText2, dateText3,demototal,demodistri,dise,demototal1,demodistri1,textView;
+    TextView fullName, school,pathak, dateText, dateText2, dateText3,demototal,demodistri,dise,demototal1,demodistri1,textView,appversion,firebaseversion;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String KEY_DATE = "date";
     private static final String KEY_TOTAL = "total";
     private static final String KEY_PRESENT = "present";
+    private static final String KEY_VERSION = "firebaseversion1";
 
 
 
@@ -49,6 +50,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         this.setTitle("MDM, Haroa Block");
+        appversion = (TextView) findViewById(R.id.appversion);
+        firebaseversion = (TextView) findViewById(R.id.firebaseversion);
+        pathak = (TextView) findViewById(R.id.pathak);
         demototal  = (TextView) findViewById(R.id.demototal);
         demodistri  = (TextView) findViewById(R.id.demodistri);
         textView = findViewById(R.id.noti);
@@ -93,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
                 dise.setText(documentSnapshot.getString("dise"));
                 loadNote();
                 loadNote2();
-
+                loadNote3() ;
 
             }
         });
@@ -139,12 +143,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         } else if (item.getItemId() == R.id.update) {
-            final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
-            try {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
-            } catch (android.content.ActivityNotFoundException anfe) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
-            }
+            Intent intent = new Intent(MainActivity.this, Aleart.class);
+            startActivity(intent);
 
         } else if (item.getItemId() == R.id.share) {
             try {
@@ -375,5 +375,58 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
             fileList();
         }
+    }
+    private void appversion() {
+
+        final String version1 = appversion.getText().toString().trim();
+        final String version2 = firebaseversion.getText().toString().trim();
+        aladyreenter();
+        if (version1.matches(version2)) {
+           // Toast.makeText(MainActivity.this, "", Toast.LENGTH_SHORT).show();
+
+
+        } else {
+            Toast.makeText(MainActivity.this, "Please Update Your App", Toast.LENGTH_SHORT).show();
+            final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
+            try {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+            } catch (android.content.ActivityNotFoundException anfe) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
+            }
+
+        }
+
+
+
+    }
+    private void loadNote3() {
+        String userID2 = pathak.getText().toString();
+
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        DocumentReference noteRef = db.collection("appVersion").document(userID2);
+        noteRef.get()
+                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+                        if (documentSnapshot.exists()) {
+                            String firebaseversion1 = documentSnapshot.getString(KEY_VERSION);
+
+                            //Map<String, Object> note = documentSnapshot.getData();
+                            firebaseversion.setText(firebaseversion1);
+                            appversion();
+
+
+                        } else {
+                            Toast.makeText(MainActivity.this, "Checking...", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(MainActivity.this, "Error!", Toast.LENGTH_SHORT).show();
+                        Log.d(TAG, e.toString());
+                    }
+                });
     }
 }
