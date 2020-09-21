@@ -204,7 +204,7 @@ public class Attendance extends AppCompatActivity implements View.OnClickListene
             final String dateTextnn = dateText2.getText().toString().trim();
 
             if (dateTextn.matches(dateTextnn)) {
-                Toast.makeText(Attendance.this, " Attendance already added Today ! ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Attendance.this, " Attendance already send! ", Toast.LENGTH_SHORT).show();
                 //share preference
                 String msg2 = dateText.getText().toString();
                 String totalp = demototal.getText().toString();

@@ -396,7 +396,7 @@ public class Coverage extends AppCompatActivity implements View.OnClickListener 
             final String dateTextnn = dateText2.getText().toString().trim();
 
             if (dateTextn.matches(dateTextnn)){
-                Toast.makeText(Coverage.this, " Coverage already added Today ! ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Coverage.this, " Coverage already send! ", Toast.LENGTH_SHORT).show();
 
                 //share preference
                 String msg2 = dateText.getText().toString();

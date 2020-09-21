@@ -13,7 +13,7 @@ import android.view.View;
 import android.widget.TextView;
 
 public class ContactUs extends AppCompatActivity {
-TextView mobile1,mobile2,mobile3,mobile4,mobilen1,mobilen2;
+TextView mobile1,mobile2,mobile3,mobile4,mobilen1,mobilen2,mobilen40;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +23,7 @@ TextView mobile1,mobile2,mobile3,mobile4,mobilen1,mobilen2;
         mobile3 = findViewById(R.id.mobile3);
         mobile4 = findViewById(R.id.mobile4);
         mobilen1 = findViewById(R.id.mobilen1);
+        mobilen40 = findViewById(R.id.mobilen40);
         mobilen2 = findViewById(R.id.mobilen2);
     }
 
@@ -126,5 +127,21 @@ TextView mobile1,mobile2,mobile3,mobile4,mobilen1,mobilen2;
         intent.setData(Uri.parse("smsto:" + Uri.encode(phoneNumber)));
         startActivity(intent);
 
+    }
+
+    public void callme40(View view) {
+        String phoneNumber = mobilen40.getText().toString().trim();
+        if (phoneNumber != null) {
+            Intent callIntent = new Intent(Intent.ACTION_DIAL);
+            callIntent.setData(Uri.parse("tel:" + phoneNumber));
+            startActivity(callIntent);
+        }
+    }
+
+    public void msgme40(View view) {
+        String phoneNumber = mobilen40.getText().toString().trim();
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("smsto:" + Uri.encode(phoneNumber)));
+        startActivity(intent);
     }
 }
