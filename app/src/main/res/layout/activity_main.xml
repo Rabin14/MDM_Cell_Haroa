@@ -11,632 +11,643 @@
 
     tools:context=".MainActivity">
 
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:orientation="vertical">
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
-        android:padding="2dp"
-        android:layout_marginStart="8dp"
-        android:clipToPadding="false"
-        android:orientation="horizontal">
-
-      <TextView
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_marginTop="0dp"
-
-          android:text="App Version:"
-          android:textColor="#fff"
-          android:textSize="13sp"
-          android:textStyle="bold" />
-      <TextView
-          android:id="@+id/appversion"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginTop="0dp"
-          android:text="1.3.6"
-          android:textColor="#fff"
-          android:textSize="13sp"
-          android:textStyle="bold" />
-      <TextView
-          android:id="@+id/firebaseversion"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginTop="0dp"
-          android:text="0.0.0"
-          android:textColor="#fff"
-          android:visibility="invisible"
-          android:textSize="13sp"
-          android:textStyle="bold" />
-      <TextView
-          android:id="@+id/pathak"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginTop="0dp"
-          android:text="19111"
-          android:textColor="#fff"
-          android:visibility="invisible"
-          android:textSize="13sp"
-          android:textStyle="bold" />
-    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:clipToPadding="false"
-        android:gravity="center"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-      <TextView
-          android:id="@+id/profileName"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginTop="5dp"
-          android:layout_marginBottom="5dp"
-          android:text="Rabindranath Sardar"
-          android:textAlignment="center"
-          android:textColor="#fff"
-          android:textSize="20sp"
-          android:textStyle="bold" />
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="0dp"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:padding="2dp">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clipToPadding="false"
-        android:gravity="center"
-        android:orientation="horizontal">
+                android:text="App Version:"
+                android:textColor="#fff"
+                android:textSize="13sp"
+                android:textStyle="bold" />
 
-      <ImageView
-          android:layout_width="80dp"
-          android:layout_height="80dp"
-          android:layout_marginBottom="3dp"
-          android:padding="1dp"
-          android:src="@mipmap/logo" />
+            <TextView
+                android:id="@+id/appversion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="1.3.8"
+                android:textColor="#fff"
+                android:textSize="13sp"
+                android:textStyle="bold" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/firebaseversion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="0.0.0"
+                android:textColor="#fff"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:visibility="invisible" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:clipToPadding="false"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-      <TextView
-          android:id="@+id/schoolname"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginTop="5dp"
-          android:layout_marginBottom="5dp"
-          android:text="Rabindranath Sardar"
-          android:textAlignment="center"
-          android:textColor="#fff"
-          android:textSize="15sp"
-          android:textStyle="bold" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clipToPadding="false"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-      <androidx.cardview.widget.CardView
-          android:id="@+id/id3"
-          android:layout_width="160dp"
-          android:layout_height="130dp"
-          android:layout_margin="10dp"
-          android:clickable="true"
-          android:foreground="?android:attr/selectableItemBackground"
-          android:onClick="attendance"
-          app:cardCornerRadius="5dp"
-          app:cardElevation="3dp"
-
-          >
+            <TextView
+                android:id="@+id/pathak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="19111"
+                android:textColor="#fff"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:visibility="invisible" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#900BE4"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:clipToPadding="false"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
-          <ImageView
-              android:layout_width="64dp"
-              android:layout_height="64dp"
-
-              android:padding="10dp"
-              android:src="@mipmap/teacher" />
-
-          <TextView
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_marginTop="5dp"
-              android:text="Send Daily Attendance"
-              android:textColor="#fff"
-              android:textStyle="bold" />
-
-          <View
-              android:layout_width="match_parent"
-              android:layout_height="1dp"
-              android:layout_margin="1dp"
-              android:background="@color/hintTextColor" />
-
-          <TextView
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:gravity="center"
-
-
-              android:text="Teacher/Staff"
-              android:textColor="#fff" />
-
-
+            <TextView
+                android:id="@+id/profileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="Rabindranath Sardar"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
         </LinearLayout>
-      </androidx.cardview.widget.CardView>
-
-      <androidx.cardview.widget.CardView
-          android:id="@+id/id4"
-          android:layout_width="160dp"
-          android:layout_height="130dp"
-          android:layout_margin="10dp"
-          android:clickable="true"
-          android:foreground="?android:attr/selectableItemBackground"
-          android:onClick="coverage"
-          app:cardCornerRadius="5dp"
-          app:cardElevation="3dp"
-
-          >
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#900BE4"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
-
-          <ImageView
-              android:layout_width="64dp"
-              android:layout_height="64dp"
-
-              android:padding="10dp"
-              android:src="@mipmap/humanpictos" />
-
-
-          <TextView
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_marginTop="5dp"
-              android:text="Send Daily Coverage"
-              android:textColor="#fff"
-              android:textStyle="bold" />
-
-
-          <View
-              android:layout_width="match_parent"
-              android:layout_height="1dp"
-              android:layout_margin="1dp"
-              android:background="@color/hintTextColor" />
-
-
-          <TextView
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:gravity="center"
-
-              android:text="MDM Report"
-              android:textColor="#fff" />
-
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="3dp"
+                android:padding="1dp"
+                android:src="@mipmap/logo" />
 
         </LinearLayout>
-      </androidx.cardview.widget.CardView>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/scroll"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clipToPadding="false"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-      <androidx.cardview.widget.CardView
-          android:id="@+id/id51"
-          android:layout_width="160dp"
-          android:layout_height="130dp"
-          android:layout_margin="10dp"
-          android:clickable="true"
-          android:foreground="?android:attr/selectableItemBackground"
-          android:onClick="report1"
-          app:cardCornerRadius="5dp"
-          app:cardElevation="3dp"
-
-          >
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#900BE4"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:clipToPadding="false"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
-          <ImageView
-              android:layout_width="64dp"
-              android:layout_height="64dp"
-
-              android:padding="10dp"
-              android:src="@mipmap/rpt" />
-
-          <TextView
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_marginTop="5dp"
-              android:text="Monthly Report"
-              android:textColor="#fff"
-              android:textStyle="bold" />
-
-          <View
-              android:layout_width="match_parent"
-              android:layout_height="1dp"
-              android:layout_margin="1dp"
-              android:background="@color/hintTextColor" />
-
-          <TextView
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:gravity="center"
-
-              android:text="MDM Coverage"
-              android:textColor="#fff" />
-
-
+            <TextView
+                android:id="@+id/schoolname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="Rabindranath Sardar"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="15sp"
+                android:textStyle="bold" />
         </LinearLayout>
-      </androidx.cardview.widget.CardView>
-
-      <androidx.cardview.widget.CardView
-          android:id="@+id/id6"
-          android:layout_width="160dp"
-          android:layout_height="130dp"
-          android:layout_margin="10dp"
-          android:clickable="true"
-          android:foreground="?android:attr/selectableItemBackground"
-          android:onClick="allotment"
-          app:cardCornerRadius="5dp"
-          app:cardElevation="3dp"
-
-          >
-
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#900BE4"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/id3"
+                android:layout_width="160dp"
+                android:layout_height="130dp"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:onClick="attendance"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="3dp"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#900BE4"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+
+                        android:padding="10dp"
+                        android:src="@mipmap/teacher" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Send Daily Attendance"
+                        android:textAlignment="center"
+                        android:textColor="#fff"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="1dp"
+                        android:background="@color/hintTextColor" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Teacher/Staff"
+
+                        android:textAlignment="center"
+                        android:textColor="#fff" />
 
 
-          <ImageView
-              android:layout_width="64dp"
-              android:layout_height="64dp"
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-              android:padding="10dp"
-              android:src="@mipmap/order" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/id4"
+                android:layout_width="160dp"
+                android:layout_height="130dp"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:onClick="coverage"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="3dp"
 
-
-          <TextView
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_marginTop="5dp"
-              android:text="Allotment "
-              android:textColor="#fff"
-              android:textStyle="bold" />
-
-
-          <View
-              android:layout_width="match_parent"
-              android:layout_height="1dp"
-              android:layout_margin="1dp"
-              android:background="@color/hintTextColor" />
+                >
 
 
-          <TextView
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:gravity="center"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#900BE4"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-              android:text="Order Copy"
-              android:textColor="#fff" />
+
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+
+                        android:padding="10dp"
+                        android:src="@mipmap/humanpictos" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Send Daily Coverage"
+                        android:textAlignment="center"
+                        android:textColor="#fff"
+                        android:textStyle="bold" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="1dp"
+                        android:background="@color/hintTextColor" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="MDM Report"
+                        android:textAlignment="center"
+                        android:textColor="#fff" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
 
         </LinearLayout>
-      </androidx.cardview.widget.CardView>
 
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/id51"
+                android:layout_width="160dp"
+                android:layout_height="130dp"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:onClick="report1"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="3dp"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#900BE4"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+
+                        android:padding="10dp"
+                        android:src="@mipmap/rpt" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Monthly Report"
+                        android:textAlignment="center"
+                        android:textColor="#fff"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="1dp"
+                        android:background="@color/hintTextColor" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="MDM Coverage"
+                        android:textAlignment="center"
+                        android:textColor="#fff" />
 
 
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/id6"
+                android:layout_width="160dp"
+                android:layout_height="130dp"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:onClick="allotment"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="3dp"
+
+                >
 
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#900BE4"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
 
-    <LinearLayout
-        android:id="@+id/scroll1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clipToPadding="false"
-        android:gravity="center"
-        android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
 
-      <androidx.cardview.widget.CardView
-          android:id="@+id/idn1"
-          android:layout_width="160dp"
-          android:layout_height="130dp"
-          android:layout_margin="10dp"
-          android:clickable="true"
-          android:foreground="?android:attr/selectableItemBackground"
-          android:onClick="notification"
-          app:cardCornerRadius="5dp"
-          app:cardElevation="3dp"
+                        android:padding="10dp"
+                        android:src="@mipmap/order" />
 
-          >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Allotment "
+                        android:textAlignment="center"
+                        android:textColor="#fff"
+                        android:textStyle="bold" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="1dp"
+                        android:background="@color/hintTextColor" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Order Copy"
+                        android:textAlignment="center"
+                        android:textColor="#fff" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/scroll1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/idn1"
+                android:layout_width="160dp"
+                android:layout_height="130dp"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:onClick="notification"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="3dp"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#900BE4"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+
+                        android:padding="10dp"
+                        android:src="@mipmap/ssss" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Notice Board"
+                        android:textAlignment="center"
+                        android:textColor="#fff"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="1dp"
+                        android:background="@color/hintTextColor" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="View Order/Notice "
+                        android:textAlignment="center"
+                        android:textColor="#fff" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/idn2"
+                android:layout_width="160dp"
+                android:layout_height="130dp"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:onClick="extra"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="3dp"
+
+                >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#900BE4"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+
+                        android:padding="10dp"
+                        android:src="@mipmap/menuu" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Miscellaneous "
+                        android:textAlignment="center"
+                        android:textColor="#fff"
+                        android:textStyle="bold" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="1dp"
+                        android:background="@color/hintTextColor" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="More Menu"
+                        android:textAlignment="center"
+                        android:textColor="#fff" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="#900BE4"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:padding="3dp">
 
-          <ImageView
-              android:layout_width="64dp"
-              android:layout_height="64dp"
 
-              android:padding="10dp"
-              android:src="@mipmap/ssss" />
-
-          <TextView
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_marginTop="5dp"
-              android:text="Notice Board"
-              android:textColor="#fff"
-              android:textStyle="bold" />
-
-          <View
-              android:layout_width="match_parent"
-              android:layout_height="1dp"
-              android:layout_margin="1dp"
-              android:background="@color/hintTextColor" />
-
-          <TextView
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:gravity="center"
-
-              android:text="View Order/Notice "
-              android:textColor="#fff" />
-
+            <TextView
+                android:id="@+id/noti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:ellipsize="marquee"
+                android:fadingEdge="horizontal"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="Welcome To MDM, Haroa Block, A project of School Education Department, Govt. of West Bengal to monitor the Mid-Day-Meal Scheme (MDMS) performance by collecting various information from school end from registered mobile numbers on daily basis. ...... An Initiative By : Haroa Block Mid Day Meal Cell ****"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
-      </androidx.cardview.widget.CardView>
-
-      <androidx.cardview.widget.CardView
-          android:id="@+id/idn2"
-          android:layout_width="160dp"
-          android:layout_height="130dp"
-          android:layout_margin="10dp"
-          android:clickable="true"
-          android:foreground="?android:attr/selectableItemBackground"
-          android:onClick="extra"
-          app:cardCornerRadius="5dp"
-          app:cardElevation="3dp"
-
-          >
 
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#900BE4"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible">
 
+            <TextView
+                android:id="@+id/demodistri1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
 
-          <ImageView
-              android:layout_width="64dp"
-              android:layout_height="64dp"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="1sp"
 
-              android:padding="10dp"
-              android:src="@mipmap/menuu" />
+                android:textStyle="bold"
+                android:visibility="invisible" />
 
+            <TextView
+                android:id="@+id/demototal1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
 
-          <TextView
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_marginTop="5dp"
-              android:text="Miscellaneous "
-              android:textColor="#fff"
-              android:textStyle="bold" />
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="1sp"
 
+                android:textStyle="bold"
+                android:visibility="invisible" />
 
-          <View
-              android:layout_width="match_parent"
-              android:layout_height="1dp"
-              android:layout_margin="1dp"
-              android:background="@color/hintTextColor" />
+            <TextView
+                android:id="@+id/demodistri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
 
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="1sp"
 
-          <TextView
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:gravity="center"
+                android:textStyle="bold"
+                android:visibility="invisible" />
 
-              android:text="More Menu"
-              android:textColor="#fff" />
+            <TextView
+                android:id="@+id/demototal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
 
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="1sp"
 
+                android:textStyle="bold"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/dateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:inputType="date"
+                android:text="TodayDate"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="1sp"
+
+                android:textStyle="bold"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/dise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="1sp"
+
+                android:textStyle="bold"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/dateText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:inputType="date"
+                android:text="TodayDate"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="2sp"
+                android:textStyle="bold"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/dateText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:inputType="date"
+                android:text="TodayDate"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="1sp"
+
+                android:textStyle="bold"
+                android:visibility="invisible" />
         </LinearLayout>
-      </androidx.cardview.widget.CardView>
-
-
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#900BE4"
-        android:clipToPadding="false"
-        android:padding="3dp"
-        android:orientation="horizontal">
-
-
-
-      <TextView
-          android:id="@+id/noti"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_alignParentRight="true"
-          android:layout_marginTop="10dp"
-          android:layout_marginBottom="10dp"
-          android:ellipsize="marquee"
-          android:fadingEdge="horizontal"
-          android:marqueeRepeatLimit="marquee_forever"
-          android:scrollHorizontally="true"
-          android:singleLine="true"
-          android:text="Welcome To MDM, Haroa Block, A project of School Education Department, Govt. of West Bengal to monitor the Mid-Day-Meal Scheme (MDMS) performance by collecting various information from school end from registered mobile numbers on daily basis. ...... An Initiative By : Haroa Block Mid Day Meal Cell ****"
-          android:textAlignment="center"
-          android:textColor="#fff"
-          android:textSize="15sp"
-          android:textStyle="bold" />
-
-    </LinearLayout>
-
-
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-      android:visibility="invisible">
-      <TextView
-          android:id="@+id/demodistri1"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginTop="5dp"
-          android:layout_marginBottom="10dp"
-
-          android:textAlignment="center"
-          android:textColor="#fff"
-          android:textSize="1sp"
-
-          android:textStyle="bold"
-          android:visibility="invisible" />
-      <TextView
-          android:id="@+id/demototal1"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginTop="5dp"
-          android:layout_marginBottom="10dp"
-
-          android:textAlignment="center"
-          android:textColor="#fff"
-          android:textSize="1sp"
-
-          android:textStyle="bold"
-          android:visibility="invisible" />
-      <TextView
-          android:id="@+id/demodistri"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginTop="5dp"
-          android:layout_marginBottom="10dp"
-
-          android:textAlignment="center"
-          android:textColor="#fff"
-          android:textSize="1sp"
-
-          android:textStyle="bold"
-          android:visibility="invisible" />
-      <TextView
-          android:id="@+id/demototal"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginTop="5dp"
-          android:layout_marginBottom="10dp"
-
-          android:textAlignment="center"
-          android:textColor="#fff"
-          android:textSize="1sp"
-
-          android:textStyle="bold"
-          android:visibility="invisible" />
-    <TextView
-        android:id="@+id/dateText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="10dp"
-        android:inputType="date"
-        android:text="TodayDate"
-        android:textAlignment="center"
-        android:textColor="#fff"
-        android:textSize="1sp"
-
-        android:textStyle="bold"
-        android:visibility="invisible" />
-    <TextView
-        android:id="@+id/dise"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="10dp"
-
-        android:textAlignment="center"
-        android:textColor="#fff"
-        android:textSize="1sp"
-
-        android:textStyle="bold"
-        android:visibility="invisible" />
-    <TextView
-        android:id="@+id/dateText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="10dp"
-        android:inputType="date"
-        android:text="TodayDate"
-        android:textAlignment="center"
-        android:textColor="#fff"
-        android:textSize="2sp"
-        android:visibility="invisible"
-        android:textStyle="bold"
-        />
-    <TextView
-        android:id="@+id/dateText3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="10dp"
-        android:inputType="date"
-        android:text="TodayDate"
-        android:textAlignment="center"
-        android:textColor="#fff"
-        android:textSize="1sp"
-
-        android:textStyle="bold"
-        android:visibility="invisible" />
-    </LinearLayout>
-  </LinearLayout>
 
 </ScrollView>
