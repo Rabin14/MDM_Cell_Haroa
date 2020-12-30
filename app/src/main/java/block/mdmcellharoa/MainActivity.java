@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -31,6 +32,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import eu.dkaratzas.android.inapp.update.Constants;
+import eu.dkaratzas.android.inapp.update.InAppUpdateManager;
+
 public class MainActivity extends AppCompatActivity {
     TextView fullName, school,pathak, dateText, dateText2, dateText3,demototal,demodistri,dise,demototal1,demodistri1,textView,appversion,firebaseversion;
     FirebaseAuth fAuth;
@@ -41,13 +45,24 @@ public class MainActivity extends AppCompatActivity {
     private static final String KEY_TOTAL = "total";
     private static final String KEY_PRESENT = "present";
     private static final String KEY_VERSION = "firebaseversion1";
-
+    // Declare the UpdateManager
+    private static final int REQ_CODE_VERSION_UPDATE = 530;
+    private static final String TAG1 = "Sample";
+    private InAppUpdateManager inAppUpdateManager;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Initialize the Update Manager with the Activity and the Update Mode
+        inAppUpdateManager = InAppUpdateManager.Builder(this, REQ_CODE_VERSION_UPDATE)
+                .resumeUpdates(true) // Resume the update, if the update was stalled. Default is true
+                .mode(Constants.UpdateMode.IMMEDIATE);
+
+        inAppUpdateManager.checkForAppUpdate();
+
 
         this.setTitle("MDM, Haroa Block");
         appversion = (TextView) findViewById(R.id.appversion);
@@ -97,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
                 dise.setText(documentSnapshot.getString("dise"));
                 loadNote();
                 loadNote2();
-                loadNote3() ;
+               // loadNote3() ;
 
             }
         });
@@ -376,6 +391,7 @@ public class MainActivity extends AppCompatActivity {
             fileList();
         }
     }
+    //departed
     private void appversion() {
 
         final String version1 = appversion.getText().toString().trim();
@@ -428,5 +444,22 @@ public class MainActivity extends AppCompatActivity {
                         Log.d(TAG, e.toString());
                     }
                 });
+    }
+
+    //inapp update
+    @Override
+    protected void onActivityResult ( int requestCode, int resultCode, @Nullable Intent data){
+        if (requestCode == REQ_CODE_VERSION_UPDATE) {
+            if (resultCode == Activity.RESULT_CANCELED) {
+                // If the update is cancelled by the user,
+                // you can request to start the update again.
+                inAppUpdateManager.checkForAppUpdate();
+
+                Log.d(TAG1, "Update flow failed! Result code: " + resultCode);
+            }
+        }
+
+        super.onActivityResult(requestCode, resultCode, data);
+
     }
 }
