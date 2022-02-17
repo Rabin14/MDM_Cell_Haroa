@@ -12,6 +12,7 @@ android {
         versionName "1.4.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
+
     }
     buildTypes {
         release {
