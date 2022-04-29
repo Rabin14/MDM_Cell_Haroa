@@ -18,6 +18,20 @@
         android:textColor="#FFFF00"
         android:textSize="25sp"
         android:textStyle="bold" />
+    <TextView
+       android:layout_gravity="center"
+        android:id="@+id/dateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:inputType="date"
+        android:text="TodayDate"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="20sp"
+
+        android:textStyle="bold" />
     <lecho.lib.hellocharts.view.PieChartView
         android:id="@+id/chart"
         android:layout_width="match_parent"

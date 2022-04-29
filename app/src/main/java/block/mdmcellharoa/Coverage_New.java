@@ -140,6 +140,12 @@ public class Coverage_New extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     private void addItemToSheet() {
+        if (demototal.getText().toString().length() == 0) {
+            demototal.setText("0");
+        }
+        if (demodistri.getText().toString().length() == 0) {
+            demodistri.setText("0");
+        }
 
 
         final ProgressDialog loading = ProgressDialog.show(this, "Adding Coverage", "Please wait");
@@ -157,12 +163,10 @@ public class Coverage_New extends AppCompatActivity {
         final String dateText1 = dateText.getText().toString().trim();
 
         //add
-        if (demototal.getText().toString().length() == 0) {
-            demototal.setText("0");
-        }
-        if (demodistri.getText().toString().length() == 0) {
-            demodistri.setText("0");
-        }
+
+
+
+
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, "https://script.google.com/macros/s/AKfycbyG52VcPFH1FKmEEWMMiXTRbXnqgg6cQBZ7T5qHeajHncHWforur9CIQ2ZzUne2eBd-8w/exec",
                 new Response.Listener<String>() {
@@ -221,21 +225,15 @@ public class Coverage_New extends AppCompatActivity {
         String distrip = demodistri.getText().toString();
         SharedPreferences shrd = getSharedPreferences("demo3", MODE_PRIVATE);
         SharedPreferences.Editor editor = shrd.edit();
-
         editor.putString("str2", msg2);
         editor.putString("str3", totalp);
         editor.putString("str4", distrip);
-
         editor.apply();
-
 
     }
 
     private void addfirebase() {
-
-
         String userID2 = dise.getText().toString();
-
         DocumentReference docRef = fStore.collection("coverage").document(userID2);
         Map<String, Object> user = new HashMap<>();
         user.put("date", dateText.getText().toString());
@@ -263,8 +261,6 @@ public class Coverage_New extends AppCompatActivity {
     private void loadNote() {
 
         String userID2 = dise.getText().toString();
-
-
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         DocumentReference noteRef = db.collection("coverage").document(userID2);
         noteRef.get()
@@ -333,6 +329,12 @@ public class Coverage_New extends AppCompatActivity {
     }
 
     public void additemToSheet(View view) {
+        loadNote();
+        if (demototal.getText().toString().isEmpty()||
+                demodistri.getText().toString().isEmpty()) {
+            Toast.makeText(Coverage_New.this, "Fill the required Details", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         final String dateTextn = dateText.getText().toString().trim();
         final String dateTextnn = dateText2.getText().toString().trim();
@@ -342,8 +344,8 @@ public class Coverage_New extends AppCompatActivity {
 
             //share preference
             String msg2 = dateText.getText().toString();
-            String totalp = demototal.getText().toString();
-            String distrip = demodistri.getText().toString();
+            String totalp = demototal1.getText().toString();
+            String distrip = demodistri1.getText().toString();
             SharedPreferences shrd = getSharedPreferences("demo3", MODE_PRIVATE);
             SharedPreferences.Editor editor = shrd.edit();
 

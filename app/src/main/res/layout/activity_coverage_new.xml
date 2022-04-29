@@ -26,7 +26,7 @@
 
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/rammetto_one"
-            android:text="Daily MDM Coverage Entry"
+            android:text="Send MDM Coverage "
             android:textAlignment="center"
             android:textColor="#FFFF00"
             android:textSize="20sp"
@@ -160,7 +160,7 @@
                         android:onClick="additemToSheet"
                         android:text="Submit"
                         android:textColor="#FFFFFF"
-                        android:textSize="25sp"
+                        android:textSize="22sp"
                         android:textStyle="bold" />
 
 

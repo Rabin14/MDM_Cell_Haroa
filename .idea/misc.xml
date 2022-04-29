@@ -4,9 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/ANDROID PROJECT/MDM NEW/app/src/main/res/layout/activity_attendance.xml" value="0.2" />
+        <entry key="..\:/ANDROID PROJECT/MDM NEW/app/src/main/res/layout/activity_contact_us.xml" value="0.2" />
         <entry key="..\:/ANDROID PROJECT/MDM NEW/app/src/main/res/layout/activity_coverage.xml" value="0.2" />
         <entry key="..\:/ANDROID PROJECT/MDM NEW/app/src/main/res/layout/activity_coverage_new.xml" value="0.2" />
         <entry key="..\:/ANDROID PROJECT/MDM NEW/app/src/main/res/layout/activity_distribution.xml" value="0.2" />
+        <entry key="..\:/ANDROID PROJECT/MDM NEW/app/src/main/res/layout/activity_main.xml" value="0.1648148148148148" />
+        <entry key="..\:/ANDROID PROJECT/MDM NEW/app/src/main/res/layout/activity_piechart__coverage.xml" value="0.2" />
       </map>
     </option>
   </component>

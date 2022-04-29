@@ -11,13 +11,17 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
+
 import android.os.Bundle;
 
 public class Piechart_Coverage extends AppCompatActivity {
     PieChartView pieChartView;
-    TextView demototal,demodistri;
+    TextView demototal,demodistri,dateText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +30,11 @@ public class Piechart_Coverage extends AppCompatActivity {
 
         demototal  = (TextView) findViewById(R.id.demototal);
         demodistri  = (TextView) findViewById(R.id.demodistri);
+        dateText  = (TextView) findViewById(R.id.dateText);
         pieChartView = findViewById(R.id.chart);
+        String date_n = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
+        //set it as current date.
+        dateText.setText(date_n);
         getSupportActionBar().hide();
         // Get the value of shared preference back
         SharedPreferences getShared = getSharedPreferences("demo3", MODE_PRIVATE);

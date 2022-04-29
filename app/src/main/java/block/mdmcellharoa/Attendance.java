@@ -61,19 +61,19 @@ import java.util.Objects;
 
 import android.os.Bundle;
 
-public class Attendance extends AppCompatActivity implements LocationListener, View.OnClickListener {
+public class Attendance extends AppCompatActivity implements  View.OnClickListener {
     TextView school, category, gp, name, dateText, dateText2, demototal, demodistri, dise;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
     public static final String TAG = "TAG";
-    EditText total, distribution;
+    EditText total, distribution,textView_location;
     Button buttonAddItem;
     private static final String KEY_DATE = "date";
     private static final String KEY_TOTAL = "total";
     private static final String KEY_PRESENT = "present";
-    TextView textView_location;
-    LocationManager locationManager;
+
+   // LocationManager locationManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,6 +93,7 @@ public class Attendance extends AppCompatActivity implements LocationListener, V
         dateText2 = (TextView) findViewById(R.id.dateText2);
         demototal = (TextView) findViewById(R.id.demototal);
         demodistri = (TextView) findViewById(R.id.demodistri);
+        /*
         //Runtime  location permissions
         checkGPSStatus();
         if (ContextCompat.checkSelfPermission(Attendance.this, Manifest.permission.ACCESS_FINE_LOCATION)
@@ -102,7 +103,7 @@ public class Attendance extends AppCompatActivity implements LocationListener, V
             }, 100);
         }
         getLocation();
-
+*/
         String date_n = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
         //set it as current date.
         dateText.setText(date_n);
@@ -112,7 +113,7 @@ public class Attendance extends AppCompatActivity implements LocationListener, V
         String value = getShared.getString("dise", "Enter coverage");
         dise.setText(value);
 
-        getLocation();
+     //   getLocation();
 //load firebase
         loadNote();
         /**
@@ -153,6 +154,7 @@ public class Attendance extends AppCompatActivity implements LocationListener, V
     //This is the part where data is transafeered from Your Android phone to Sheet by using HTTP Rest API calls
 
     private void addItemToSheet() {
+        loadNote();
         if (total.getText().toString().isEmpty() || distribution.getText().toString().isEmpty()) {
             Toast.makeText(Attendance.this, "Fill the required Details", Toast.LENGTH_SHORT).show();
             return;
@@ -225,7 +227,7 @@ public class Attendance extends AppCompatActivity implements LocationListener, V
 
     @Override
     public void onClick(View v) {
-
+        loadNote();
         if (v == buttonAddItem) {
             final String dateTextn = dateText.getText().toString().trim();
             final String dateTextnn = dateText2.getText().toString().trim();
@@ -248,15 +250,10 @@ public class Attendance extends AppCompatActivity implements LocationListener, V
                 startActivity(ii);
                 finish();
             }
-            if (location1.matches("Please wait.")){
-                getLocation();
-                Toast.makeText(Attendance.this, "Please wait just a minute to get your location ! ", Toast.LENGTH_SHORT).show();
-            }
 
 
             else {
                 addItemToSheet();
-
                 addfirebase();
                 aladyreenter();
             }
@@ -348,6 +345,7 @@ public class Attendance extends AppCompatActivity implements LocationListener, V
                     }
                 });
     }
+    /*
 //////////////////////////////////// auto generate method//////start
     @Override
     public void onLocationChanged(@NonNull Location location) {
@@ -426,6 +424,8 @@ public class Attendance extends AppCompatActivity implements LocationListener, V
             alert.show();
         }
     }
+
+ */
     }
 
 

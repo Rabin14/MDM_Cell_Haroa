@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
                 dise.setText(documentSnapshot.getString("dise"));
                 loadNote();
                 loadNote2();
-               // loadNote3() ;
+                loadNote3() ;
 
             }
         });
@@ -219,7 +219,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void coverage(View view) {
-
+        loadNote();
         final String dateTextn1 = dateText.getText().toString().trim();
         final String dateTextnn1 = dateText3.getText().toString().trim();
         aladyreenter();
