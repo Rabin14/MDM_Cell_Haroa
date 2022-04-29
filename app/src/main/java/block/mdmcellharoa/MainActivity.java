@@ -235,7 +235,7 @@ public class MainActivity extends AppCompatActivity {
             SharedPreferences.Editor editor = shrd.edit();
             editor.putString("dise", msg2);
             editor.apply();
-            Intent intent = new Intent(getApplicationContext(), Coverage.class);
+            Intent intent = new Intent(getApplicationContext(), Coverage_New.class);
             startActivity(intent);
 
         }
